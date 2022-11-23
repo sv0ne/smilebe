@@ -1,0 +1,46 @@
+
+//////////////////////// subscribe ////////////////////////
+
+.subscribe{
+	&__text{
+		padding: 32px 0 32px 32px;
+		@media (max-width:$md3+px) {
+		    padding: 0;
+		}
+	}
+}
+
+////////////////////////// footer //////////////////////////
+
+.footer{
+	&__payments{
+		@media (max-width:$md4+px) {
+		    justify-content: center;
+		}
+	}
+	&__logo{
+		@media (max-width:$md4+px) {
+		    flex: 0 0 100%;
+		    text-align: center;
+		}
+	}
+	&__footer{
+		@media (max-width:$md4+px) {
+		    flex: 0 0 100%;
+		    justify-content: center;
+		}
+	}
+	&__socials{
+		@media (max-width:$md4+px) {
+		    flex: 0 0 100%;
+		    margin-right: 0;
+		    margin-bottom: 16px;
+		    justify-content: center;
+		    > * {
+		    	margin: 0 8px !important;
+		    }
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////

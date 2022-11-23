@@ -1,0 +1,47 @@
+.text-huge{
+  font-family: "Spectral-SemiBold-600";
+  font-size: 80px;
+  line-height: 120%;
+  @media (max-width:$md3+px) {
+    font-size: 60px;
+  }
+}
+
+.text-big{
+  font-family: "Spectral-SemiBold-600";
+  font-size: 48px;
+  line-height: 120%;
+  @media (max-width:$md3+px) {
+    font-size: 32px;
+  } 
+}
+
+.text-large{
+  font-family: "Spectral-Bold-700";
+  font-size: 28px;
+  line-height: 130%;
+}
+
+.text-medium{
+  font-family: "RedHatDisplay-Bold-700";
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.text-default-bold{
+  font-family: "RedHatDisplay-Bold-700";
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.text-default{
+  font-family: "RedHatDisplay-Regular-400";
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.text-small{
+  font-family: "RedHatDisplay-Regular-400";
+  font-size: 14px;
+  line-height: 130%;
+}

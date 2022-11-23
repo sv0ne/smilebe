@@ -1,0 +1,65 @@
+@import "import/mixin"; // Подключаю миксины
+
+// ================== Подключаем шрифты ===================
+@import "import/fonts";
+// --------------------------------------------------------
+
+// ====================== Переменные ======================
+
+$minwidth: 320px;
+$mw: 1343;
+$md1: $mw;
+$md_1150: 1149.98;
+$md_1045: 1044.98;
+$md2: 992.98;
+$md_872: 871.98;
+$md3: 767.98;
+$md_608: 608.98;
+$md_552: 551.98;
+$md4: 479.98;
+$fontfamily: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Segoe WP', 'Helvetica Neue', 'Lucida Grande', Verdana, Tahoma, Arial, sans-serif;
+
+
+$black: #000000;
+$white: #FFFFFF;
+$darkGray: #8F98A3;
+$lightGray: #F1F5F9;
+$red: #E63189;
+
+$lg: linear-gradient(265.62deg, #BD02FE -0.04%, #6117FE 100.04%);
+$boxShadow: 0px 0px 40px rgba(69, 76, 84, 0.08);
+
+// --------------------------------------------------------
+
+@import "import/null"; // Обнуляющие стили
+
+// ===================== Оболочка =========================
+
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	@media (max-width:$md3+px) {
+	    overflow: hidden;/* Выше 768 мы его убираем чтобы сработал 
+	    position sticky у блока .stickyBlock */
+	}
+}
+
+// --------------------------------------------------------
+
+// ================= Основная сетка =======================
+.container{
+	max-width: $mw+px; margin: 0 auto; width: 100%;
+}
+// --------------------------------------------------------
+
+// ============== Импортируем все стили ===================
+
+@import "import/base"; // Вертска переиспользуемых блоков
+@import "import/site"; // Последовательная верстка всего сайта
+@import "import/text"; // Для теста
+@import "import/components"; // Для компонентов типа кнопки, ссылки, переключатели
+//@import "import/test"; // Для теста
+
+// --------------------------------------------------------

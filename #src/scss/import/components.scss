@@ -1,0 +1,19 @@
+.btn{
+	padding: 16px 24px;
+	border-radius: 12px;
+	&:hover{
+		opacity: 0.8;
+	}
+	&_black{
+		background-color: $black;
+		color: $white;
+	}
+	&_white{
+		background-color: $white;
+		color: $black;
+	}
+}
+
+input[type="text"]{
+	border-radius: 12px;
+}
