@@ -55,29 +55,35 @@
 	</div>
 </header>
 
-	
-	<div class="container p-16 subscribe">
-		<div class="bg-lightGray brad-24 row">
-			<div class="row p-8">
-				<div class="p-8 col-2">
-					<div class=" nlc-mb-16 subscribe__text">
-						<p class="text-big">Want the chance to trial our new products?</p>
-						<p>Sign up for the latest news, exclusive offers, and the chance to trial new and unreleased products.</p>
-						<div>
-							<div class="inputTextBtn">
-								<input type="text">
-								<button class="btn btn_black">Subscribe</button>
-							</div>
-						</div>
+	<div class="p-16-0-32-0 container">
+		<div class="p-16">
+			<p class="text-huge mb-8">Вход или регистрация</p>
+			<p class="darkGray text-medium">Войдите если у вас уже есть аккаунт, или зарегистрируйтесь, если вы новый пользователь</p>
+		</div>
+		<div class="f-jcc-aic">
+			<form class="auth__body card-v1 mod-md-p-16 nlc-mb-32 js-validation-form" action="" method="post">
+				<div class="d-flex">
+					<a href="login.html" class="btn-2 mr-16">Вход</a>
+					<a href="registration.html" class="btn-2 btn-2_active">Регистрация</a>
+				</div>
+				<p>Введите номер телефона, который будет использоваться для входа в аккаунт.</p>
+				<div class="js-validation-block">
+					<div class="inputText">
+						<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" placeholder=" ">
+						<label>Телефон</label>
 					</div>
+					<p class="js-validation-error mt-4 error"></p>
 				</div>
-				<div class="p-8 col-2 f-jcc-aic">
-					<img src="img/subscribe/subscribe.png" alt="">
+				<div class="auth__line">
+					<div></div>
+					<div class="active"></div>
 				</div>
-			</div>
+				<div class="f-jcc-aic">
+					<button class="btn js-form-submit">Далее</button>
+				</div>
+			</form>
 		</div>
 	</div>
-	
 	<footer class="footer jcfe">
 	<div class="container">
 		<div class="row p-8 jcsb mb-16">

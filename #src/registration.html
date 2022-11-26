@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/common/head.html',{
+	"title": "Toplash"
+})
+<body>
+	@@include('blocks/common/header.html')
+	<div class="p-16-0-32-0 container">
+		<div class="p-16">
+			<p class="text-huge mb-8">Вход или регистрация</p>
+			<p class="darkGray text-medium">Войдите если у вас уже есть аккаунт, или зарегистрируйтесь, если вы новый пользователь</p>
+		</div>
+		<div class="f-jcc-aic">
+			<form class="auth__body card-v1 mod-md-p-16 nlc-mb-32 js-validation-form" action="" method="post">
+				<div class="d-flex">
+					<a href="login.html" class="btn-2 mr-16">Вход</a>
+					<a href="registration.html" class="btn-2 btn-2_active">Регистрация</a>
+				</div>
+				<div class="js-validation-block">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req", "name"]' type="text" autocomplete="off" name="name" placeholder=" ">
+						<label>Имя и фамилия (нужны при заказе)</label>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div class="js-validation-block">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
+						<label>Email</label>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div class="auth__line">
+					<div class="active"></div>
+					<div></div>
+				</div>
+				<div class="f-jcc-aic">
+					<button class="btn js-form-submit">Далее</button>
+				</div>
+				<div class="inputCheckbox">
+				  	<input type="checkbox" name="newsSubscribe" id="newsSubscribe">
+				  	<label for="newsSubscribe">
+				  		<svg class="w24">
+							<use xlink:href="img/sprite/icons-sprite.svg#checkbox" class="st-1"></use>
+							<use xlink:href="img/sprite/icons-sprite.svg#checkbox-active" class="st-2"></use>
+						</svg>
+				  		<span>Получать новости и акции Toplash на email</span>
+				  	</label>
+				</div>
+			</form>
+		</div>
+	</div>
+	@@include('blocks/common/footer.html')
+</body>
+</html>

@@ -19,6 +19,12 @@ body{
 }
 
 svg{
+	&.w-24{
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+		display: block;
+	}
 	&.w-40{
 		flex: 0 0 40px;
 		width: 40px;
@@ -29,13 +35,6 @@ svg{
 
 img, video{
 	object-fit: cover;
-}
-
-.wrapper{
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 ///////////////////// MARGIN-PADDING //////////////////////
@@ -85,7 +84,7 @@ img, video{
 
 .nlc-mb-64 > *:not(:last-child){
 	margin-bottom: 64px;
-	@media (max-width:$md3+px) {
+	@media (max-width:($md3+px)) {
 	    margin-bottom: 32px;
 	}
 }
@@ -115,17 +114,17 @@ img, video{
 
 .dn{ display: none !important;}
 .md3-dn{
-	@media (max-width:$md3+px) {
+	@media (max-width:($md3+px)) {
 	    display: none !important;
 	}
 }
 .md4-dn{
-	@media (max-width:$md4+px) {
+	@media (max-width:($md4+px)) {
 	    display: none !important;
 	}
 }
 .md4-w-100{
-	@media (max-width:$md4+px) {
+	@media (max-width:($md4+px)) {
 	    width: 100%;
 	}
 }
@@ -143,7 +142,7 @@ img, video{
 
 .darkGray{color: $darkGray; fill: $darkGray; svg{fill: $darkGray} }
 .white{color: $white;}
-.black{color: $black;}
+.black{color: $black; fill: $black;}
 .red{color: $red;}
 
 .bg-lightGray{background-color: $lightGray;}
@@ -193,24 +192,24 @@ img, video{
 
 .col-2{
 	flex: 0 0 50%;
-	@media (max-width:$md3+px) {
+	@media (max-width:($md3+px)) {
 	    flex: 0 0 100%;
 	}
 }
 
 .col-3{
 	flex: 0 0 33.333%;
-	@media (max-width:$md3+px) {
+	@media (max-width:($md3+px)) {
 	    flex: 0 0 100%;
 	}
 }
 
 .col-4{
 	flex: 0 0 25%;
-	@media (max-width:$md2+px) {
+	@media (max-width:($md2+px)) {
 	    flex: 0 0 50%;
 	}
-	@media (max-width:$md3+px) {
+	@media (max-width:($md3+px)) {
 	    flex: 0 0 100%;
 	}
 }

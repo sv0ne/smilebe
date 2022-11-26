@@ -1,3 +1,4 @@
+img/sprite/icons-sprite.svg#cart
 img/sprite/icons-sprite.svg#facebook
 img/sprite/icons-sprite.svg#instagram
 img/sprite/icons-sprite.svg#tiktok
