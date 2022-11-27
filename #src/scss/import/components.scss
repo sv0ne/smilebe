@@ -3,10 +3,13 @@
 .btn{
 	padding: 16px 24px;
 	border-radius: 12px;
+	display: inline-flex;
+	align-items: center;
 	@extend .text-default-bold;
 
 	&:hover{
 		opacity: 0.8;
+		text-decoration: none;
 	}
 	&_black{
 		background-color: $black;
@@ -30,9 +33,9 @@
 		color: $white;
 		background-color: $black;
 	}
-	&:hover{
-		opacity: 0.8;
-	}
+}
+button.btnM:hover, a.btnM:hover{
+	opacity: 0.8;
 }
 
 ////////////////////////// инпуты /////////////////////////////////
@@ -47,7 +50,7 @@
 	    }
 	}
 	input[type="text"], input[type="password"], textarea{
-		border: 2px solid $darkGray;
+		border: 2px solid $lightGray;
 		border-radius: 12px;
 		padding: 14px;
 		height: 56px;
@@ -112,6 +115,39 @@
 	}
 }
 
+.inputBtn{
+	display: inline-block;
+	text-decoration: none !important;
+	cursor: pointer;
+	background-color: $black;
+	color: $white;
+	border-radius: 12px;
+	padding: 16px 24px;
+	@extend .bold;
+	&:hover{
+		opacity: 0.8;
+	}
+	&_gray{
+		background-color: $lightGray;
+		color: $darkGray;
+	}
+}
+
+.inputTextBtn{
+	width: 100%;
+	display: flex;
+	.inputText{
+		flex: 1;
+		input[type="text"] + label{
+			border-radius: 4px;
+		}
+	}
+	.inputBtn{
+		position: relative;
+		left: -8px;
+	}
+}
+
 .inputCheckbox{
 	> * {
 		cursor: pointer;
@@ -151,6 +187,13 @@
 }
 
 //////////////////////// Прочее /////////////////////////////////////
+
+.link{
+	text-decoration: underline;
+	&:hover{
+		opacity: 0.8;
+	}
+}
 
 .error{
 	color: $red;

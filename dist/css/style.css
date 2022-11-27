@@ -17,17 +17,17 @@
 }
 
 @font-face {
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral-Bold-700";
   font-display: swap;
-  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
+  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Spectral-Bold-700";
+  font-family: "Spectral-SemiBold-600";
   font-display: swap;
-  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
+  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -304,6 +304,10 @@ video {
   padding: 0 8px;
 }
 
+.p-32-md3-16 {
+  padding: 32px;
+}
+
 .nlc-mb-32 > *:not(:last-child):not(.not-nlc) {
   margin-bottom: 32px;
 }
@@ -328,7 +332,8 @@ video {
   height: 100%;
 }
 
-.bold {
+.bold,
+.inputBtn {
   font-family: "RedHatDisplay-Bold-700";
 }
 
@@ -373,6 +378,10 @@ video {
 
 .brad-24 {
   border-radius: 24px;
+}
+
+.maxW-100 {
+  max-width: 100%;
 }
 
 .darkGray {
@@ -701,10 +710,17 @@ video {
 .btn {
   padding: 16px 24px;
   border-radius: 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn:hover {
   opacity: 0.8;
+  text-decoration: none;
 }
 
 .btn_black {
@@ -733,7 +749,8 @@ video {
   background-color: #000000;
 }
 
-.btnM:hover {
+button.btnM:hover,
+a.btnM:hover {
   opacity: 0.8;
 }
 
@@ -755,7 +772,7 @@ video {
 .inputText input[type="text"],
 .inputText input[type="password"],
 .inputText textarea {
-  border: 2px solid #8F98A3;
+  border: 2px solid #F1F5F9;
   border-radius: 12px;
   padding: 14px;
   height: 56px;
@@ -850,6 +867,47 @@ video {
           transform: translateY(-50%);
 }
 
+.inputBtn {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 16px 24px;
+}
+
+.inputBtn:hover {
+  opacity: 0.8;
+}
+
+.inputBtn_gray {
+  background-color: #F1F5F9;
+  color: #8F98A3;
+}
+
+.inputTextBtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputTextBtn .inputText {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.inputTextBtn .inputText input[type="text"] + label {
+  border-radius: 4px;
+}
+
+.inputTextBtn .inputBtn {
+  position: relative;
+  left: -8px;
+}
+
 .inputCheckbox > * {
   cursor: pointer;
 }
@@ -898,6 +956,14 @@ video {
   height: 100%;
 }
 
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
 .error {
   color: #E63189;
 }
@@ -935,6 +1001,10 @@ video {
     overflow: hidden;
     /* Выше 768 мы его убираем чтобы сработал 
 	    position sticky у блока .stickyBlock */
+  }
+
+  .p-32-md3-16 {
+    padding: 16px;
   }
 
   .nlc-mb-64 > *:not(:last-child):not(.not-nlc) {
@@ -985,6 +1055,10 @@ video {
 }
 
 @media (max-width: 479.98px) {
+  .p-32-md3-16 {
+    padding: 0;
+  }
+
   .md4-dn {
     display: none !important;
   }

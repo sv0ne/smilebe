@@ -69,6 +69,16 @@ img, video{
 .p-8-16{padding: 8px 16px;}
 .p-0-8{padding: 0 8px;}
 
+.p-32-md3-16{
+	padding: 32px;
+	@media (max-width:$md3+px) {
+	    padding: 16px;
+	}
+	@media (max-width:$md4+px) {
+	    padding: 0;
+	}
+}
+
 .nlc-mb-32 > *:not(:last-child):not(.not-nlc){
 	margin-bottom: 32px;
 }
@@ -136,6 +146,10 @@ img, video{
 
 .brad-24{
 	border-radius: 24px;
+}
+
+.maxW-100{
+	max-width: 100%;
 }
 
 //////////////// COLOR, FILL, BACKGROUND //////////////////
