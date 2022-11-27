@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div class="wrapper nlc-mb-64">
-<header>
+<header class="not-nlc">
 	<div class="bg-gradient p-8 ta-c">
 		<p class="bold white">Save 10% for the first purchase with promocode: TLNEWYEAR2022 </p>
 	</div>
@@ -55,16 +55,16 @@
 	</div>
 </header>
 
-	<div class="p-16-0-32-0 container">
+	<div class="container">
 		<div class="p-16">
-			<p class="text-huge mb-8">Вход или регистрация</p>
-			<p class="darkGray text-medium">Войдите если у вас уже есть аккаунт, или зарегистрируйтесь, если вы новый пользователь</p>
+			<p class="text-big mb-8">Вход или регистрация</p>
+			<p class="darkGray">Войдите если у вас уже есть аккаунт, или зарегистрируйтесь, если вы новый пользователь</p>
 		</div>
 		<div class="f-jcc-aic">
-			<form class="auth__body card-v1 mod-md-p-16 nlc-mb-32 js-validation-form" action="" method="post">
+			<form class="auth__body card-v1 nlc-mb-32 js-validation-form" action="" method="post">
 				<div class="d-flex">
-					<a href="login.html" class="btn-2 mr-16">Вход</a>
-					<a href="registration.html" class="btn-2 btn-2_active">Регистрация</a>
+					<a href="login.html" class="btnM btnM_gray mr-16">Вход</a>
+					<a href="registration.html" class="btnM btnM_black">Регистрация</a>
 				</div>
 				<p>Введите номер телефона, который будет использоваться для входа в аккаунт.</p>
 				<div class="js-validation-block not-nlc mb-8">
@@ -77,8 +77,8 @@
 				</div>
 				<div>
 					<p>Не пришло сообщение?</p>
-					<p class="darkGray text-footnote js-rest-time-exist">Вы можете отправить код повторно, через <span class="js-rest-time-resend-code">59</span> секунд.</p>
-					<p class="darkGray text-footnote js-rest-time-missing dn">Вы можете <a href="registration-step-3.html" class="link text-footnote">отправить код повторно</a></p>
+					<p class="darkGray js-rest-time-exist">Вы можете отправить код повторно, через <span class="js-rest-time-resend-code">59</span> секунд.</p>
+					<p class="darkGray js-rest-time-missing dn">Вы можете <a href="registration-step-3.html" class="link">отправить код повторно</a></p>
 				</div>
 				<p>Введите код, который мы отправили на ваш номер телефона для подтверждения.</p>
 				<div class="js-validation-block">
@@ -90,9 +90,9 @@
 					<!-- Если пользователь ввел код и он не верный, можно перезагрузить эту страницу и для input что находится внутри этого же блока что и этот коммент, нужно дать класс _error. А внутри js-validation-error написать что-то типа "Неверный код, повторите попытку" -->
 				</div>
 				<div class="f-jcc-aic">
-					<button class="btn js-form-submit">Зарегистрироваться</button>
+					<button class="btn btn_black js-form-submit">Зарегистрироваться</button>
 				</div>
-				<p class="text-footnote darkGray">Нажимая кнопку «Зарегистрироваться», вы принимаете пользовательское соглашение и политику конфиденциальности.</p>
+				<p class="darkGray">Нажимая кнопку «Зарегистрироваться», вы принимаете пользовательское соглашение и политику конфиденциальности.</p>
 			</form>
 		</div>
 	</div>

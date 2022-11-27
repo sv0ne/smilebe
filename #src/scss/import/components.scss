@@ -1,8 +1,10 @@
-/////////////////////////////// Кнопка ///////////////////////////////
+/////////////////////////////// Кнопки ///////////////////////////////
 
 .btn{
 	padding: 16px 24px;
 	border-radius: 12px;
+	@extend .text-default-bold;
+
 	&:hover{
 		opacity: 0.8;
 	}
@@ -15,6 +17,25 @@
 		color: $black;
 	}
 }
+
+.btnM{
+	text-decoration: none !important;
+	border-radius: 8px;
+	padding: 4px 16px;
+	&_gray{
+		background-color: $lightGray;
+		color: $darkGray;
+	}
+	&_black{
+		color: $white;
+		background-color: $black;
+	}
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+////////////////////////// инпуты /////////////////////////////////
 
 .inputText{
 	position: relative;
@@ -46,7 +67,7 @@
 		max-width: calc(100% - 16px);
 		position: absolute;
 		left: 12px;
-		top: calc(50% - 12px);
+		top: calc(50% - 14px);
 		padding: 0 4px;
 		background-color: $white;
 		pointer-events: none;
@@ -59,13 +80,13 @@
 		text-overflow: ellipsis;
 	}
 	input[type="text"]:disabled + label, input[type="password"]:disabled + label, textarea:disabled + label{
-		background-color: transparent;
+		//background-color: transparent;
 	}
 	input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown){
 		//padding: 26px 16px 6px 16px;
 	}
 	input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label{
-		top: -8px;
+		top: -12px;
 	}
 	textarea{
 		resize: none;
@@ -89,6 +110,50 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
+}
+
+.inputCheckbox{
+	> * {
+		cursor: pointer;
+	}
+	input[type="checkbox"]{
+		visibility: hidden;
+		display: none;
+	}
+	input[type="checkbox"] + label{
+		display: flex;
+		align-items: flex-start;
+		span{
+			padding-left: 8px;
+		}
+		.st-1{fill: $black;}
+		.st-2{visibility: hidden;}
+	}
+	input[type="checkbox"]:checked + label{
+		.st-1{visibility: hidden;}
+		.st-2{visibility: visible; fill: $black;}
+	}
+}
+
+////////////////////////// Карточки //////////////////////////////
+
+.card-v1{
+	box-shadow: $boxShadow;
+	border-radius: 24px;
+	background: $white;
+	padding: 32px;
+	height: 100%;
+	&.mod-md-p-16{
+		@media (max-width:$md4+px) {
+		    padding: 16px;
+		}
+	}
+}
+
+//////////////////////// Прочее /////////////////////////////////////
+
+.error{
+	color: $red;
 }
 
 /////////////////////////////////////////////////////////////////////

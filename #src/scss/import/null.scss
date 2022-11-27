@@ -5,7 +5,7 @@
 a:focus,a:active{outline:none;}
 nav,footer,header,section,aside{display:block;}
 html,body{height:100%;margin:0;padding:0;min-width:$minwidth;position: relative;width: 100%;color:#000;}
-body{font-size:100%;line-height:1;font-size:14px;font-family: $fontfamily;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{font-size:100%;line-height:1;font-size:14px;font-family:$fontfamily;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 body.lock{overflow: hidden;}
 input,button,textarea{font-family:$fontfamily;}
 input::-ms-clear{display:none;}

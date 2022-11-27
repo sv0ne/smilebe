@@ -82,7 +82,7 @@ img, video{
 }
 
 
-.nlc-mb-64 > *:not(:last-child){
+.nlc-mb-64 > *:not(:last-child):not(.not-nlc){
 	margin-bottom: 64px;
 	@media (max-width:($md3+px)) {
 	    margin-bottom: 32px;

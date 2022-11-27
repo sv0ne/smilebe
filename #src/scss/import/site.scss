@@ -114,6 +114,32 @@
 	}
 }
 
+//////////// регистрация, вход, забыли пароль /////////////
+
+.auth{
+	&__body{
+		width: 540px;
+		@media (max-width:$md_608+px) {
+		    border-radius: 0px;
+		    box-shadow: none;
+		}
+	}
+	&__line{
+		display: flex;
+		justify-content: space-between;
+		> * {
+			flex: 0 0 calc(50% - 4px);
+			height: 4px;
+			margin: 0 2px;
+			border-radius: 99px;
+			background-color: $white;
+			&.active{
+				background-color: $black;
+			}
+		}
+	}
+}
+
 ////////////////////////// footer //////////////////////////
 
 .footer{

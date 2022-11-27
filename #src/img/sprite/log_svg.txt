@@ -1,4 +1,6 @@
 img/sprite/icons-sprite.svg#cart
+img/sprite/icons-sprite.svg#checkbox-active
+img/sprite/icons-sprite.svg#checkbox
 img/sprite/icons-sprite.svg#facebook
 img/sprite/icons-sprite.svg#instagram
 img/sprite/icons-sprite.svg#tiktok
