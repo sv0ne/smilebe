@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('blocks/common/head.html',{
-	"title": "Toplash"
+	"title": "Smilebe"
 })
 <body>
 	@@include('blocks/common/header.html')
-	<!-- Our story -->
+
+	<!-- Our products -->
+	@@include('blocks/product/slider.html', {
+		"title": "Our products",
+		"hasLink": "true",
+		"withSlider": "true"
+	})
+
+	<!-- Teeth Whitening Kit -->
+	<div class="container p-16 teethKit">
+		<div class="bg-gradient brad-24 row p-8 teethKit__row">
+			<div class="p-8 col-2">
+				<div class="nlc-mb-32 white p-32-md3-16">
+					<p class="btnM btnM_white">-25% discount</p>
+					<div>
+						<p class="text-big">Teeth Whitening Kit</p>
+						<p>Combining the power of VIO405 light technology with our award-winning PAP+ formula, the VIO405 Kit promotes the highest level of at-home whitening in just 10 minutes.</p>
+					</div>
+					<a href="" class="btn btn_white md4-w-100">
+						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+						<span class="ml-8">Add to cart</span>
+						<span class="ml-32 d-inline-flex aic teethKit__price">
+							<span class="text-medium">$149</span>
+							<span class="ml-8 text-through">$175</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class="p-8 col-2 f-jcc-aic posr">
+				<div class="teethKit__image">
+					<img src="img/content/cam_light.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- before-after -->
 	<div class="container p-16">
 		<div class="bg-lightGray brad-24 row">
 			<div class="row p-8">
-				<div class="p-8 col-2 f-jcc-aic">
-					<img class="maxW-100" src="img/content/our-story.png" alt="">
-				</div>
-				<div class="p-8 col-2 d-flex fdc jcc">
-					<div class="nlc-mb-16 p-32-md3-16">
-						<p class="text-big">Our story</p>
-						<p>Every day we’re in the lab, learning from our community, and working with leading dentists to develop products to make you look good, and feel even better.</p>
-						<div class="d-inline-flex fdc aife">
-							<a href="" class="btn btn_black">
-								<span class="mr-4">Read more about</span>
-								<img src="img/logo-white.svg" width="73" height="18" alt="">
-							</a>
-							<p class="text-small mt-4">by toplash cosmetics</p>
+				<div class="p-8 col-2">
+					<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
+						<img src="img/logo.svg" width="110" height="24" alt="">
+						<div class="mb-16">
+							<p class="text-big">How whitening works</p>
+							<p>Tooth discolouration and staining are a result of various dyes and pigments attaching to the organic matter of your tooth. The process of lifting these stains is most commonly achieved by two methods: physical removal and chemical bleaching.</p>
 						</div>
+						<a href="" class="btn btn_black md4-w-100">Read more about research</a>
+					</div>
+				</div>
+				<div class="p-8 col-2 f-jcc-aic">
+					<div class="p-32-md3-16">
+						<img class="maxW-100" src="img/content/before-after.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Our story -->
+	<div class="container p-16">
+		<div class="bg-lightGray brad-24 row p-8">
+			<div class="p-8 col-2 f-jcc-aic">
+				<img class="maxW-100" src="img/content/our-story.png" alt="">
+			</div>
+			<div class="p-8 col-2 d-flex fdc jcc">
+				<div class="nlc-mb-16 p-32-md3-16">
+					<p class="text-big">Our story</p>
+					<p>Every day we’re in the lab, learning from our community, and working with leading dentists to develop products to make you look good, and feel even better.</p>
+					<div class="d-inline-flex fdc aife md4-w-100">
+						<a href="" class="btn btn_black md4-w-100">
+							<span class="mr-4">Read more about</span>
+							<img src="img/logo-white.svg" width="73" height="18" alt="">
+						</a>
+						<p class="text-small mt-4">by toplash cosmetics</p>
 					</div>
 				</div>
 			</div>
@@ -46,35 +103,34 @@
 
 	<!-- subscribe -->
 	<div class="container p-16 subscribe">
-		<div class="bg-lightGray brad-24 row">
-			<div class="row p-8">
-				<div class="p-8 col-2">
-					<div class="nlc-mb-16 subscribe__text">
-						<p class="text-big">Want the chance to trial our new products?</p>
-						<p>Sign up for the latest news, exclusive offers, and the chance to trial new and unreleased products.</p>
-						<div>
-							<form class="js-validation-form" action="" method="post">
-								<div class="js-validation-block mt-16">
-									<div class="inputTextBtn">
-										<div class="inputText">
-											<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
-											<label>Enter your email adress</label>
-										</div>
-										<button class="inputBtn js-form-submit">Subscribe</button>
+		<div class="bg-lightGray brad-24 row p-8">
+			<div class="p-8 col-2">
+				<div class="nlc-mb-16 subscribe__text">
+					<p class="text-big">Want the chance to trial our new products?</p>
+					<p>Sign up for the latest news, exclusive offers, and the chance to trial new and unreleased products.</p>
+					<div>
+						<form class="js-validation-form" action="" method="post">
+							<div class="js-validation-block mt-16">
+								<div class="inputTextBtn">
+									<div class="inputText">
+										<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
+										<label>Enter your email adress</label>
 									</div>
-									<p class="js-validation-error mt-4 error"></p>
+									<button class="inputBtn js-form-submit">Subscribe</button>
 								</div>
-							</form>
-							<p class="text-small darkGray">By clicking the subscribe button, you are agreeded with our <a class="link" href="">terms.</a></p>
-						</div>
+								<p class="js-validation-error mt-4 error"></p>
+							</div>
+						</form>
+						<p class="text-small darkGray">By clicking the subscribe button, you are agreeded with our <a class="link" href="">terms.</a></p>
 					</div>
 				</div>
-				<div class="p-8 col-2 f-jcc-aic">
-					<img src="img/content/subscribe.png" alt="">
-				</div>
+			</div>
+			<div class="p-8 col-2 f-jcc-aic">
+				<img src="img/content/subscribe.png" alt="">
 			</div>
 		</div>
 	</div>
+
 	@@include('blocks/common/footer.html')
 </body>
 </html>

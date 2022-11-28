@@ -1,3 +1,4 @@
+img/sprite/icons-sprite.svg#back
 img/sprite/icons-sprite.svg#cart
 img/sprite/icons-sprite.svg#checkbox-active
 img/sprite/icons-sprite.svg#checkbox

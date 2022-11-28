@@ -5,6 +5,7 @@
 	border-radius: 12px;
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	@extend .text-default-bold;
 
 	&:hover{
@@ -14,10 +15,14 @@
 	&_black{
 		background-color: $black;
 		color: $white;
+		fill: $white;
 	}
 	&_white{
 		background-color: $white;
 		color: $black;
+	}
+	&.jcsb{
+		justify-content: space-between;
 	}
 }
 
@@ -25,6 +30,8 @@
 	text-decoration: none !important;
 	border-radius: 8px;
 	padding: 4px 16px;
+	display: inline-flex;
+	@extend .text-default-bold;
 	&_gray{
 		background-color: $lightGray;
 		color: $darkGray;
@@ -33,9 +40,52 @@
 		color: $white;
 		background-color: $black;
 	}
+	&_white{
+		color: $black;
+		background-color: $white;
+	}
 }
 button.btnM:hover, a.btnM:hover{
 	opacity: 0.8;
+}
+
+.btnRound{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	box-shadow: $boxShadow;
+	border-radius: 99px;
+	transform: scale(1);
+	transition: scale 0.2s ease 0s;
+	&.btn-next{
+		transform: rotate(180deg);
+	}
+	&:hover{
+	    transition: scale 0.2s ease 0s;
+		transform: scale(1.2);
+		&.btn-next{
+			transform: rotate(180deg) scale(1.2);
+		}
+	}
+	&_black{
+		background-color: $black;
+		fill: $white;
+	}
+	&.sliderBtn{
+		z-index: 20;
+		position: absolute;
+		top: calc(50% - 100px);
+		&.btn-prev{ left: 0px; }
+		&.btn-next{ right: 0px; }
+		@media (max-width:$md3+px) {
+		    display: none !important;
+		}
+		@media (max-width:1384+px) {
+			&.btn-prev{ left: 28px; }
+		    &.btn-next{ right: 28px; }
+		}
+	}
 }
 
 ////////////////////////// инпуты /////////////////////////////////
@@ -186,7 +236,30 @@ button.btnM:hover, a.btnM:hover{
 	}
 }
 
+//////////////////////// Слайдеры //////////////////////////////////
+
+.slider-style-default{
+	.slick-track{
+		display: flex;
+	}
+
+	.slick-list {
+		overflow: hidden;
+		padding: 8px;
+	}
+}
+
 //////////////////////// Прочее /////////////////////////////////////
+
+.label{
+	padding: 2px 4px;
+	border-radius: 4px;
+	@extend .bold;
+	&_black{
+		color: $white;
+		background-color: $black;
+	}
+}
 
 .link{
 	text-decoration: underline;

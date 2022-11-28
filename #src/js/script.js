@@ -8,6 +8,7 @@ $(document).ready(function () {
 	const BREAKPOINT_md2 = 992.98;
 	const BREAKPOINT_872 = 871.98;
 	const BREAKPOINT_md3 = 767.98;
+	const BREAKPOINT_608 = 608.98;
 	const BREAKPOINT_552 = 551.98;
 	const BREAKPOINT_md4 = 479.98;
 
@@ -50,6 +51,28 @@ $(document).on(isMobile ? "touchend" : "mousedown", function (e) {
 		$overlay.toggleClass('active', isActiveMenu);
 		if(w < BREAKPOINT_md4){$body.toggleClass('lock', isActiveMenu);}
 	}
+});
+
+///////////////////////////////// Слайдеры ///////////////////////////////////////////
+
+$('.js-slider').slick({
+	slidesToShow: 3,
+	prevArrow: $('.products_withSlider .sliderBtn.btn-prev'),
+	nextArrow: $('.products_withSlider .sliderBtn.btn-next'),
+	responsive:[
+		{ 
+			breakpoint: BREAKPOINT_md2,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{ 
+			breakpoint: BREAKPOINT_608,
+			settings: {
+				slidesToShow: 1,
+			}
+		}
+	]
 });
 
 //////////////////////////////////// Прочее /////////////////////////////////////////////

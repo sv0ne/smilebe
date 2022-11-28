@@ -5,10 +5,12 @@
 })
 <body>
 	@@include('blocks/common/header.html')
-	
-	<div class="container p-16">
-		<p>волаитм гавирвги гивш</p>
-	</div>
+
+	@@include('blocks/product/slider.html', {
+		"title": "Smilebe products",
+		"hasLink": "false",
+		"withSlider": "false"
+	})
 	
 	@@include('blocks/common/footer.html')
 </body>
