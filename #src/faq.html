@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/common/head.html',{
+	"title": "Smilebe"
+})
+<body>
+	@@include('blocks/common/header.html')
+
+	<div class="container pageCreator">
+		<div class="pageCreator__black white nlc-mb-16">
+			<p class="text-huge">Frequently Asked Questions</p>
+			<p>If you're stumped and need a little help, you're on the right page. You'll probably be able to find the answer to your questions right here. If you have a question that is not listed please feel free to <a href="" class="link">contact us.</a></p>
+		</div>
+		<div class="pageCreator__white">
+			@@include('blocks/product/faq.html', {
+				"page": "page",
+				"title": "" 
+			})
+		</div>
+	</div>
+	
+	
+	@@include('blocks/common/footer.html')
+</body>
+</html>

@@ -5,10 +5,19 @@
 })
 <body>
 	@@include('blocks/common/header.html')
-	
-	<div class="container p-16">
-		<p>волаитм гавирвги гивш</p>
-	</div>
+
+	<!-- FAQ -->
+	@@include('blocks/product/faq.html', {
+		"page": "product",
+		"title": "Got a questions? We've got answers" 
+	})
+
+	<!-- Recommendations -->
+	@@include('blocks/product/slider.html', {
+		"title": "Recommendations",
+		"hasLink": "false",
+		"withSlider": "true"
+	})
 	
 	@@include('blocks/common/footer.html')
 </body>

@@ -29,12 +29,14 @@
 	<div class="nav">
 		<div class="container">
 			<div class="nav__body">
-				<button class="nav__burger js-burger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-				<a href="/"><img src="img/logo.svg" width="110" height="24" alt=""></a>
+				<div class="f-aic">
+					<button class="nav__burger js-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a href="/" class="nav__home"><img src="img/logo.svg" width="110" height="24" alt=""></a>
+				</div>
 				<div class="nav__overlay js-overlay"></div>
 				<nav class="nav__menu js-menu">
 					<ul>
@@ -55,10 +57,174 @@
 	</div>
 </header>
 
-	
-	<div class="container p-16">
-		<p>волаитм гавирвги гивш</p>
+
+	<!-- FAQ -->
+	<div class="container">
+	 <p class="text-big p-16">Got a questions? We've got answers</p> 
+	<div class="dropdown">
+		
+			<div class="dropdown__item active js-dropdown-item">
+				<div class="dropdown__head js-dropdown-head">
+					<p class="text-large">Усилится / ускорится ли результат, если использовать сыворотку Toplash Lash and Brow чаще раза в день?</p>
+					<button class="btnRound">
+						<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+					</button>
+				</div>
+				<div class="dropdown__body js-dropdown-body">
+					<p>Клинические испытания подтвердили безопасность средства, однако они не проводились на женщинах в периоды лактации и беременности, а потому подтвердить или опровергнуть его безвредность не представляется возможным.</p>
+					<p>Мы настоятельно рекомендуем проконсультироваться с врачом или же вообще воздержаться от применения продукта до истечения вышеназванных периодов.</p>
+				</div>
+			</div>
+			<div class="dropdown__item active js-dropdown-item">
+				<div class="dropdown__head js-dropdown-head">
+					<p class="text-large">На какой курс рассчитан флакон сыворотки?</p>
+					<button class="btnRound">
+						<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+					</button>
+				</div>
+				<div class="dropdown__body js-dropdown-body">
+					<p>Флакон Toplash Lash and Brow объемом 3 мл. рассчитан на 2-3 месяца ежедневного применения, объемом 6 мл. рассчитан на 4-6 месяца ежедневного применения.</p>
+				</div>
+			</div>
+			<div class="dropdown__item active js-dropdown-item">
+				<div class="dropdown__head js-dropdown-head">
+					<p class="text-large">Безопасна ли сыворотка Toplash Lash and Brow для беременных и кормящих женщин?</p>
+					<button class="btnRound">
+						<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+					</button>
+				</div>
+				<div class="dropdown__body js-dropdown-body">
+					<p>Клинические испытания подтвердили безопасность средства, однако они не проводились на женщинах в периоды лактации и беременности, а потому подтвердить или опровергнуть его безвредность не представляется возможным.</p>
+					<p>Мы рекомендуем проконсультироваться с врачом.</p>
+				</div>
+			</div>
+		
+		
 	</div>
+</div>
+
+
+	<!-- Recommendations -->
+	<div class="container products products_withSlider">
+	<div class="p-16 f-jcsb-aic">
+		<p class="text-big">Recommendations</p>
+		
+	</div>
+	<div class="products__body">
+		
+			<button class="btnRound btnRound_black sliderBtn btn-prev">
+				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+			</button>
+			<button class="btnRound btnRound_black sliderBtn btn-next">
+				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+			</button>
+		
+		<div class="products__row js-slider slider-style-default">
+			<div class="products__col">
+				<div class="products__card">
+					<div class="products__label">
+						<span class="btn-2 btn-2_black">Best seller</span>
+						<span class="btn-2 btn-2_white">-25% discount</span>
+					</div>
+					<a href="https://site.com">
+						<div class="products__image">
+							<img loading="lazy" src="img/_placeholder/03.jpg" alt="">
+						</div>
+						<div class="products__text nlc-mb-16 d-flex fdc flex-1">
+							<p class="text-large">Teeth Whitening Kit</p>
+							<p class="darkGray flex-1">Combining the power of VIO405 light technology with our award-winning PAP+ formula, the VIO405 Kit promotes the highest level of at-home whitening in just 10 minutes.</p>
+						</div>
+					</a>
+					<div class="products__btn">
+						<button class="btn btn_black jcsb w-100">
+							<span class="d-inline-flex">
+								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="products__btnText">Add to cart</span>
+							</span>
+							<span class="d-inline-flex aic">
+								<span class="text-medium">$149</span>
+								<span class="ml-8 text-through">$175</span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="products__col">
+				<div class="products__card">
+					<a href="https://site.com">
+						<div class="products__image">
+							<img loading="lazy" src="img/_placeholder/02.jpg" alt="">
+						</div>
+						<div class="products__text nlc-mb-16 d-flex fdc flex-1">
+							<p class="text-large">Whitening Strips</p>
+							<p class="darkGray flex-1">Based on our instant whitening formula PAP+, we’ve designed strips as our most convenient way to whiten yet.</p>
+						</div>
+					</a>
+					<div class="products__btn">
+						<button class="btn btn_black jcsb w-100">
+							<span class="d-inline-flex">
+								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="products__btnText">Add to cart</span>
+							</span>
+							<span class="d-inline-flex aic">
+								<span class="text-medium">$39</span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="products__col">
+				<div class="products__card">
+					<a href="https://site.com">
+						<div class="products__image">
+							<img loading="lazy" src="img/_placeholder/01.jpg" alt="">
+						</div>
+						<div class="products__text nlc-mb-16 d-flex fdc flex-1">
+							<p class="text-large">Whitening Powder</p>
+							<p class="darkGray flex-1">Our groundbreaking PAP+ Whitening Powder transforms your existing favourite toothpaste into an effective, daily whitening treatment, that effectively oxidises stains.</p>
+						</div>
+					</a>
+					<div class="products__btn">
+						<button class="btn btn_black jcsb w-100">
+							<span class="d-inline-flex">
+								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="products__btnText">Add to cart</span>
+							</span>
+							<span class="d-inline-flex aic">
+								<span class="text-medium">$39</span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="products__col">
+				<div class="products__card">
+					<a href="https://site.com">
+						<div class="products__image">
+							<img loading="lazy" src="img/_placeholder/04.jpg" alt="">
+						</div>
+						<div class="products__text nlc-mb-16 d-flex fdc flex-1">
+							<p class="text-large">Teeth Kit</p>
+							<p class="darkGray flex-1">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ratione ipsum animi molestiae veniam ex corporis asperiores quis id vero accusantium. Molestiae harum saepe nulla aliquid vero amet sint rem vitae? Consectetur impedit nemo error est, obcaecati sunt, magnam natus ex!</p>
+						</div>
+					</a>
+					<div class="products__btn">
+						<button class="btn btn_black jcsb w-100">
+							<span class="d-inline-flex">
+								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="products__btnText">Add to cart</span>
+							</span>
+							<span class="ml-32 d-inline-flex aic">
+								<span class="text-medium">$149</span>
+								<span class="ml-8 text-through">$175</span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 	
 	<footer class="footer jcfe">
 	<div class="container">

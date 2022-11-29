@@ -1,0 +1,119 @@
+.popup {
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	::-webkit-scrollbar {
+    	width: 8px;
+    	height: 8px;
+   		background-color: #fff;
+   		@media (max-width:$md3+px) {
+   		    display: none;
+   		}
+	}
+
+	::-webkit-scrollbar-thumb {
+	    background-color: rgba(136,136,158, 0.4);
+	    border-radius: 4px;
+	    @media (max-width:$md3+px) {
+   		    display: none;
+   		}
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+	    background-color: rgba(136,136,158, 0.5);
+	}
+
+	scrollbar-color: #999 #ccc;
+  	scrollbar-width: thin;
+	
+  	&.p-center{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	&.p-overlay{
+		@media (max-width:$md3+px) {
+		    height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			align-items: flex-end;
+			.popup__body{
+				border-radius: 12px 12px 0 0;
+				position: relative;
+				max-height: calc(100vh - 128px) !important;
+			}
+			.popup__wrap{
+				border-radius: 12px 12px 0 0;
+			}
+		}
+	}
+	&.open{
+		opacity: 1;
+		visibility: visible;
+		z-index: 1000;
+		.popup__wrap{
+			transform: translateY(0%);
+			transition: all 0.3s ease 0s;
+		}
+	}
+	&__wrap{
+		@media (max-width:$md3+px) {
+		    flex: 1;
+		    transition: all 0.3s ease 0s;
+	        transform: translateY(110%);
+		}
+		position: relative;
+		background-color: $white;
+		border-radius: 12px;
+		overflow: hidden;
+		filter: drop-shadow(0px 2px 8px rgba(43, 43, 66, 0.08));
+	}
+	&__body {
+		max-height: calc(100vh - 64px);
+		width: 540px;
+		position: relative;
+		border-radius: 12px;
+		background-color: $white;
+		margin-top: -8px;
+		z-index: 20;
+		overflow: auto;
+		@media (max-width:$md3+px) {
+		    width: 100%;
+		}
+	}
+	&__close{
+		padding: 12px;
+		z-index: 4;
+		position: absolute;
+		cursor: pointer;
+		top: 4px;
+		right: -4px;
+	}
+	&__header {
+		border-radius: 12px 12px 0px 0px;
+		position: relative;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__gift{
+		width: 36.75%;
+		left: 50%;
+		pointer-events: none;
+		position: absolute;
+		z-index: 70;
+		padding-top: 25.45%;
+		transform: translate(-50%, calc(-100% + 52px));
+		img{
+			@extend .posa;
+		}
+	}
+}

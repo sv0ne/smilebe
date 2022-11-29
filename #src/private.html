@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/common/head.html',{
+	"title": "Smilebe"
+})
+<body>
+	@@include('blocks/common/header.html')
+	<div class="container not-nlc">
+		<p class="text-big p-0-16">Личный кабинет</p>
+		<div class="flexBlock-v3">
+			<div class="flexBlock-v3__col33">
+				<div class="card-v1 p-24 mod-md-p-16 bg-green white f-jcsb fdc">
+					<div class="mb-12">
+						<div class="f-aic">
+							<img loading="lazy" src="img/content/money.png" alt="">
+							<p class="ml-8">Ваш бонусный счёт (1балл=1₽):</p>
+						</div>
+						<p class="text-big">677 баллов</p>
+						<p class="text-big">18%</p>
+						<p class="text-small">Вы сможете потратить ваши бонусы при следующей покупке.</p>
+					</div>
+					<button class="btn btn_white js-popup-open" data-popupid="accrualHistory">История начислений</button>
+				</div>
+			</div>
+			<div class="flexBlock-v3__col66">
+				<form class="card-v1 p-24 mod-md-p-16 js-validation-form" action="" method="post">
+					<div class="flexBlock-v4">
+						<div class="flexBlock-v4__col">
+							<div class="js-validation-block">
+								<p class="mb-8">ФИО:</p>	
+								<div class="inputText hidePlaceholder">
+									<input class="_validate" data-validation-type='["req", "name"]' type="text" autocomplete="off" name="name" value="John Wick" placeholder=" " disabled>
+									<label for="sv-input-name"></label>
+								</div>
+								<p class="js-validation-error mt-4 error"></p>
+							</div>
+						</div>
+						<div class="flexBlock-v4__col">
+							<div class="js-validation-block">
+								<p class="mb-8">Адрес доставки:</p>	
+								<div class="inputText hidePlaceholder">
+									<input class="_validate" data-validation-type='["req"]' type="text" autocomplete="off" name="address" value="Москва, ул. Кузнечная, д.5, кв.18" placeholder=" " disabled>
+									<label for="sv-input-name"></label>
+								</div>
+								<p class="js-validation-error mt-4 error"></p>
+							</div>
+						</div>
+						<div class="flexBlock-v4__col">
+							<div class="js-validation-block">
+								<p class="mb-8">Email:</p>
+								<div class="inputText hidePlaceholder">
+									<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" value="example@email.com" placeholder=" " disabled>
+									<label for="sv-input-name"></label>
+								</div>
+								<p class="js-validation-error mt-4 error"></p>
+							</div>
+						</div>
+						<div class="flexBlock-v4__col">
+							<div class="js-validation-block">
+								<p class="mb-8">Телефон:</p>	
+								<div class="inputText hidePlaceholder">
+									<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" value="+7 123 456 789 0" placeholder=" " disabled>
+									<label for="sv-input-name"></label>
+								</div>
+								<p class="js-validation-error mt-4 error"></p>
+							</div>
+						</div>
+					</div>
+					<button class="btn btn_light w-100 mt-16 js-personal-edit" type="button">Редактировать информацию</button>
+					<button class="btn btn_black w-100 mt-16 js-form-submit dn">Сохранить информацию</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container not-nlc history p-16-0">
+		<p class="p-16 text-big">История покупок:</p>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-1 568 ₽</p>
+				<p class="darkGray ta-r">Оплачен и обрабатывается</p>
+			</div>
+		</a>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-11 568 ₽</p>
+				<p class="darkGray ta-r">Ожидает оплату</p>
+			</div>
+		</a>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-1 268 ₽</p>
+				<p class="darkGray ta-r">В дороге</p>
+			</div>
+		</a>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-1 568 ₽</p>
+				<p class="darkGray ta-r green">Получен</p>
+			</div>
+		</a>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-1 568 ₽</p>
+				<p class="darkGray ta-r red">Отменён вами</p>
+			</div>
+		</a>
+		<a href="" class="history__item f-jcsb-aic p-16">
+			<div class="f-aic">
+				<div class="iconRound mr-16">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+				</div>
+				<div>
+					<p class="text-medium">№18105</p>
+					<p class="darkGray">09.12.2021</p>
+				</div>
+			</div>
+			<div>
+				<p class="text-medium ta-r">-1 568 ₽</p>
+				<p class="darkGray ta-r red">Отказано в доставке</p>
+			</div>
+		</a>
+	</div>
+	<div class="container not-nlc awards p-16-0">
+		<div class="text-big p-16">За что начисляются баллы?</div>
+		<div class="awards__row">
+			<div class="awards__col">
+				<div class="awards__card">
+					<p class="text-big mb-8">50 баллов</p>
+					<p class="bold">За регистрацию личного кабинета.</p>
+					<div class="awards__decor"></div>
+					<div class="awards__bg mod-2">50</div>
+				</div>
+			</div>
+			<div class="awards__col">
+				<div class="awards__card">
+					<p class="text-big mb-8">3%</p>
+					<p class="bold">От суммы каждого заказа вернется на ваш счет.</p>
+					<div class="awards__decor"></div>
+					<div class="awards__bg">3%</div>
+				</div>
+			</div>
+			<div class="awards__col">
+				<div class="awards__card">
+					<p class="text-big mb-8">3%</p>
+					<p class="bold">От суммы каждого заказа вашего реферала (друга).</p>
+					<div class="awards__decor"></div>
+					<div class="awards__bg">3%</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container not-nlc">
+		<div class="d-flex-md3-w aic p-8">
+			<div class="col-2 p-8">
+				<p class="text-big">Ваша реферальная ссылка для бонусной программы:</p>
+			</div>
+			<div class="col-2 p-8">
+				<div class="inputTextBtn">
+					<div class="inputText">
+						<input type="text" autocomplete="off" name="name" disabled placeholder=" ">
+						<label>toplash.ru/reflink</label>
+					</div>
+					<button class="inputBtn js-copy-text" data-copy-text="toplash.ru/reflink" data-copy-message="Ссылка скопирована">Скопировать</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container not-nlc easyEarn">
+		<div class="d-flex-md3-w">
+			<div class="col-2 p-16">
+				<div class="easyEarn__card">
+					<div class="image-hw-80">
+						<img loading="lazy" src="img/content/credit-card_1.png" alt="">
+					</div>
+					<div class="text-big">150 рублей</div>
+					<svg class="easyEarn__tail"><use xlink:href="img/sprite/icons-sprite.svg#tail"/></svg>
+				</div>
+			</div>
+			<div class="col-2 p-16">
+				<div class="nlc-mb-16">
+					<p class="text-large">Получи подарок за честный отзыв!</p>
+					<p>Что для этого нужно? Все просто:</p>
+					<ol class="list">
+						<li>Оставляйте комментарий на сайте (маркетплейсе) где приобрели Smilebe.</li>
+						<li>Скидывайте нам скриншот.</li>
+						<li>После проверки гарантировано получайте реальные деньги на карту.</li>
+					</ol>
+					<a href="https://t.me/toplash" class="btn btn_black md4-w-100">Отправить скриншот</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('blocks/common/footer.html')
+	<div class="popup-page">
+		<div class="popup p-center p-overlay" id="accrualHistory">
+			<div class="popup__wrap">
+				<div class="popup__body p-8 m-0">
+					<div class="p-8 f-jcsb-aic">
+						<p class="text-large">История начислений</p>
+						<div class="p-12">
+							<button type="button" class="btn-3 js-popup-close">
+								<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#close"/></svg>
+							</button>
+						</div>
+					</div>
+					<div class="f-jcsb p-8 aifs">
+						<div>
+							<p>3% от реферальной покупки</p>
+							<p class="darkGray">11.12.2021</p>
+						</div>
+						<p class="bold green">+85 баллов</p>
+					</div>
+					<div class="f-jcsb p-8 aifs">
+						<div>
+							<p>3% от вашей покупки</p>
+							<p class="darkGray">02.12.2021</p>
+						</div>
+						<p class="bold green">+42 балла</p>
+					</div>
+					<div class="f-jcsb p-8 aifs">
+						<div>
+							<p>Регистрация</p>
+							<p class="darkGray">01.12.2021</p>
+						</div>
+						<p class="bold green">+50 баллов</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

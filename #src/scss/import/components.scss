@@ -21,12 +21,16 @@
 		background-color: $white;
 		color: $black;
 	}
+	&_light{
+		background-color: $lightGray;
+		color: $black;
+	}
 	&.jcsb{
 		justify-content: space-between;
 	}
 }
 
-.btnM{
+.btn-2{
 	text-decoration: none !important;
 	border-radius: 8px;
 	padding: 4px 16px;
@@ -45,8 +49,23 @@
 		background-color: $white;
 	}
 }
-button.btnM:hover, a.btnM:hover{
+button.btn-2:hover, a.btn-2:hover{
 	opacity: 0.8;
+}
+
+.btn-3{
+	cursor: pointer;
+	display: flex;
+	background: rgba(48, 52, 56, 0.25);
+	transition: all 0.1s ease 0s;
+	border-radius: 99px;
+	&:hover{
+		transition: all 0.1s ease 0s;
+		background: rgba(48, 52, 56, 1);
+	}
+	svg{
+		fill: $white;
+	}
 }
 
 .btnRound{
@@ -78,17 +97,17 @@ button.btnM:hover, a.btnM:hover{
 		top: calc(50% - 100px);
 		&.btn-prev{ left: 0px; }
 		&.btn-next{ right: 0px; }
-		@media (max-width:$md3+px) {
+		@media (max-width:($md3+px)) {
 		    display: none !important;
 		}
-		@media (max-width:1384+px) {
+		@media (max-width:(1384+px)) {
 			&.btn-prev{ left: 28px; }
 		    &.btn-next{ right: 28px; }
 		}
 	}
 }
 
-////////////////////////// инпуты /////////////////////////////////
+////////////////////////// Инпуты /////////////////////////////////
 
 .inputText{
 	position: relative;
@@ -221,6 +240,46 @@ button.btnM:hover, a.btnM:hover{
 	}
 }
 
+/////////////////////////// Списки ///////////////////////////////
+
+ul.list{
+	> li:not(:last-child){
+		margin-bottom: 16px;
+	}
+	li{
+		display: flex;
+		&:before{
+			content: "";
+			flex: 0 0 8px;
+			margin: 8px 8px 0 16px;
+			top: 8px;
+			left: 16px;
+			width: 8px;
+			height: 8px;
+			background-color: $black;
+			border-radius: 99px;
+		}
+	}
+}
+
+ol.list{
+	> li:not(:last-child){
+		margin-bottom: 16px;
+	}
+	counter-reset: myCounter;
+	li{
+		padding-left: 16px;
+		display: flex;
+		&:before{
+			content: counter(myCounter)".";
+			counter-increment: myCounter;
+			padding-right: 8px;
+			color: $black;
+			@extend .bold;
+		}
+	}
+}
+
 ////////////////////////// Карточки //////////////////////////////
 
 .card-v1{
@@ -230,9 +289,140 @@ button.btnM:hover, a.btnM:hover{
 	padding: 32px;
 	height: 100%;
 	&.mod-md-p-16{
-		@media (max-width:$md4+px) {
+		@media (max-width:($md4+px)) {
 		    padding: 16px;
 		}
+	}
+	&.p-24{
+		padding: 24px;
+	}
+}
+
+.card-v2{
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 192px;
+	> span:not(:last-child){
+		margin-bottom: 8px;
+	}
+	&__image{
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		width: 160px;
+		height: 160px;
+		border-radius: 8px;
+		@media (max-width:($md3+px)) {
+		    width: 80px;
+			height: 80px;
+		}
+	}
+	&__title{
+		font-family: "Spectral-Bold-700";
+	  	font-size: 28px;
+	  	line-height: 130%;
+	  	margin-left: 176px;
+	  	@media (max-width:($md3+px)) {
+	  		margin-left: 96px;
+	  	}
+	  	@media (max-width:($md_608+px)) {
+	  		font-family: "RedHatDisplay-Bold-700";
+  			font-size: 18px;
+	  	}
+	}
+	&__text{
+		@extend .text-trim-3;
+		margin-left: 176px;
+		@media (max-width:($md3+px)) {
+	  		margin-left: 96px;
+	  	}
+	}
+	&:hover{
+		border-radius: 24px;
+		text-decoration: none;
+		background-color: $lightGray;
+	}
+}
+
+.card-v3{
+	border: 2px solid $lightGray;
+	border-radius: 24px;
+	padding: 24px;
+	@media (max-width:($md4+px)) {
+	    padding: 16px;
+	}
+}
+
+////////////////////// Флекс-разметки //////////////////////////////
+
+.flexBlock-v1{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -8px -16px;
+
+	&__col{
+		flex: 0 0 50%;
+		padding: 8px 16px;
+		@media (max-width:($md_872+px)) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__content{
+		height: 100%;
+		box-shadow: $boxShadow;
+		padding: 24px;
+		border-radius: 24px;
+		@media (max-width:($md4+px)) {
+		    padding: 16px;
+		}
+	}
+}
+
+.flexBlock-v2{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -8px -8px 4px -8px !important;
+	&__col{
+		flex: 1 1 33.333%;
+		min-width: 175px;
+		padding: 8px;
+		&:not(:last-child){
+			margin-bottom: -4px;
+		}
+	}
+}
+
+.flexBlock-v3{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 8px 0px;
+	&__col33{
+		padding: 8px 16px;
+		flex: 0 0 447px;
+		@media (max-width:$md2+px) {
+		    flex: 0 0 352px;
+		}
+		@media (max-width:$md3+px) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__col66{
+		flex: 1;
+		padding: 8px 16px;
+	}
+}
+
+
+.flexBlock-v4{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -8px -16px;
+	&__col{
+		padding: 8px 16px;
+		flex: 1 1 50%;
+		min-width: 255px;
 	}
 }
 
@@ -245,8 +435,98 @@ button.btnM:hover, a.btnM:hover{
 
 	.slick-list {
 		overflow: hidden;
-		padding: 8px;
 	}
+}
+
+//////////////////////////// Картинки /////////////////////////////
+
+.iconRound{
+	background-color: $black;
+	border-radius: 99px;
+	flex: 0 0 40px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-hw-80{
+	height: 80px;
+	width: 80px;
+	flex: 0 0 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+//////////////////////// Выпадающие списки ////////////////////////
+
+.dropdown{
+	&__item{
+		position: relative;
+		.btnRound{
+			transition: all 0.3s ease 0s;
+			transform: rotate(180deg);
+		}
+		&.active{
+			.btnRound{
+				transform: rotate(0deg);
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 16px;
+			right: 16px;
+			height: 2px;
+			background-color: $lightGray;
+		}
+	}
+	&__head{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 32px 16px;
+		cursor: pointer;
+		p{margin-right: 8px;}
+	}
+	&__body{
+		padding: 16px;
+		@extend .nlc-mb-16;
+	}
+}
+
+////////////////////// Вспывающая подсказка /////////////////////////
+
+.simpleMessage{
+	position: fixed;
+	bottom: 16px;
+	left: 50%;
+	transform: translate(-50%, calc(105% + 16px));
+	background-color: $black;
+	color: $white;
+	padding: 16px;
+	border-radius: 12px;
+	text-align: center;
+	z-index: 9999;
+	animation: simpleMessage 2s forwards 0s ease;
+	@media (max-width:$md4+px) {
+	    width: calc(100% - 32px);
+	}
+}
+
+@keyframes simpleMessage {
+ 	20% { transform: translate(-50%, 0%);}
+ 	80% { transform: translate(-50%, 0%);}
+ 	100% { transform: translate(-50%, calc(105% + 16px));}
 }
 
 //////////////////////// Прочее /////////////////////////////////////
@@ -270,6 +550,14 @@ button.btnM:hover, a.btnM:hover{
 
 .error{
 	color: $red;
+}
+
+.image-w100-h50{
+	position: relative;
+	padding-top: 50%;
+	img{
+		@extend .posa;
+	}
 }
 
 /////////////////////////////////////////////////////////////////////

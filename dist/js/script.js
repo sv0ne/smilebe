@@ -23,6 +23,74 @@ $(document).ready(function () {
 
 	});
 
+	/////////////////// Скрипты для попапов ///////////////////////////
+
+var popup = $(".popup");
+var lastOpen = false;
+
+// Показать попапы при клике
+$(document).on("click", ".js-popup-open", function(e){
+	e.preventDefault();
+	if($(this).hasClass('disabled')){return false;}
+	openPopup($(this).data('popupid'));
+});
+
+// Открыть попап
+function openPopup(popupID) {
+	if(lastOpen !== popupID){
+		if(lastOpen !== false){close_popup();}
+		lastOpen = popupID;
+		$('#'+popupID).addClass('open');
+		bodyLock();
+	}else{
+		close_popup();
+	}
+}
+
+// Скрыть попапы при клике вне попапа и вне области вызова попапа
+$(document).on(isMobile ? "touchend" : "mousedown", function (e) {
+	var popupTarget = $(".js-popup-open").has(e.target).length;
+	// Если (клик вне попапа && попап имеет класс open)
+    if (popup.has(e.target).length === 0 && popup.hasClass('open') && popupTarget === 0 && $('.js-micropopup-lottery').has(e.target).length === 0){
+	    close_popup();
+	}
+});
+
+// Скрыть попап при нажатии на клавишу "Esc"
+$(document).on("keydown", function (e) {
+	if(e.which === 27){
+		close_popup();
+
+		// Закрыть слайдер отзывов 
+		if($activeSlidersReviews !== null){closeSliderReviews();}
+
+		// Закрыть сторисы
+		closeStories();
+	}
+});
+
+// Блокировка скролла при открытии попапа
+function bodyLock() {
+	$body.addClass('lock');
+}
+
+// Разблокировка скролла при закрытии попапа
+function bodyUnLock() {
+	$body.removeClass('lock');
+}
+
+// Закрыть popup
+function close_popup() {
+	$(".popup").removeClass('open');
+	bodyUnLock();
+	lastOpen = false;
+}
+
+// Закрыть попапа при нажатии на кнопки "Close"
+$(document).on("click", ".js-popup-close", function(e){
+	e.preventDefault();
+	close_popup();
+});;
 	// Инициируем обработчики валидации
 function initValidators() {
 	// Валидируем поля формы перед отправкой
@@ -175,6 +243,23 @@ $(document).on(isMobile ? "touchend" : "mousedown", function (e) {
 	}
 });
 
+///////////////////////////// Выпадающие списки ////////////////////////////////////
+
+// Клик по выпадающему списку
+$(document).on("click", ".js-dropdown-head", function(){
+	let dropdownItem = $(this).closest('.js-dropdown-item');
+	let dropdownBody = dropdownItem.find('.js-dropdown-body');
+	let isActive = dropdownItem.hasClass('active');
+	dropdownItem.toggleClass("active", !isActive);
+	isActive ? dropdownBody.slideUp(300) : dropdownBody.slideDown(300);
+});
+
+/** При инициализации страницы закрываем/открываем выпадающий список в зависимости от класса "active" */
+$(".js-dropdown-item").each(function(){
+	let isActive = $(this).hasClass('active');
+	isActive ? $(this).find('.js-dropdown-body').show() : $(this).find('.js-dropdown-body').hide();
+});
+
 ///////////////////////////////// Слайдеры ///////////////////////////////////////////
 
 $('.js-slider').slick({
@@ -197,6 +282,31 @@ $('.js-slider').slick({
 	]
 });
 
+//////////////////////// Скопировать ссылку в буфер обмена ////////////////////////// 
+
+// Копирование текста в буфер обмена
+function copy_in_buffer(txt) {
+	var $tmp = $("<textarea>");
+	$("body").append($tmp);
+	$tmp.val(txt).select();
+	document.execCommand("copy");
+	$tmp.remove();
+}
+
+// Клик на скопировать ссылку
+$(".js-copy-text").click(function(){
+	let txt = $(this).data('copy-text');
+	let msg = $(this).data('copy-message');
+	copy_in_buffer(txt);
+	showAlertPupup(msg);
+});
+
+// Показать всплывашку снизу поцентру экрана
+function showAlertPupup(message) {
+	$('.simpleMessage').remove();
+	$body.append('<div class="simpleMessage">'+message+'</div>');
+}
+
 //////////////////////////////////// Прочее /////////////////////////////////////////////
 
 $(".js-full-year").text(new Date().getFullYear()); // В фитере показываем текущий год
@@ -216,6 +326,13 @@ if($resendCodeText.length !== 0){
 		}
 	}, 1000);
 }
+
+// Редактировать персональную информацию
+$(".js-personal-edit").click(function(){
+	$(this).addClass('dn');
+	$(this).closest('.js-validation-form').find('input').removeAttr('disabled');
+	$(this).closest('.js-validation-form').find('.js-form-submit').removeClass('dn');
+});
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

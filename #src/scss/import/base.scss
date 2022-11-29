@@ -51,6 +51,8 @@ img, video{
 .mb-8{margin-bottom: 8px;}
 .ml-8{margin-left: 8px;}
 
+.mb-12{margin-bottom: 12px;}
+
 .m-16{margin: 16px;}
 .mt-16{margin-top: 16px;}
 .mr-16{margin-right: 16px;}
@@ -124,6 +126,13 @@ img, video{
 	white-space: nowrap;
 }
 
+.text-trim-3{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .text-through{
 	text-decoration: line-through;
 }
@@ -153,10 +162,10 @@ img, video{
 .w-100{width: 100%;}
 .h-100{height: 100%;}
 .m0-auto{margin: 0 auto;}
+.clear-both{clear: both;}
 
-.brad-24{
-	border-radius: 24px;
-}
+.brad-24{border-radius: 24px;}
+.brad-16{border-radius: 16px;}
 
 .maxW-100{
 	max-width: 100%;
@@ -166,10 +175,13 @@ img, video{
 
 .darkGray{color: $darkGray; fill: $darkGray; svg{fill: $darkGray} }
 .white{color: $white;}
+.green{color: $green;}
 .black{color: $black; fill: $black;}
 .red{color: $red;}
 
 .bg-lightGray{background-color: $lightGray;}
+.bg-green{background: $green !important;}
+.bg-black{background: $black;}
 .bg-gradient{background: $lg;}
 
 ///////////////////////// FLEX ////////////////////////////
@@ -239,5 +251,12 @@ img, video{
 }
 
 .fx-1{flex: 1;}
+
+.d-flex-md3-w{
+	display: flex;
+	@media (max-width:$md3+px) {
+	    flex-wrap: wrap;
+	}
+}
 
 ///////////////////////////////////////////////////////////

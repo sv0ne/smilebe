@@ -100,9 +100,15 @@
 		    display: none;
 		}
 	}
+	&__home{
+		@media (max-width:($md_872+px)) {
+			margin-left: 8px;
+			transform: translateY(-3px);
+		}
+	}
 }
 
-///////////////////////// useful //////////////////////////
+///////////////////////// products //////////////////////////
 
 .products{
 	&__row{
@@ -183,12 +189,188 @@
 	}
 	.slick-list{
 		@media (max-width:$md_608+px) {
-		    padding: 16px 32px 16px 0px;
+		    padding: 0px 24px 0px 0px;
 		}
 	}
 	&_withSlider{
 		.products__col{
 			flex: auto !important;
+		}
+	}
+}
+
+//////// Our story | FAQ | Contacts | Research | ... ///////
+
+.pageCreator{
+	padding: 16px 16px 0;
+	&__black{
+		background-color: $black;
+		border-radius: 24px;
+		padding: 48px 48px 96px;
+		@media (max-width:$md3+px) {
+		    padding: 32px 32px 64px;
+		}
+		@media (max-width:$md4+px) {
+		    padding: 16px;
+		}
+	}
+	&__white{
+		max-width: 78%;
+		margin: -48px auto 0;
+		border-radius: 24px;
+		box-shadow: $boxShadow;
+		background-color: $white;
+		padding: 48px;
+		@media (max-width:$md3+px) {
+			margin: -32px auto 0;
+		    padding: 32px;
+		    max-width: 88%;
+		}
+		@media (max-width:$md4+px) {
+		    margin: 32px 0 0 0;
+		    padding: 0px;
+		    max-width: none;
+		    box-shadow: none;
+		}
+	}
+}
+
+// >>>>>>>>>>> Личный кабинет
+
+.history{
+	svg{
+		fill: $white;
+	}
+	&__item{
+		border-radius: 12px;
+		text-decoration: none !important;
+		@media (max-width:$md1+px) {
+			border-radius: 0px;
+		}
+		&:hover{
+			box-shadow: $boxShadow;
+		}
+	}
+}
+
+.awards{
+	&__row{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 8px;
+	}
+	&__col{
+		padding: 8px;
+		flex: 0 0 33.333%;
+		@media (max-width:$md3+px) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__card{
+		height: 100%;
+		border-radius: 12px;
+		background-color: $green;
+		padding: 48px 32px 48px 128px;
+		overflow: hidden;
+		color: $white;
+		position: relative;
+		@media (min-width:$md3+px) and (max-width:1150+px) {
+			padding: 96px 32px 32px 32px;
+		}
+		@media (max-width:$md4+px) {
+		    padding-left: 64px;
+		}
+	}
+	&__decor{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 76px;
+		height: 100%;
+		z-index: 3;
+		border-right: 4px dashed $white;
+		@media (min-width:$md3+px) and (max-width:1150+px) {
+			width: 100%;
+			height: 76px;
+			border-right: none;
+			border-bottom: 4px dashed $white;
+		}
+		@media (max-width:$md4+px) {
+		    width: 48px;
+		}
+		&:after, &:before{
+			content: "";
+			position: absolute;
+			right: -22px;
+			width: 40px;
+			height: 40px;
+			background-color: $white;
+			border-radius: 50%;
+			@media (min-width:$md3+px) and (max-width:1150+px) {
+				bottom: -21px;
+				right: auto;
+			}
+		}
+		&:after{
+			top: -20px;
+			@media (min-width:$md3+px) and (max-width:1150+px) {
+				right: -20px;
+				top: auto;
+			}
+		}
+		&:before{
+			bottom: -20px;
+			@media (min-width:$md3+px) and (max-width:1150+px) {
+				bottom: -21px;
+				left: -20px;
+			}
+		}
+	}
+	&__bg{
+		position: absolute;
+		left: 22px;
+		top: 40px;
+		font-family: "Spectral-Bold-700";
+	    font-size: 300px;
+	    line-height: 48px;
+	    color: $white;
+	    opacity: 0.15;
+	    transform: rotate(-30deg);
+	    &.mod-2{
+	    	top: 88px;
+	    }
+	}
+}
+
+.easyEarn {
+	padding-bottom: 32px;
+	&__card{
+		border-radius: 24px;
+		background-color: $blue;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 55px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		.image-hw-80{
+			background-color: transparent;
+		}
+	}
+	&__tail{
+		fill: $blue;
+		position: absolute;
+		bottom: -43px;
+		left: 0;
+		width: 103px;
+		height: 45px;
+		@media (max-width:$md3+px) {
+		    width: 51.5px;
+			height: 22.5px;
+			bottom: -21.5px;
 		}
 	}
 }

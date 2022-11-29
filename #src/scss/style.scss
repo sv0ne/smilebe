@@ -19,12 +19,13 @@ $md_552: 551.98;
 $md4: 479.98;
 $fontfamily: "RedHatDisplay-Regular-400";
 
-
 $black: #000000;
 $white: #FFFFFF;
 $darkGray: #8F98A3;
 $lightGray: #F1F5F9;
 $red: #E63189;
+$green: #17CF7B;
+$blue: #0069FF;;
 
 $lg: linear-gradient(265.62deg, #BD02FE -0.04%, #6117FE 100.04%);
 $boxShadow: 0px 0px 40px rgba(69, 76, 84, 0.08);
@@ -60,6 +61,7 @@ $boxShadow: 0px 0px 40px rgba(69, 76, 84, 0.08);
 @import "import/base"; // Вертска переиспользуемых блоков
 @import "import/site"; // Последовательная верстка всего сайта
 @import "import/text"; // Для теста
+@import "import/_popups"; // Попапы
 @import "import/components"; // Для компонентов типа кнопки, ссылки, переключатели
 //@import "import/test"; // Для теста
 
