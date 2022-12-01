@@ -145,6 +145,15 @@ $(".js-personal-edit").click(function(){
 	$(this).closest('.js-validation-form').find('.js-form-submit').removeClass('dn');
 });
 
+// Кнопки play|stop управляют видео в рамках подителя .js-video-container
+$(".js-video-control").click(function(){
+	var $parent = $(this).closest('.js-video-container');
+	var isPlayingVideo = $parent.hasClass('js-video-active');
+	$(this).closest('.js-video-container').toggleClass("js-video-active", !isPlayingVideo);
+	$parent.find(".js-video").trigger(isPlayingVideo ? 'pause' : 'play');
+	$(this).toggleClass("active", isPlayingVideo);
+});
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 	$(document).on("click", function(e){

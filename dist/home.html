@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div class="wrapper nlc-mb-64">
-<header class="not-nlc">
+<header class="header not-nlc absolute">
 	<div class="bg-gradient p-8 ta-c">
 		<p class="bold white">Save 10% for the first purchase with promocode: TLNEWYEAR2022 </p>
 	</div>
@@ -57,6 +57,36 @@
 	</div>
 </header>
 
+	<!-- First screen -->
+	<div class="fScreen js-video-container js-video-active">
+		<div class="fScreen__body">
+			<div class="container">
+				<div class="fScreen__row">
+					<div class="fScreen__col">
+						<div class="fScreen__text">
+							<p class="text-huge">Smile brighter with Smilbe</p>
+							<p>If your dentist uses it, so do we. Every product we make puts professional-quality ingredients in your hands, to help you be your own version of perfect.</p>
+							<a href="" class="btn btn_white">Shop smilebe solution</a>
+						</div>
+					</div>
+					<div class="fScreen__col">
+						<div class="fScreen__video">
+							<video class="js-video" src="video/01.mp4" autoplay muted loop playsinline></video>
+							<button class="fScreen__control btnControl js-video-control svgWithState">
+								<svg class="w-24">
+									<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
+									<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fScreen__bg posa">
+			<video class="posa js-video" src="video/01.mp4" autoplay muted loop playsinline></video>
+		</div>
+	</div>
 
 	<!-- Our products -->
 	<div class="container products products_withSlider">
@@ -170,7 +200,7 @@
 								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
 								<span class="products__btnText">Add to cart</span>
 							</span>
-							<span class="ml-32 d-inline-flex aic">
+							<span class="d-inline-flex aic">
 								<span class="text-medium">$149</span>
 								<span class="ml-8 text-through">$175</span>
 							</span>
@@ -212,26 +242,32 @@
 
 	<!-- before-after -->
 	<div class="container p-16">
-		<div class="bg-lightGray brad-24 row">
-			<div class="row p-8">
-				<div class="p-8 col-2">
-					<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
-						<img src="img/logo.svg" width="110" height="24" alt="">
-						<div class="mb-16">
+	<div class="bg-lightGray brad-24 row">
+		<div class="row p-8">
+			<div class="p-8 col-2">
+				<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
+					<img src="img/logo.svg" width="110" height="24" alt="">
+					<div class="nlc-mb-16">
+						
 							<p class="text-big">How whitening works</p>
 							<p>Tooth discolouration and staining are a result of various dyes and pigments attaching to the organic matter of your tooth. The process of lifting these stains is most commonly achieved by two methods: physical removal and chemical bleaching.</p>
-						</div>
+						
+						
+					</div>
+					
 						<a href="" class="btn btn_black md4-w-100">Read more about research</a>
-					</div>
+					
+					
 				</div>
-				<div class="p-8 col-2 f-jcc-aic">
-					<div class="p-32-md3-16">
-						<img class="maxW-100" src="img/content/before-after.png" alt="">
-					</div>
+			</div>
+			<div class="p-8 col-2 f-jcc-aic">
+				<div class="p-32-md3-16">
+					<img class="maxW-100" src="img/content/before-after.png" alt="">
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 	<!-- Our story -->
 	<div class="container p-16">

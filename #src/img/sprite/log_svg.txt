@@ -6,5 +6,10 @@ img/sprite/icons-sprite.svg#checkbox
 img/sprite/icons-sprite.svg#close
 img/sprite/icons-sprite.svg#facebook
 img/sprite/icons-sprite.svg#instagram
+img/sprite/icons-sprite.svg#minus
+img/sprite/icons-sprite.svg#pause
+img/sprite/icons-sprite.svg#play-2
+img/sprite/icons-sprite.svg#play
+img/sprite/icons-sprite.svg#plus
 img/sprite/icons-sprite.svg#tail
 img/sprite/icons-sprite.svg#tiktok

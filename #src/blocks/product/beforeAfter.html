@@ -1,0 +1,41 @@
+<div class="container p-16">
+	<div class="bg-lightGray brad-24 row">
+		<div class="row p-8">
+			<div class="p-8 col-2">
+				<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
+					<img src="img/logo.svg" width="110" height="24" alt="">
+					<div class="nlc-mb-16">
+						@@if(page === "home"){
+							<p class="text-big">How whitening works</p>
+							<p>Tooth discolouration and staining are a result of various dyes and pigments attaching to the organic matter of your tooth. The process of lifting these stains is most commonly achieved by two methods: physical removal and chemical bleaching.</p>
+						}
+						@@if(page === "product"){
+							<p class="text-big">Just 30 minutes for whitening treatment</p>
+							<p>Each satchet comes with two strips, for your top and bottom teeth. Firmly apply a strip to both your upper & lower teeth. After 30 minutes, gently remove both strips from your teeth and say hello to your whitest & brightest smile yet.</p>
+						}
+					</div>
+					@@if(page === "home"){
+						<a href="" class="btn btn_black md4-w-100">Read more about research</a>
+					}
+					@@if(page === "product"){
+						<button class="btn btn_black jcsb md4-w-100">
+							<span class="d-inline-flex">
+								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="products__btnText">Add to cart</span>
+							</span>
+							<span class="d-inline-flex aic btn__price">
+								<span class="text-medium">$149</span>
+								<span class="ml-8 text-through">$175</span>
+							</span>
+						</button>
+					}
+				</div>
+			</div>
+			<div class="p-8 col-2 f-jcc-aic">
+				<div class="p-32-md3-16">
+					<img class="maxW-100" src="img/content/before-after.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -4,7 +4,153 @@
 	"title": "Smilebe"
 })
 <body>
-	@@include('blocks/common/header.html')
+	@@include('blocks/common/header.html', {
+		"page": "product"
+	})
+
+	<!-- demoVideo -->
+	<div class="demoVideo container p-16 js-video-container js-video-active">
+		<div class="demoVideo__body">
+			<div class="demoVideo__video posa">
+				<video class="js-video" src="video/02.mp4" autoplay muted loop playsinline></video>
+			</div>
+			<div class="demoVideo__text posa">
+				<div class="f-jcsb-aic mb-16">
+					<img src="img/logo.svg" width="110" height="24" alt="">
+					<button class="demoVideo__control js-video-control btnControl svgWithState">
+						<svg class="w-24">
+							<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
+							<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
+						</svg>
+					</button>
+				</div>
+				<div>
+					<p class="text-big mb-16">Created by dentists for safe and effective whitening</p>
+					<p>Created by dentists, our Teeth Whitening Strips have been specifically designed to effectively and safely whiten your teeth with minimal sensitivity.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Ingredients -->
+	<div class="container">
+		<div class="p-16 maxW-655">
+			<p class="text-big mb-16">Three powerful ingredients, one advanced formula</p>
+			<p class="darkGray">After years of research and development, we’ve created a whitening formula that combines groundbreaking performance with expert level formulation.</p>
+		</div>
+		<div class="flexBlock-v5">
+			<div class="flexBlock-v5__col">
+				<div class="card-v4 mod-v2">
+					<img src="img/ingredients/01.png" alt="">
+					<p class="text-large">Strengthening</p>
+					<p>Hydroxyapatite (HAp) rebuilds the protective layer of your teeth, and replaces lost minerals from the tooth surface.</p>
+				</div>
+			</div>
+			<div class="flexBlock-v5__col">
+				<div class="card-v4 mod-v2">
+					<img src="img/ingredients/02.png" alt="">
+					<p class="text-large">Whitening</p>
+					<p>Phthalimidoperoxycaproicacid (PAP) is clinically proven to effectively whiten teeth without causing sensitivity or gum irritation.</p>
+				</div>
+			</div>
+			<div class="flexBlock-v5__col">
+				<div class="card-v4 mod-v2">
+					<img src="img/ingredients/03.png" alt="">
+					<p class="text-large">Protecting</p>
+					<p>Potassium Citrate helps relieve pre-existing sensitivity, and provides long-term protection from external stimuli that cause discomfort.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- before-after -->
+	@@include('blocks/product/beforeAfter.html', {
+		"page": "product"
+	})
+
+	<!-- Smilebe in the numbers -->
+	<div class="container">
+		<p class="text-big p-16">Smilebe in the numbers</p>
+		<div class="flexBlock-v5">
+			<div class="flexBlock-v5__col">
+				<div class="card-v4">
+					<img src="img/icon/star.svg" alt="">
+					<p class="text-big">4.95</p>
+					<p>average rating according to customers reviews.</p>
+				</div>
+			</div>
+			<div class="flexBlock-v5__col">
+				<div class="card-v4">
+					<img src="img/icon/fire.svg" alt="">
+					<p class="text-big">1000+</p>
+					<p>people are interested of our product every day.</p>
+				</div>
+			</div>
+			<div class="flexBlock-v5__col">
+				<div class="card-v4">
+					<img src="img/icon/reload.svg" alt="">
+					<p class="text-big">98%</p>
+					<p>of customers are coming back. That means smilebe is a high quality product, which helps people.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- cost -->
+	<div class="container p-16">
+		<div class="cost">
+			<div class="cost__row">
+				<div class="cost__col">
+					<div class="diagram">
+						<div class="diagram__background">
+							<div class="diagram__line"></div>
+							<div class="diagram__line"></div>
+							<div class="diagram__line"></div>
+							<div class="diagram__line"></div>
+							<div class="diagram__line"></div>
+							<div class="diagram__line"></div>
+						</div>
+						<div class="diagram__row">
+							<div class="diagram__col">
+								<div class="diagram__content diagram__white">
+									<div class="diagram__logo">
+										<div class="posa f-jcc-aic"><img src="img/cost.svg" alt=""></div>
+									</div>
+									<div class="p-24">
+										<p>Dantist teeth whitening</p>
+										<p class="text-large mt-16">Reach $1000</p>
+									</div>
+								</div>
+							</div>
+							<div class="diagram__col">
+								<div class="diagram__content diagram__black">
+									<div class="diagram__logo">
+										<div class="posa f-jcc-aic"><img src="img/logo_white.svg" alt=""></div>
+									</div>
+									<div class="p-24 white">
+										<p>Smilebe maximum whitening bundle</p>
+										<p class="mt-16 f-aic">
+											<span class="text-large">$149</span>
+											<span class="ml-8 text-through">$175</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cost__col">
+					<div class="cost__text nlc-mb-16">
+						<p class="text-big">Same result for less money and without pain</p>
+						<p>As with any dental procedure, the cost of whitening can fluctuate considerably depending on the type of whitening, the specifics involved with your treatment and where it is performed. Dental insurance offers no coverage for the cosmetic procedure, meaning you are responsible for 100 percent of the cost.</p>
+						<p>The average cost of in-office teeth whitening is approximately $650 per visit.</p>
+						<p>The average cost of at-home whitening using over-the-counter whitening products ranges from $20 to $100.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- FAQ -->
 	@@include('blocks/product/faq.html', {

@@ -7,7 +7,12 @@
 	align-items: center;
 	justify-content: center;
 	@extend .text-default-bold;
-
+	&__price{
+		margin-left: 32px;
+		@media (max-width:$md4+px) {
+		    margin-left: 8px;
+		}
+	}
 	&:hover{
 		opacity: 0.8;
 		text-decoration: none;
@@ -27,6 +32,9 @@
 	}
 	&.jcsb{
 		justify-content: space-between;
+	}
+	@media (max-width:$md4+px) {
+	    padding: 16px;
 	}
 }
 
@@ -104,6 +112,21 @@ button.btn-2:hover, a.btn-2:hover{
 			&.btn-prev{ left: 28px; }
 		    &.btn-next{ right: 28px; }
 		}
+	}
+}
+
+.btnControl{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+	z-index: 3;
+	background-color: transparent;
+	border-radius: 99px;
+	background: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	svg{
+		fill: $white;
 	}
 }
 
@@ -240,6 +263,58 @@ button.btn-2:hover, a.btn-2:hover{
 	}
 }
 
+// Убрать стрелки у input[type="number"]
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputPlusminus{
+	display: flex;
+	input{
+		text-align: center;
+		border: 2px solid $lightGray;
+		margin: 0;
+		max-width: 80px;
+		border-radius: 0px;
+		outline: none;
+		&:focus{
+			outline: none;
+		}
+		@extend .text-default;
+	}
+	button{
+		padding: 8px;
+		background-color: $lightGray;
+		display: flex;
+		color: $white;
+		font-size: 15px;
+		line-height: 18px;
+		border-radius: 8px 0px 0px 8px;
+		&:last-child{
+			border-radius: 0px 8px 8px 0px;
+		}
+		svg{
+			fill: $black;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&.disabled{
+		button{
+			cursor: default;
+			svg{
+				fill: $darkGray;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+
 /////////////////////////// Списки ///////////////////////////////
 
 ul.list{
@@ -328,7 +403,7 @@ ol.list{
 	  		margin-left: 96px;
 	  	}
 	  	@media (max-width:($md_608+px)) {
-	  		font-family: "RedHatDisplay-Bold-700";
+	  		font-family: "NunitoSans-Bold-700";
   			font-size: 18px;
 	  	}
 	}
@@ -352,6 +427,27 @@ ol.list{
 	padding: 24px;
 	@media (max-width:($md4+px)) {
 	    padding: 16px;
+	}
+}
+
+.card-v4{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 24px;
+	background-color: $lightGray;
+	border-radius: 24px;
+	height: 100%;
+	text-align: center;
+	@extend .nlc-mb-24;
+	&.mod-v2{
+		align-items: flex-start;
+		text-align: left;
+		img{
+			max-width: 100%;
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -423,6 +519,18 @@ ol.list{
 		padding: 8px 16px;
 		flex: 1 1 50%;
 		min-width: 255px;
+	}
+}
+
+.flexBlock-v5{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 8px 0px;
+	//margin: 8px -16px;
+	&__col{
+		flex: 1 1 33.333%;
+		padding: 8px 16px;
+		min-width: 275px;
 	}
 }
 
@@ -541,6 +649,12 @@ ol.list{
 	}
 }
 
+.label-4{
+	border-radius: 12px;
+	background-color: $lightGray;
+	padding: 16px;
+}
+
 .link{
 	text-decoration: underline;
 	&:hover{
@@ -557,6 +671,14 @@ ol.list{
 	padding-top: 50%;
 	img{
 		@extend .posa;
+	}
+}
+
+.svgWithState{
+	.st-2{visibility: hidden; opacity: 0;}
+	&.active{
+		.st-1{visibility: hidden; opacity: 0;}
+		.st-2{visibility: visible; opacity: 1;}
 	}
 }
 

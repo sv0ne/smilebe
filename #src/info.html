@@ -4,10 +4,114 @@
 	"title": "Smilebe"
 })
 <body>
-	@@include('blocks/common/header.html')
+	@@include('blocks/common/header.html', {
+		"page": "none"
+	})
 
-	
-	
+	<div class="container">
+		<div class="p-16">
+			<p class="text-big">Заказ №18105</p>
+			<p class="text-small darkGray">Ваш заказ принят</p>
+		</div>
+		<div class="cart__row">
+			<div class="cart__col mod-col-1 nlc-mb-24">
+				<div class="cartProduct">
+					<div class="cartProduct__col">
+						<div class="image-hw-80">
+							<img loading="lazy" src="img/_placeholder/01.jpg" alt="">
+						</div>
+					</div>
+					<div class="cartProduct__row">
+						<div class="cartProduct__col mod-col-2">
+							<p class="text-large mb-4">Whitening Strips</p>
+							<p>Подводка и штамп для стрелок</p>
+						</div>
+						<div class="cartProduct__col mod-col-3">
+							<div class="inputPlusminus disabled">
+								<!-- Тут кнопки не кликабельные -->
+								<button type="button">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#minus"></use></svg>
+								</button>
+								<input type="number" name="count" autocomplete="off" value="1" readonly>
+								<button type="button">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#plus"></use></svg>
+								</button>
+							</div>
+						</div>
+						<div class="cartProduct__col mod-col-4 flex-1 ws-n">
+							<p class="bold mb-4 ta-c">16 084 ₽</p>
+							<p class="darkGray ta-c">13 042 ₽/шт.</p>
+						</div>
+					</div>
+				</div>
+				<p class="text-large">Информация о получателе</p>
+				<div class="nlc-mb-16">
+					<div class="f-jcsb-aic">
+						<p>Дата заказа</p>
+						<p>	21.01.2022 в 11:25</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Имя</p>
+						<p>Username</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Фамилия</p>
+						<p>User2ndname</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Email</p>
+						<p>email@email.com</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Телефон</p>
+						<p>+77777777777</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Адрес доставки</p>
+						<p>г. Москва, Красная пл, д.1</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Комментарий</p>
+						<p>Пример комментария</p>
+					</div>
+				</div>
+			</div>
+			<div class="cart__col mod-col-2">
+				<div class="boxShadow brad-16 p-16 nlc-mb-16">
+					<div class="f-jcsb-aic">
+						<p>Товары, 2 шт.</p>
+						<p>6 084 ₽ </p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p>Скидка</p>
+						<p class="red">1,2 ₽</p>
+					</div>
+					<div>
+						<div class="f-jcsb-aic">
+							<p>Доставка</p>
+							<p class="green">Бесплатная</p>
+						</div>
+						<p class="darkGray text-small mt-4">Бесплатная при покупке от 1 800 ₽</p>
+					</div>
+					<div class="f-jcsb-aic">
+						<p class="text-large">Итого</p>
+						<p class="text-large">5 706 ₽ </p>
+					</div>
+					<div class="label-4">
+						<p class="text-small">Вы можете оплатить заказ сейчас картой или при получении наличными или картой</p>
+					</div>
+					<button class="btn btn_black w-100">Оплатить картой</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Рекомендации -->
+	@@include('blocks/product/slider.html', {
+		"title": "Вдруг вы что-то забыли..?",
+		"hasLink": "false",
+		"withSlider": "true"
+	})
 	@@include('blocks/common/footer.html')
 </body>
 </html>

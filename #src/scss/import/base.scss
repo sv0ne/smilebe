@@ -1,7 +1,7 @@
 ///////////////////// ТЕГИ: Default ///////////////////////
 
 body{
-	font-family: "RedHatDisplay-Regular-400";
+	font-family: "NunitoSans-Regular-400";
 	font-size: 18px;
 	line-height: 130%;
 	color: $black;
@@ -59,6 +59,8 @@ img, video{
 .mb-16{margin-bottom: 16px;}
 .ml-16{margin-left: 16px;}
 
+.mb-24{margin-bottom: 24px;}
+
 .mb-32{margin-bottom: 32px;}
 .ml-32{margin-left: 32px;}
 .mb-48{margin-bottom: 48px;}
@@ -67,6 +69,7 @@ img, video{
 .p-8{padding: 8px;}
 .p-12{padding: 12px;}
 .p-16{padding: 16px;}
+.p-24{padding: 24px;}
 .p-0-16{padding: 0 16px;}
 .p-16-0{padding: 16px 0;}
 .p-16-8{padding: 16px 8px;}
@@ -85,6 +88,10 @@ img, video{
 
 .nlc-mb-32 > *:not(:last-child):not(.not-nlc){
 	margin-bottom: 32px;
+}
+
+.nlc-mb-24 > *:not(:last-child):not(.not-nlc){
+	margin-bottom: 24px;
 }
 
 .nlc-mb-16 > *:not(:last-child){
@@ -117,7 +124,7 @@ img, video{
 }
 
 .bold{
-	font-family: "RedHatDisplay-Bold-700";
+	font-family: "NunitoSans-Bold-700";
 }
 
 .text-trim{
@@ -167,9 +174,8 @@ img, video{
 .brad-24{border-radius: 24px;}
 .brad-16{border-radius: 16px;}
 
-.maxW-100{
-	max-width: 100%;
-}
+.maxW-100{max-width: 100%;}
+.maxW-655{max-width: 655px;}
 
 //////////////// COLOR, FILL, BACKGROUND //////////////////
 
@@ -183,6 +189,8 @@ img, video{
 .bg-green{background: $green !important;}
 .bg-black{background: $black;}
 .bg-gradient{background: $lg;}
+
+.boxShadow{box-shadow: $boxShadow;} 
 
 ///////////////////////// FLEX ////////////////////////////
 

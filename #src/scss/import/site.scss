@@ -1,5 +1,15 @@
 ////////////////////////// header //////////////////////////
 
+.header{
+	&.absolute{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+	}
+}
+
 .nav{
 	&__body{
 		display: flex;
@@ -69,7 +79,7 @@
 	&__burger{
 		width: 40px;
 		height: 40px;
-		background-color: $white;
+		background-color: transparent;
 		position: relative;
 		span{
 			position: absolute;
@@ -107,6 +117,109 @@
 		}
 	}
 }
+
+
+//////////////////////// First screen ////////////////////////
+
+.fScreen {
+	position: relative;
+	&__body{
+		min-height: 100vh;
+		padding-top: 128px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		z-index: 3;
+		backdrop-filter: blur(100px);
+	}
+	&__row {
+		padding: 8px;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+	}
+	&__col {
+		padding: 8px;
+		flex: 0 0 50%;
+		@media (max-width:$md2+px) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__text{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		> *:not(:last-child){
+			margin-bottom: 32px;
+		}
+		@media (max-width:$md2+px) {
+		    align-items: center;
+		    text-align: center;
+		    margin-bottom: 16px;
+		    > *:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+	}
+	&__video {
+		position: relative;
+		video,img{
+			border-radius: 16px;
+			max-width: 100%;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__control{
+		left: calc(50% - 20px);
+		bottom: 16px;
+	}
+	&__bg{
+		z-index: 2;
+	}
+}
+
+//////////////////////// demoVideo //////////////////////////
+
+.demoVideo {
+	&__body {
+		position: relative;
+		padding-top: 56.21%;
+		@media (max-width:$md3+px) {
+		    padding-top: 0;
+		}
+	}
+	&__video {
+		video{
+			border-radius: 16px;
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__text{
+		padding: 48px;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		p{
+			max-width: 607px;
+		}
+		@media (max-width:$md3+px) {
+		    padding: 16px;
+		    position: relative;
+		    min-height: 56.21vw;
+		}
+	}
+	&__control{
+		position: relative;
+	}
+}
+
 
 ///////////////////////// products //////////////////////////
 
@@ -419,6 +532,122 @@
 	}
 }
 
+////////////////////////// Корзина /////////////////////////////
+
+.cart{
+	&__row {
+		display: flex;
+		@media (max-width:$md3+px) {
+		    display: block;
+		}
+	}
+	&__col {
+		padding: 16px;
+		&.mod-col-1{
+			flex: 1;
+		}
+		&.mod-col-2{
+			flex: 0 0 392px;
+		}
+	}
+	&__btnSec{
+		@media (max-width:$md4+px) {
+		    margin: 16px 0 0 0;
+		}
+	}
+}
+
+.cartProduct {
+	border: 2px solid $lightGray;
+	border-radius: 12px;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	&__row{
+		flex: 1;
+		display: flex;
+		align-items: center;
+		@media (max-width:1080+px) {
+		    flex-wrap: wrap;
+		}
+	}
+	&__col {
+		padding: 12px;
+		&.mod-col-2{
+			flex: 1;
+			@media (max-width:1080+px) {
+				flex: 0 0 100%;
+			}
+		}
+		&.mod-col-3{
+			@media (min-width:$md3+px) and (max-width:966+px), (max-width:600+px) {
+				flex: 0 0 100%;
+			}
+		}
+		&.mod-col-4{
+			flex: 0 0 140px !important;
+			@media (min-width:$md3+px) and (max-width:966+px), (max-width:600+px) {
+				.ta-c{
+					text-align: left;
+				}
+			}
+		}
+	}
+	.image-hw-80{
+		border-radius: 12px;
+		overflow: hidden;
+	}
+}
+
+.imageComm{
+	overflow: hidden;
+	img{
+		min-height: 100px;
+		width: 100%;
+	}
+}
+
+.cartSet{
+	border: 2px solid $lightGray;
+	border-radius: 24px;
+	.slick-slider{
+		width: 360px;
+		@media (max-width:$md3+px) {
+		    width: 100%;
+		}
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.slick-track{
+		display: flex;
+	}
+}
+
+.rowInputs{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -16px 16px -16px;
+	&__col{
+		padding: 0 16px;
+		flex: 1;
+		min-width: 250px;
+		margin-bottom: 16px;
+	}
+}
+
+
+.cartFixed{
+	&.active{
+		z-index: 205;
+		background-color: $white;
+		margin: 0;
+		position: fixed;
+		bottom: 16px;
+		left: 16px;
+		right: 16px;
+	}
+}
 
 /////////////////////// before-after //////////////////////
 
@@ -426,6 +655,108 @@
 	&__text{
 		@media (max-width:$md4+px) {
 			padding-bottom: 16px !important;
+		}
+	}
+}
+
+/////////////////////////// cost ////////////////////////////
+
+.cost {
+	background-color: $lightGray;
+	border-radius: 24px;
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__col {
+		flex: 0 0 50%;
+		@media (max-width:$md2+px) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__text{
+		padding: 32px;
+		@media (max-width:$md3+px) {
+		    padding: 16px;
+		}
+	}
+}
+
+.diagram{
+	position: relative;
+	height: 100%;
+	padding: 100px 24px 0 24px;
+	@media (max-width:$md3+px) {
+	    padding: 100px 8px 0 8px;
+	}
+	&__background{
+		@extend .posa;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	&__line{
+		height: 2px;
+		background: rgba(143, 152, 163, 0.2);
+	}
+	&__row{
+		position: relative;
+		height: 100%;
+		z-index: 2;
+		
+		display: flex;
+		align-items: flex-end;
+	}
+	&__col{
+		padding: 8px 8px 0px 8px;
+		flex: 0 0 50%;
+	}
+	&__content{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		border-radius: 16px 16px 0px 0px;
+		@media (max-width:$md4+px) {
+		    .p-24{
+		    	padding: 16px;
+		    }
+		}
+	}
+	&__logo{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 44%;
+		padding-top: 44%;
+		background-color: $red;
+		border-radius: 99px;
+		transform: translate(-50%, -50%);
+		@media (max-width:$md3+px) {
+		    width: 54%;
+			padding-top: 54%;
+		}
+		img{
+			max-width: 70%;
+		}
+	}
+	&__black{
+		height: 200px;
+		background-color: $black;
+		@media (min-width:$md_552+px) and (max-width:$md3+px) {
+		    height: 250px;
+		}
+	}
+	&__white{
+		height: 400px;
+		background-color: $white;
+		@media (min-width:$md_552+px) and (max-width:$md3+px) {
+		    height: 500px;
+		}
+		.diagram__logo{
+			background-color: $orange;
 		}
 	}
 }

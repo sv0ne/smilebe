@@ -4,7 +4,9 @@
 	"title": "Smilebe"
 })
 <body>
-	@@include('blocks/common/header.html')
+	@@include('blocks/common/header.html', {
+		"page": "none"
+	})
 
 	@@include('blocks/product/slider.html', {
 		"title": "Smilebe products",
