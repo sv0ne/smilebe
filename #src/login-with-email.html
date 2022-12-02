@@ -15,24 +15,21 @@
 		<div class="f-jcc-aic">
 			<form class="auth__body card-v1 nlc-mb-32 js-validation-form" action="" method="post">
 				<div class="d-flex">
-					<a href="login.html" class="btn-2 btn-2_gray mr-16">Вход</a>
-					<a href="registration.html" class="btn-2 btn-2_black">Регистрация</a>
+					<a href="login.html" class="btn-2 btn-2_black mr-16">Вход</a>
+					<a href="registration.html" class="btn-2 btn-2_gray">Регистрация</a>
 				</div>
-				<p>Введите номер телефона, который будет использоваться для входа в аккаунт.</p>
+				<p>Введите адрес почты, указанный при регистрации. Мы отправим вам сообщение с кодом, по которому вы сможете войти.</p>
 				<div class="js-validation-block">
 					<div class="inputText">
-						<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" placeholder=" ">
-						<label>Телефон</label>
+						<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
+						<label>Email</label>
 					</div>
 					<p class="js-validation-error mt-4 error"></p>
 				</div>
-				<div class="auth__line">
-					<div></div>
-					<div class="active"></div>
-				</div>
 				<div class="f-jcc-aic">
-					<button class="btn btn_black js-form-submit">Далее</button>
+					<button class="btn btn_black js-form-submit">Отправить код</button>
 				</div>
+				<a href="login-with-tel.html" class="link">Войти с помощью номера телефона</a>
 			</form>
 		</div>
 	</div>

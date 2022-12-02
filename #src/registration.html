@@ -15,7 +15,7 @@
 		<div class="f-jcc-aic">
 			<form class="auth__body card-v1 nlc-mb-32 js-validation-form" action="" method="post">
 				<div class="d-flex">
-					<a href="login.html" class="btn-2 btn-2_gray mr-16">Вход</a>
+					<a href="login-with-tel.html" class="btn-2 btn-2_gray mr-16">Вход</a>
 					<a href="registration.html" class="btn-2 btn-2_black">Регистрация</a>
 				</div>
 				<div class="js-validation-block">
@@ -27,17 +27,42 @@
 				</div>
 				<div class="js-validation-block">
 					<div class="inputText">
-						<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
-						<label>Email</label>
+						<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" placeholder=" ">
+						<label>Телефон (нужен при заказе)</label>
 					</div>
 					<p class="js-validation-error mt-4 error"></p>
 				</div>
-				<div class="auth__line">
-					<div class="active"></div>
-					<div></div>
+				<div class="js-validation-block">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
+						<label>Email*</label>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div class="js-validation-block js-showHidePasswordParent">
+					<div class="inputText">
+						<input class="_validate js-password-match" data-validation-type='["req", "password"]' type="password" autocomplete="off" name="password" placeholder=" ">
+						<label>Пароль*</label>
+						<svg class="js-showHidePassword showHidePassword w-24 svgWithState">
+							<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#show-on"></use>
+							<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#show-off"></use>
+						</svg>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div class="js-validation-block js-showHidePasswordParent">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req", "passwordMatch"]' type="password" autocomplete="off" name="passwordMatch" placeholder=" ">
+						<label>Повторите пароль*</label>
+						<svg class="js-showHidePassword showHidePassword w-24 svgWithState">
+							<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#show-on"></use>
+							<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#show-off"></use>
+						</svg>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
 				</div>
 				<div class="f-jcc-aic">
-					<button class="btn btn_black js-form-submit">Далее</button>
+					<button class="btn btn_black js-form-submit">Отправить код</button>
 				</div>
 				<div class="inputCheckbox">
 				  	<input type="checkbox" name="newsSubscribe" id="newsSubscribe">

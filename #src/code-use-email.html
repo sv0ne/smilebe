@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/common/head.html',{
+	"title": "Smilebe"
+})
+<body>
+	@@include('blocks/common/header.html', {
+		"page": "none"
+	})
+	<div class="container">
+		<div class="p-16">
+			<p class="text-big mb-8">Вход или регистрация</p>
+			<p class="darkGray">Войдите если у вас уже есть аккаунт, или зарегистрируйтесь, если вы новый пользователь</p>
+		</div>
+		<div class="f-jcc-aic">
+			<form class="auth__body card-v1 nlc-mb-32 js-validation-form" action="" method="post">
+				<div class="d-flex">
+					<a href="login.html" class="btn-2 btn-2_black mr-16">Вход</a>
+					<a href="registration.html" class="btn-2 btn-2_gray">Регистрация</a>
+				</div>
+				<p>Введите адрес почты, указанный при регистрации. Мы отправим вам сообщение с кодом, по которому вы сможете войти.</p>
+				<div class="js-validation-block not-nlc mb-8">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" value="test@email.com" disabled placeholder=" ">
+						<label>Email</label>
+						<a class="inputText__link" href="login-with-email.html">Изменить</a>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div>
+					<p>Не пришло сообщение?</p>
+					<p class="darkGray text-small js-rest-time-exist">Вы можете отправить код повторно, через <span class="js-rest-time-resend-code">59</span> секунд.</p>
+					<p class="darkGray text-small js-rest-time-missing dn">Вы можете <a href="code-with-email.html" class="link text-small">отправить код повторно</a></p>
+				</div>
+				<div class="js-validation-block">
+					<div class="inputText">
+						<input class="_validate" data-validation-type='["req"]' type="text" autocomplete="off" name="code" placeholder=" ">
+						<label>Введите код из сообщения</label>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div class="f-jcc-aic">
+					<button class="btn btn_black js-form-submit">Войти</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	@@include('blocks/common/footer.html')
+</body>
+</html>

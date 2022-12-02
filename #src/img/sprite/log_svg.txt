@@ -11,6 +11,8 @@ img/sprite/icons-sprite.svg#pause
 img/sprite/icons-sprite.svg#play
 img/sprite/icons-sprite.svg#play_2
 img/sprite/icons-sprite.svg#plus
+img/sprite/icons-sprite.svg#show-off
+img/sprite/icons-sprite.svg#show-on
 img/sprite/icons-sprite.svg#star-fill
 img/sprite/icons-sprite.svg#star
 img/sprite/icons-sprite.svg#tail

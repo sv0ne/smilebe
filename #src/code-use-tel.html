@@ -19,15 +19,28 @@
 					<a href="registration.html" class="btn-2 btn-2_gray">Регистрация</a>
 				</div>
 				<p>Введите номер телефона, указанный при регистрации. Мы отправим вам сообщение с кодом, по которому вы сможете войти.</p>
+				<div class="js-validation-block not-nlc mb-8">
+					<div class="inputText">
+						<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" value="+365698789594" disabled placeholder=" ">
+						<label>Телефон</label>
+						<a class="inputText__link" href="login-with-tel.html">Изменить</a>
+					</div>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<div>
+					<p>Не пришло сообщение?</p>
+					<p class="darkGray text-small js-rest-time-exist">Вы можете отправить код повторно, через <span class="js-rest-time-resend-code">59</span> секунд.</p>
+					<p class="darkGray text-small js-rest-time-missing dn">Вы можете <a href="code-with-tel.html" class="link text-small">отправить код повторно</a></p>
+				</div>
 				<div class="js-validation-block">
 					<div class="inputText">
-						<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" placeholder=" ">
-						<label>Телефон</label>
+						<input class="_validate" data-validation-type='["req"]' type="text" autocomplete="off" name="code" placeholder=" ">
+						<label>Введите код из сообщения</label>
 					</div>
 					<p class="js-validation-error mt-4 error"></p>
 				</div>
 				<div class="f-jcc-aic">
-					<button class="btn btn_black js-form-submit">Отправить код</button>
+					<button class="btn btn_black js-form-submit">Войти</button>
 				</div>
 			</form>
 		</div>
