@@ -113,6 +113,46 @@ button.btn-2:hover, a.btn-2:hover{
 		    &.btn-next{ right: 28px; }
 		}
 	}
+	&.btnPlayVideo{
+		position: absolute;
+		z-index: 4;
+		top: calc(50% - 20px);
+		left: calc(50% - 20px);
+		padding: 10px;
+		background: rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		svg{
+			fill: $white;
+			transform: translate(1px, 1px);
+		}
+	}
+	&.feedbackBtn{
+		z-index: 20;
+		position: absolute;
+		top: calc(50% - 24px);
+	    left: 24px;
+	    opacity: 1 !important;
+	    visibility: visible !important;
+		&.btn-close{
+			top: 16px;
+			left: auto;
+			right: 16px;
+		}
+		&.btn-prev{
+			transform: rotate(-90deg);
+			&:hover{
+				transform: rotate(-90deg) scale(1.2);
+			}
+		}
+		&.btn-next{
+			left: auto;
+			right: 24px;
+			transform: rotate(90deg);
+			&:hover{
+				transform: rotate(90deg) scale(1.2);
+			}
+		}
+	}
 }
 
 .btnControl{
@@ -681,5 +721,48 @@ ol.list{
 		.st-2{visibility: visible; opacity: 1;}
 	}
 }
+
+.userImage {
+	border-radius: 99px;
+	flex: 0 0 40px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	span{
+		background-color: $red;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		@extend .text-large;
+	}
+	img{
+		@extend .posa;
+	}
+	img + span{
+		display: none;
+	}
+}
+
+.rating{
+	margin-left: 8px;
+	display: flex;
+	padding: 2px 0;
+	> *:not(:last-child){
+		margin-right: 8px;
+	}
+	svg{
+		width: 22px;
+		height: 22px;
+		fill: $black;
+	}
+}
+
 
 /////////////////////////////////////////////////////////////////////

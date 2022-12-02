@@ -307,6 +307,88 @@ function showAlertPupup(message) {
 	$body.append('<div class="simpleMessage">'+message+'</div>');
 }
 
+////////////////////////////// Блок отзывов //////////////////////////////////
+
+let $activeSlidersReviews = null;
+// Открыть слайдер с картинками отзывов
+$(".js-detect-grid .imageFeedback__item").click(function(){
+	if($activeSlidersReviews === null){
+		let $parent = $(this).closest('.js-detect-grid');
+		let index = $(this).index();
+
+		$parent.removeClass('imageFeedback').addClass("isSliderReviews");
+		$parent.find('video').prop('muted', false).prop('controls', true);
+		$body.addClass('lock');
+		$('.feedbackSliderControls').addClass('active');
+		$activeSlidersReviews = $parent;
+
+		$parent.slick({
+			prevArrow: $('.feedbackSliderControls .feedbackBtn.btn-prev'),
+			nextArrow: $('.feedbackSliderControls .feedbackBtn.btn-next'),
+			initialSlide: index
+		});
+		/*$parent.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			$parent.find('video').get(0).pause();
+		});*/
+	}
+});
+
+// Действие для закрытия слайдера
+$(".js-close-SliderReviews").click(function(){
+	closeSliderReviews();
+});
+
+// Действие для закрытия слайдера
+$(document).on("click", function(e){
+	if($activeSlidersReviews !== null && $(e.target).hasClass('imageFeedback__wrap')){
+		closeSliderReviews();
+	}
+});
+
+// Закрыть слайдер с картинками отзывов
+function closeSliderReviews() {
+	$activeSlidersReviews.slick('unslick');
+	$activeSlidersReviews.removeClass('isSliderReviews').addClass("imageFeedback");
+	let video = $activeSlidersReviews.find('video');
+	if(video.length !== 0){
+		video.prop('muted', true).prop('controls', false);
+		video.get(0).pause();
+	}
+	$('.feedbackSliderControls').removeClass('active');
+	$body.removeClass('lock');
+	$activeSlidersReviews = null;
+}
+
+// Узнать сколько картинок в отзывах и задать нужную grid-сетку
+$(".js-detect-grid").each(function(){
+	let countChild = $(this).children().length;
+	$(this).addClass("child-" + countChild);
+});
+
+let iterationsDetectVideoDuration = {count: 0, max: 25};
+
+// Узнать есть ли видосики в блоке с отзывами
+function detectDurationVideo() {
+	if(iterationsDetectVideoDuration.count > iterationsDetectVideoDuration.max){return false;}
+	iterationsDetectVideoDuration.count++;
+	$(".js-detect-grid .imageFeedback__item video").each(function(){
+		let duration = $(this)[0].duration.toFixed(0);
+		if(duration === "NaN"){
+			setTimeout(function() {detectDurationVideo();}, 1000);
+			return false;
+		}
+		let m = duration % 60;
+		let min = Math.floor(duration / 60);
+		let result = (min < 10 ? '0' : '') + min + ':' + (m < 10 ? '0' : '') + m;
+ 		let html = '<span class="imageFeedback__duration">'+result+'</span>';
+ 		html += '<span class="btnRound btnPlayVideo">';
+		html += '<svg class="w-16"><use xlink:href="img/sprite/icons-sprite.svg#play_2"/></svg>';
+		html += '</span>';
+ 		$(this).closest('.imageFeedback__wrap').append(html);
+ 	});
+}
+setTimeout(function() {detectDurationVideo();}, 10);
+
 //////////////////////////////////// Прочее /////////////////////////////////////////////
 
 $(".js-full-year").text(new Date().getFullYear()); // В фитере показываем текущий год
@@ -341,6 +423,21 @@ $(".js-video-control").click(function(){
 	$(this).closest('.js-video-container').toggleClass("js-video-active", !isPlayingVideo);
 	$parent.find(".js-video").trigger(isPlayingVideo ? 'pause' : 'play');
 	$(this).toggleClass("active", isPlayingVideo);
+});
+
+// Узнать сколько картинок в отзывах и задать нужную grid-сетку
+$(".js-detect-grid").each(function(){
+	let countChild = $(this).children().length;
+	$(this).addClass("child-" + countChild);
+});
+
+// Задаем рейтинг продукта в звездочках
+$(".js-rating").each(function(){
+	let rating = $(this).data('rating');
+	for(let i = 1; i < 6; i++){
+		let icon = i <= rating ? "star-fill" : "star";
+		$(this).append('<svg><use xlink:href="'+pathSprite+'#'+icon+'"/></svg>');
+	}
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////
