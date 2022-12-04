@@ -200,6 +200,91 @@ function detectDurationVideo() {
 }
 setTimeout(function() {detectDurationVideo();}, 10);
 
+//////////////////// Слайдер в начале страницы "СТРАНИЦА ТОВАРА" ////////////////////////
+
+// Узнать ID слайда с презентацией
+let slidePresentationID = $('.sliderBig__item .js-presentation-video').parent().index();
+
+/* Отследить инициализацию слайдера js-sliderBig. Чтобы избежать мигания картинок, до 
+   инициализации слайдера скрываем все слайды кроме первого */
+$('.js-sliderBig').on('init', function(event, slick){
+  $('.js-sliderBig').removeClass('preInit');
+});
+
+// Инициализация слайдера
+$('.js-sliderBig').slick({
+	prevArrow: $('.product .sliderBtn.btn-prev'),
+	nextArrow: $('.product .sliderBtn.btn-next'),
+	//autoplay: true,
+	//autoplaySpeed: 3500,
+});
+
+// Отслеживаем действие -> перелистывание слайда
+$('.js-sliderBig').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.js-scrollPreview .scrollPreview__item').removeClass('active');
+  $('.js-scrollPreview .scrollPreview__item:eq('+nextSlide+')').addClass('active');
+
+  /** Автоперелистывание слайдов в блоке превью слайдов */
+  if(w < BREAKPOINT_md2){
+  	  let scrollLeft = $('.js-scrollPreview').scrollLeft();
+	  let widthScroll = parseInt($('.js-scrollPreview').width());
+	  nextSlide = parseFloat(nextSlide);
+
+	  let startVisibility = scrollLeft;
+	  let endVisibility = scrollLeft + widthScroll;
+
+	  let leftItem = nextSlide * 96;
+	  let rightItem = (nextSlide * 96) + 80;
+
+	  let setScroll = false;
+	  if(rightItem > endVisibility){setScroll = rightItem - endVisibility + scrollLeft;}
+	  if(leftItem < startVisibility){setScroll = leftItem;}
+
+	  if(setScroll !== false){
+	  	$('.js-scrollPreview').animate({scrollLeft: setScroll}, 300);
+	  }
+  }else{
+  	  let scrollLeft = $('.js-scrollPreview').scrollTop();
+	  let widthScroll = parseInt($('.js-scrollPreview').height());
+	  nextSlide = parseFloat(nextSlide);
+
+	  let startVisibility = scrollLeft;
+	  let endVisibility = scrollLeft + widthScroll;
+
+	  let leftItem = nextSlide * 88;
+	  let rightItem = (nextSlide * 88) + 80;
+
+	  let setScroll = false;
+	  if(rightItem > endVisibility){setScroll = rightItem - endVisibility + scrollLeft;}
+	  if(leftItem < startVisibility){setScroll = leftItem;}
+
+	  if(setScroll !== false){
+	  	$('.js-scrollPreview').animate({scrollTop: setScroll}, 300);
+	  }
+  }
+  
+
+  // Логика автовоспроизведения видео
+  let $video = $(slick.$slides.get(nextSlide)).find('video');
+  let isSlideWithVideo = $video.length;
+  if(isSlideWithVideo === 1){
+  	$video.trigger('play');
+  }else{
+  	$('.sliderBig__item video').trigger('pause');
+  }
+});
+
+// Клик по слайду в превью блоке
+$(".js-scrollPreview .scrollPreview__item").click(function(){
+	var index = $(this).index();
+	$('.js-sliderBig').slick('goTo', index);
+});
+
+// Клик по "как пользоваться", тоесть открыть презентационное видео
+$(".js-view-presentation-video").click(function(){
+	$('.js-sliderBig').slick('goTo', slidePresentationID);
+});
+
 ///////////////////// Видео истории в блоке testimonials ////////////////////////////////
 
 const TIME_SLIDE_DURATION = 5000; // Длительность слайда с картинкой

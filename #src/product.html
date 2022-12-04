@@ -8,6 +8,186 @@
 		"page": "product"
 	})
 
+	<!-- breadcrumbs -->
+	<nav class="container breadcrumbs not-nlc">
+		<ul class="d-flex p-16" itemscope itemtype="https://schema.org/BreadcrumbList">
+			<li class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+				<a href="/" itemprop="item">
+					<span itemprop="name">Products</span>
+					<meta itemprop="position" content="0">
+				</a>
+			</li>
+			<li class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+				<a href="/razdel/" itemprop="item">
+					<span itemprop="name">Whitening</span>
+					<meta itemprop="position" content="1">
+				</a>
+			</li>
+			<li class="breadcrumbs__link" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+				<a href="/razdel/podrazdel" itemprop="item">
+					<span itemprop="name">Strips</span>
+					<meta itemprop="position" content="2">
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Product -->
+	<div class="product">
+		<div class="container">
+			<div class="product__row">
+				<div class="product__col">
+					<div class="horizontalScroller product__imager">
+						<div class="sliderBig">
+							<button class="btnRound btnRound_black sliderBtn btn-prev">
+								<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+							</button>
+							<button class="btnRound btnRound_black sliderBtn btn-next">
+								<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+							</button>
+							<div class="sliderBig__body js-sliderBig preInit">
+								<div class="sliderBig__item">
+									<img width="600" height="488" data-lazy="img/_placeholder/other/01.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/02.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/04.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/05.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/06.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<video disablepictureinpicture src="video/v-04.mp4" mute></video>
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/08.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/10.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/11.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/12.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<img data-lazy="img/_placeholder/other/13.jpg" src="" alt="">
+								</div>
+								<div class="sliderBig__item">
+									<video class="js-presentation-video" disablepictureinpicture src="video/6.mp4" mute></video>
+								</div>
+							</div>
+						</div>
+						<div class="scrollPreview js-scrollPreview">
+							<div class="scrollPreview__body">
+								<div class="scrollPreview__item active">
+									<img loading="lazy" src="img/_placeholder/other/01.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/02.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/04.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/05.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/06.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/07.jpg" alt="">
+									<span class="btnRound btnPlayVideo"><svg class="w-16"><use xlink:href="img/sprite/icons-sprite.svg#play"></use></svg></span>
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/08.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/10.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/11.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/12.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/13.jpg" alt="">
+								</div>
+								<div class="scrollPreview__item">
+									<img loading="lazy" src="img/_placeholder/other/08.webp" alt="">
+									<span class="btnRound btnPlayVideo"><svg class="w-16"><use xlink:href="img/sprite/icons-sprite.svg#play"></use></svg></span>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="product__col">
+					<div class="product__content">
+						<div class="nlc-mb-16 mb-16 d-flex aifs fdc">
+							<p class="label-gradient">Gentle</p>
+							<h1 class="text-big">Whitening Strips</h1>
+							<div class="f-aic fww">
+								<div class="rating js-rating mr-8" data-rating="5"></div>
+								<p class="bold">4.95 from 4 321 reviews</p>
+							</div>
+							<p>Based on our instant whitening formula PAP+, we’ve designed strips as our most convenient way to whiten yet.</p>
+							<ul class="list">
+								<li>No gum irritation, no tooth sensitivity</li>
+								<li>Fast results after just one treatment</li>
+								<li>Includes 14 individual on-the-go treatments</li>
+							</ul>
+						</div>
+						<div class="w-100">
+							<div class="switch">
+								<div class="switch__item">
+									<input type="radio" name="countProduct" id="countProduct-1" class="switch__input" checked>
+									<label for="countProduct-1" class="switch__label">
+										<span class="bold">Buy 1</span>
+										<span class="f-aic">
+											<span class="text-medium mr-8">$35</span>
+											<span class="text-through">$55</span>
+										</span>
+									</label>
+								</div>
+								<div class="switch__item">
+									<input type="radio" name="countProduct" id="countProduct-2" class="switch__input">
+									<label for="countProduct-2" class="switch__label">
+										<span class="bold">Buy 2</span>
+										<span class="text-medium">$35</span>
+									</label>
+								</div>
+								<div class="switch__item">
+									<input type="radio" name="countProduct" id="countProduct-3" class="switch__input">
+									<label for="countProduct-3" class="switch__label">
+										<span class="bold">Buy 3</span>
+										<span class="text-medium">$35</span>
+									</label>
+								</div>
+							</div>
+							<button class="btn btn_black jcsb md4-w-100">
+								<span class="d-inline-flex">
+									<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+									<span class="products__btnText">Add to cart</span>
+								</span>
+								<span class="d-inline-flex aic btn__price">
+									<span class="text-medium">$149</span>
+									<span class="ml-8 text-through">$175</span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- demoVideo -->
 	<div class="demoVideo container p-16 js-video-container js-video-active">
 		<div class="demoVideo__body">
@@ -257,7 +437,7 @@
 					</div>
 					<div class="feedback__info">
 						<p class="darkGray bold ws-n">01 апреля 2020</p>
-						<div class="js-rating rating" data-rating="5"></div>
+						<div class="js-rating rating ml-8" data-rating="5"></div>
 					</div>
 				</div>
 				<div class="feedback__content nlc-mb-16">
@@ -317,7 +497,7 @@
 					</div>
 					<div class="feedback__info">
 						<p class="darkGray bold ws-n">22 ноября 2020</p>
-						<div class="js-rating rating" data-rating="4"></div>
+						<div class="js-rating rating ml-8" data-rating="4"></div>
 					</div>
 				</div>
 				<div class="feedback__content nlc-mb-16">

@@ -355,6 +355,36 @@ input::-webkit-inner-spin-button {
 	}
 }
 
+.switch {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px;
+	&__item {
+		padding: 0 8px;
+		flex: 33.333%;
+		margin-bottom: 16px;
+	}
+	input{
+		display: none;
+	}
+	label{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 14px;
+		border: 2px solid $lightGray;
+		cursor: pointer;
+		height: 100%;
+		border-radius: 12px;
+		> *:not(:last-child){
+			margin-bottom: 10px;
+		}
+	}
+	input[type="radio"]:checked + label{
+		border-color: $black;
+	}
+}
+
 /////////////////////////// Списки ///////////////////////////////
 
 ul.list{
@@ -586,6 +616,27 @@ ol.list{
 	}
 }
 
+///////////////////// breadcrumbs //////////////////////////
+
+.breadcrumbs {
+	&__link {
+		&:not(:first-child){
+			padding-left: 24px;
+			position: relative;
+			&:before{
+				position: absolute;
+				content: "";
+				top: calc(50% - 8px);
+				left: 4px;
+				width: 16px;
+				height: 16px;
+				background: url('../img/sprite/icons-sprite.svg#breadcrumbsNav') 0 0 / cover no-repeat;
+				background-position: 50% 50%;
+			}
+		}
+	}
+}
+
 //////////////////////////// Картинки /////////////////////////////
 
 .iconRound{
@@ -695,6 +746,14 @@ ol.list{
 	padding: 16px;
 }
 
+.label-gradient{
+	background: $lg2;
+	border-radius: 8px;
+	padding: 4px 16px;
+	color: $white;
+	@extend .bold;
+}
+
 .link{
 	text-decoration: underline;
 	&:hover{
@@ -751,9 +810,7 @@ ol.list{
 }
 
 .rating{
-	margin-left: 8px;
 	display: flex;
-	padding: 2px 0;
 	> *:not(:last-child){
 		margin-right: 8px;
 	}
@@ -770,6 +827,33 @@ ol.list{
     top: 16px;
     fill: #ABB2BA;
     cursor: pointer;
+}
+
+.horizontalScroller{
+	::-webkit-scrollbar {
+    	width: 12px;
+    	height: 12px;
+   		background-color: $lightGray;
+   		border-radius: 8px;
+   		@media (max-width:$md3+px) {
+   		    display: none;
+   		}
+	}
+
+	::-webkit-scrollbar-thumb {
+	    background-color: rgba(171, 178, 186, 0.5);
+	    border-radius: 8px;
+	    @media (max-width:$md3+px) {
+   		    display: none;
+   		}
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+	    background-color: $darkGray;
+	}
+
+	scrollbar-color: #999#333;
+    scrollbar-width: thin;
 }
 
 /////////////////////////////////////////////////////////////////////

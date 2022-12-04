@@ -182,6 +182,155 @@
 	}
 }
 
+////////////////////////// product ///////////////////////////
+
+.product {
+	&__row {
+		display: flex;
+		@media (max-width:$md3+px) {
+		    flex-wrap: wrap;
+		}
+	}
+	&__col {
+		flex: 0 0 50%;
+		padding: 16px;
+		min-width: 0;
+		@media (max-width:$md3+px) {
+		    flex: 0 0 100%;
+		}
+	}
+	&__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__imager{
+		@media (min-width:$md2+px) {
+		    display: flex;
+		    flex-direction: row-reverse;
+		    position: relative;
+		    .scrollPreview{
+		    	position: absolute;
+		    	top: 0;
+		    	left: 0;
+		    	height: 100%;
+		    	overflow-x: hidden;
+		    	overflow-y: auto;
+		    	flex: 0 0 100px;
+		    	margin: 0;
+		    	padding: 0;
+		    	&__body{
+			    	flex-direction: column;
+			    	margin: 0;
+			    	padding-right: 6px;
+			    }
+			    &__item{
+			    	margin: 4px 0;
+			    	&:first-child{margin-top: 0;}
+			    	&:last-child{margin-bottom: 0;}
+			    }
+		    }
+		    .sliderBig{
+		    	margin-left: 106px;
+		    }
+		}
+	}
+	.list{
+		li:before{
+			margin: 8px 8px 0 8px;
+		}
+	}
+}
+
+.sliderBig{
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	&__body{
+		@extend .posa;
+		&:hover{
+			/*.slick-dots > li.slick-active:after{
+				display: none !important;
+				animation-play-state: paused;
+				-webkit-animation-play-state: paused;
+			}*/
+		}
+		&.preInit{
+			.sliderBig__item{
+				display: none;	
+			}
+		}
+	}
+	&__item{
+		border: 2px solid $lightGray;
+		position: relative;
+		max-height: 100%;
+		border-radius: 24px;
+		overflow: hidden;
+		img, video{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.slick-list {
+		border-radius: 24px;
+	}
+	.btnRound{
+		top: calc(50% - 24px);
+		&.btn-prev{left: 16px !important;}
+		&.btn-next{right: 16px !important;}
+	}
+	@extend .slider-style-banner;
+}
+
+@keyframes loading {
+ 	100% { width: 100%;}
+}
+
+.scrollPreview {
+	margin-top: 8px;
+	max-width: 100%;
+	padding-bottom: 8px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	&__body{
+		display: inline-flex;
+		margin: 0 -8px;
+	}
+	&__item {
+		flex: 0 0 80px;
+		width: 80px;
+		height: 80px;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 2px solid transparent;
+		margin: 0 8px;
+		cursor: pointer;
+		position: relative;
+		&.active{
+			border-color: $black;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.slider-style-banner{
+	.slick-track{
+		display: flex;
+		height: 100%;
+	}
+
+	.slick-list {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
 /////////////////////// Testimonials ////////////////////////
 
 .testimonials {
@@ -211,7 +360,6 @@
 		    }
 		}
 		.rating{
-			margin: 0 8px 0 0;
 			svg{
 				fill: $white;
 			}
