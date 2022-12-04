@@ -20,7 +20,8 @@ $(document).ready(function () {
 
 	// Действия при скролле
 	$(window).scroll(function(){
-
+		let scrollTop = $(window).scrollTop();
+		fixedElementOnScroll(scrollTop);
 	});
 
 	@@include('_popup.js');
@@ -438,6 +439,18 @@ $(".js-rating").each(function(){
 		$(this).append('<svg><use xlink:href="'+pathSprite+'#'+icon+'"/></svg>');
 	}
 });
+
+let isFixedCard = false;
+let fixedCard = $('.js-fixed-card');
+// Фиксируем карточку товара
+function fixedElementOnScroll(scrollTop) {
+	let bottomAnchor = $(document).height() - h - (fixedCard.height() * 2);
+	if((scrollTop > h && scrollTop < bottomAnchor && isFixedCard === false) || 
+		 ((scrollTop < h || scrollTop > bottomAnchor) && isFixedCard === true)){
+		isFixedCard = !isFixedCard;
+		fixedCard.toggleClass('active', isFixedCard);
+	}
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

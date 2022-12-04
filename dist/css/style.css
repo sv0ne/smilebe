@@ -1544,6 +1544,30 @@ ol.list li:before {
   max-height: 100%;
 }
 
+.image-hw-120 {
+  height: 120px;
+  width: 120px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.image-hw-120 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 .dropdown__item {
   position: relative;
 }
@@ -2217,6 +2241,22 @@ ol.list li:before {
 .sliderBig .slick-list {
   height: 100%;
   overflow: hidden;
+}
+
+.fixedCard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 80;
+  -webkit-box-shadow: 0px 0px 40px rgba(69, 76, 84, 0.08);
+          box-shadow: 0px 0px 40px rgba(69, 76, 84, 0.08);
+  display: none;
+}
+
+.fixedCard.active {
+  display: block;
 }
 
 .testimonials {
@@ -3843,6 +3883,37 @@ ol.list li:before {
 
   .subscribe__text {
     padding: 0;
+  }
+}
+
+@media (max-width: 652px) {
+  .fixedCard__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .fixedCard__text .mr-16 {
+    margin-right: 0;
+  }
+
+  .fixedCard__text .text-large,
+  .fixedCard__text .userImage span,
+  .userImage .fixedCard__text span {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .fixedCard__text .btn {
+    width: 100%;
+  }
+
+  .fixedCard__rating {
+    display: none;
   }
 }
 

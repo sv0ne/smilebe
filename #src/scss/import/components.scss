@@ -664,6 +664,21 @@ ol.list{
 	}
 }
 
+.image-hw-120{
+	height: 120px;
+	width: 120px;
+	flex: 0 0 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $white;
+	img{
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+	}
+}
+
 //////////////////////// Выпадающие списки ////////////////////////
 
 .dropdown{
