@@ -389,6 +389,100 @@ function detectDurationVideo() {
 }
 setTimeout(function() {detectDurationVideo();}, 10);
 
+///////////////////// Видео истории в блоке testimonials ////////////////////////////////
+
+const TIME_SLIDE_DURATION = 5000; // Длительность слайда с картинкой
+
+let $lastVideoPlaying = null;
+let isStoped = false; // Слайдер на паузе
+// Момент инициализации/переключения слайдов
+$('.js-slick-tape').on('init beforeChange', function(event, slick, currentSlide, nextSlide){
+	let $video = event.type === "init" ? $(slick.$slides[0]).find('video') : $(slick.$slides.get(nextSlide)).find('video');
+	const duration = $video.length === 1 ? $video[0].duration * 1000 : TIME_SLIDE_DURATION;
+	const countSlides = $(slick.$slides).length;
+	const indexCurrentSlide = event.type === "init" ? 0 : nextSlide;
+
+	// Остановить видео в предыдущем слайде если оно там есть
+	if($lastVideoPlaying !== null){
+		$lastVideoPlaying.get(0).pause();
+	  $lastVideoPlaying = null;
+	}
+
+	// Если в текущем слайде есть видео, запустить его
+	if($video.length === 1){
+		$video[0].currentTime = 0;
+		$video.get(0).play();
+		$lastVideoPlaying = $video;
+	}
+
+	isStoped = false;
+	$('.js-tape-pause').removeClass("active");
+	$('.js-timescale').remove();
+	$('.js-slick-tape').append(addTimescale(countSlides, indexCurrentSlide, duration));
+	autoSlide(duration);
+});
+
+let timeoutNextSlide = null, startSlideTime;
+// Автопереключение слайдов
+function autoSlide(delay) {
+	startSlideTime = new Date().getTime();
+	clearTimeout(timeoutNextSlide);
+	timeoutNextSlide = setTimeout(function() {
+		$('.js-slick-tape').slick('slickNext');
+	}, delay);
+}
+
+$('.js-slick-tape').slick({
+	prevArrow: $('.js-tape-controls .btnRound.btn-prev'),
+	nextArrow: $('.js-tape-controls .btnRound.btn-next'),
+});
+
+// Создать временные шкалы (отрезки)
+function addTimescale(count, itemActive, duration = TIME_SLIDE_DURATION) {
+	let html = '<div class="timescale js-timescale" style="--stories-duration: '+duration+'ms;">';
+		html += '<div class="timescale__lines">';
+			for (var i = 0; i < count; i++){
+				let timescale_leftClass = i === itemActive ? "active" : i < itemActive ? "complete" : "";
+				html = html + '<div class="timescale__item"><div class="timescale__left '+timescale_leftClass+'"></div></div>';
+			}
+		html += '</div>';
+	html += '</div>';
+	return html;
+}
+
+let leftTimeSlide;
+// Остановить автопрокрутку сторисов
+$(document).on("mousedown", ".js-tape-pause", function(e){
+	if(isStoped === false){
+		isStoped = true;
+		$(this).addClass('active');
+		$('.timescale__left').addClass('pause');
+		let nowTime = new Date().getTime();
+		leftTimeSlide = nowTime - startSlideTime;
+		clearTimeout(timeoutNextSlide);
+		if($lastVideoPlaying !== null){
+			$lastVideoPlaying.get(0).pause();
+		}
+	}else{
+		isStoped = false;
+		$(this).removeClass('active');
+		$('.timescale__left').removeClass('pause');
+		if($lastVideoPlaying !== null){
+			$lastVideoPlaying.get(0).play();
+		}
+		let durationSlide = $lastVideoPlaying !== null ? $lastVideoPlaying.get(0).duration * 1000 : TIME_SLIDE_DURATION;
+		autoSlide(durationSlide - leftTimeSlide);
+	}
+});
+
+let storiesVideoMuted = true;
+// Включение/Отключение звука на видео
+$(document).on("click", ".js-tape-mute", function(e){
+	storiesVideoMuted = !storiesVideoMuted;
+	$('.tape__item video').prop('muted', storiesVideoMuted);
+	$(this).toggleClass('active');
+});
+
 //////////////////////////////////// Прочее /////////////////////////////////////////////
 
 $(".js-full-year").text(new Date().getFullYear()); // В фитере показываем текущий год
@@ -423,6 +517,15 @@ $(".js-video-control").click(function(){
 	$(this).closest('.js-video-container').toggleClass("js-video-active", !isPlayingVideo);
 	$parent.find(".js-video").trigger(isPlayingVideo ? 'pause' : 'play');
 	$(this).toggleClass("active", isPlayingVideo);
+});
+
+/** Включить выключить звук на видео */
+$(".js-video-mute").click(function(){
+	var $parent = $(this).closest('.js-video-container');
+	var isSoundVideo = $parent.hasClass('js-video-sound');
+	$(this).closest('.js-video-container').toggleClass("js-video-sound", !isSoundVideo);
+	$parent.find(".js-video").prop('muted', !isSoundVideo);
+	$(this).toggleClass("active", isSoundVideo);
 });
 
 // Узнать сколько картинок в отзывах и задать нужную grid-сетку
