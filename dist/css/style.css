@@ -17,17 +17,17 @@
 }
 
 @font-face {
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral-Bold-700";
   font-display: swap;
-  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
+  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Spectral-Bold-700";
+  font-family: "Spectral-SemiBold-600";
   font-display: swap;
-  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
+  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -423,6 +423,8 @@ video {
 .bundles__image img,
 .bundles__previewImage,
 .bundles__previewText,
+.buyBundles__bg,
+.buyBundles__bg:after,
 .timescale,
 .imageFeedback__wrap,
 .diagram__background {
@@ -2611,6 +2613,68 @@ ol.list li:before {
   right: 32px;
 }
 
+.buyBundles {
+  padding: 64px 16px 0 16px;
+}
+
+.buyBundles__body {
+  position: relative;
+}
+
+.buyBundles__row {
+  position: relative;
+  z-index: 2;
+  border-radius: 24px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+}
+
+.buyBundles__col {
+  padding: 8px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.buyBundles__content {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.buyBundles__image {
+  position: relative;
+  height: 100%;
+}
+
+.buyBundles__bg {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.buyBundles__bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.buyBundles__bg:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
 .fixedCard {
   position: fixed;
   bottom: 0;
@@ -4030,6 +4094,17 @@ ol.list li:before {
   .nav__burger {
     display: none;
   }
+
+  .buyBundles__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 95%;
+    height: auto;
+  }
 }
 
 @media (min-width: 992.98px) {
@@ -4223,6 +4298,27 @@ ol.list li:before {
     -webkit-transform: translateY(-3px);
         -ms-transform: translateY(-3px);
             transform: translateY(-3px);
+  }
+
+  .buyBundles__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .buyBundles__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .buyBundles__image img {
+    max-width: 100%;
+    display: block;
+    margin: -120px auto 0 auto;
   }
 }
 
@@ -4680,6 +4776,14 @@ ol.list li:before {
 
   .bundles__previewText {
     padding: 16px;
+  }
+
+  .buyBundles__content {
+    padding: 24px 0 0 0;
+  }
+
+  .buyBundles__image img {
+    margin-top: -80px;
   }
 
   .cart__btnSec {
