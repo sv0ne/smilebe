@@ -6,6 +6,7 @@ img/sprite/icons-sprite.svg#checkbox-active
 img/sprite/icons-sprite.svg#checkbox
 img/sprite/icons-sprite.svg#close
 img/sprite/icons-sprite.svg#facebook
+img/sprite/icons-sprite.svg#inCart
 img/sprite/icons-sprite.svg#information
 img/sprite/icons-sprite.svg#instagram
 img/sprite/icons-sprite.svg#minus
@@ -13,6 +14,7 @@ img/sprite/icons-sprite.svg#pause
 img/sprite/icons-sprite.svg#play
 img/sprite/icons-sprite.svg#play_2
 img/sprite/icons-sprite.svg#plus
+img/sprite/icons-sprite.svg#remove
 img/sprite/icons-sprite.svg#show-off
 img/sprite/icons-sprite.svg#show-on
 img/sprite/icons-sprite.svg#star-fill

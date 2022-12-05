@@ -22,6 +22,7 @@ $(document).ready(function () {
 	$(window).scroll(function(){
 		let scrollTop = $(window).scrollTop();
 		fixedElementOnScroll(scrollTop);
+		fixedCardOnScroll(scrollTop);
 	});
 
 	@@include('_popup.js');
@@ -380,10 +381,76 @@ $(document).on("click", ".js-tape-mute", function(e){
 	$(this).toggleClass('active');
 });
 
+//////////////////////////////////// Корзина ///////////////////////////////////////////
+
+let isFixedTotality = false;
+let totalityFixed = $('.js-totalityFixed');
+let anchorTotalityFixed = $('.js-totalityFixed-anchor');
+let totalityHeight = totalityFixed.outerHeight();
+// Фиксируем блок подтверждения заказа при доскролле до него
+function fixedCardOnScroll(scrollTop) {
+	if(totalityFixed.length === 0 || w > BREAKPOINT_md3){return false;}
+
+	let bottomAnchor = $(document).height() - h - (totalityFixed.height() * 5);
+	let topAnchor = anchorTotalityFixed.offset().top - h;
+
+	if((scrollTop > topAnchor && scrollTop < bottomAnchor && isFixedTotality === false) || 
+		 ((scrollTop < topAnchor || scrollTop > (bottomAnchor+totalityHeight+32)) && isFixedTotality === true)){
+		isFixedTotality = !isFixedTotality;
+		totalityFixed.toggleClass('active', isFixedTotality);
+	}
+}
+
+// В зависимости от разрешения экрана меняем расположение блоков местами
+var movementBlockStateDESC = true;
+function moveDOMelement (){
+	if(w < BREAKPOINT_md3 && movementBlockStateDESC === true){
+		$(".js-movement-block").each(function(){
+			var id = $(this).closest('.js-movement-block-to-desc').data('id');
+			$(this).appendTo('.js-movement-block-to-mob[data-id='+id+']');
+			movementBlockStateDESC = false;
+		});
+	}else if(w > BREAKPOINT_md3 && movementBlockStateDESC === false){
+		$(".js-movement-block").each(function(){
+			var id = $(this).closest('.js-movement-block-to-mob').data('id');
+			$(this).appendTo('.js-movement-block-to-desc[data-id='+id+']');
+			movementBlockStateDESC = true;
+		});
+	}
+}
+moveDOMelement();
+
+// Селект похожий на обычный
+$('.js-select-once-2').select2({ 
+	minimumResultsForSearch: -1,
+	width: 'auto',
+	dropdownCssClass: "select-once-2-dropdown",
+});
+
+// Отследить инициализацию слайдера в корзине
+$('.js-cartSlider').on('init', function(event, slick){
+  $('.js-cartSlider-slideCount').text(slick.slideCount);
+});
+
+// Слайдер в корзине
+$('.js-cartSlider').slick({
+	prevArrow: $('.js-cartSlider-control.btn-prev'),
+	nextArrow: $('.js-cartSlider-control.btn-next'),
+});
+
+$('.js-cartSlider-slideCount').text();
+// Узнать текущий слайд для слайдера в корзине
+$('.js-cartSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	let currentNumberSlide = (currentSlide ? currentSlide : 0) + 1;
+	$('.js-cartSlider-currentSlide').text(currentNumberSlide);
+	$('.js-cartSlider-slideCount').text(slick.slideCount);
+});
+
 //////////////////////////////////// Прочее /////////////////////////////////////////////
 
 $(".js-full-year").text(new Date().getFullYear()); // В фитере показываем текущий год
 $('.js-mask-tel').mask("+7(999)999-99-99"); // Маска для телефонов
+$('.js-mask-card').mask("9999-9999-9999-9999"); // Маска для банковских карточек
 
 // Если это страница ввода кода при входе, включаем таймер до повторной отправки кода
 let $resendCodeText = $('.js-rest-time-resend-code');

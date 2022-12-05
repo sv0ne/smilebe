@@ -56,6 +56,9 @@
 		color: $black;
 		background-color: $white;
 	}
+	&.ta-c{
+		display: block;
+	}
 }
 button.btn-2:hover, a.btn-2:hover{
 	opacity: 0.8;
@@ -155,6 +158,19 @@ button.btn-2:hover, a.btn-2:hover{
 	}
 }
 
+.btnIcon{
+	background-color: transparent;
+	svg{
+		opacity: 0.5;
+		fill: $red;
+	}
+	&:hover{
+		svg{
+			opacity: 1;
+		}
+	}
+}
+
 .btnControl{
 	position: absolute;
 	width: 40px;
@@ -202,7 +218,7 @@ button.btn-2:hover, a.btn-2:hover{
 		max-width: calc(100% - 16px);
 		position: absolute;
 		left: 12px;
-		top: calc(50% - 14px);
+		top: calc(50% - 12px);
 		padding: 0 4px;
 		background-color: $white;
 		pointer-events: none;
@@ -303,6 +319,47 @@ button.btn-2:hover, a.btn-2:hover{
 	}
 }
 
+.inputRadio{
+	input[type="radio"]{
+		visibility: hidden;
+		display: none;
+	}
+	input[type="radio"] + label{
+		display: flex;
+		align-items: center;
+		border-radius: 12px;
+		position: relative;
+		cursor: pointer;
+		padding-left: 40px;
+		&:after, &:before{
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+		}
+		&:after{
+			top: calc(50% - 12px);
+			left: 0px;
+			width: 24px;
+			height: 24px;
+			border: 2px solid $darkGray;
+		}
+		&:before{
+			z-index: 2;
+			top: calc(50% - 6px);
+			left: 6px;
+			width: 12px;
+			height: 12px;
+			background-color: $white;
+		}
+	}
+	input[type="radio"]:checked + label{
+		&:after{
+			border: none;
+			background-color: $black;
+		}
+	}
+}
+
 // Убрать стрелки у input[type="number"]
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -322,7 +379,7 @@ input::-webkit-inner-spin-button {
 		&:focus{
 			outline: none;
 		}
-		@extend .text-default;
+		@extend .text-default-bold;
 	}
 	button{
 		padding: 8px;
@@ -426,6 +483,11 @@ ol.list{
 }
 
 ////////////////////////// Карточки //////////////////////////////
+
+.cardSimple {
+	box-shadow: $boxShadow;
+	border-radius: 24px;
+}
 
 .card-v1{
 	box-shadow: $boxShadow;
@@ -659,8 +721,8 @@ ol.list{
 	align-items: center;
 	background-color: $white;
 	img{
-		max-width: 100%;
-		max-height: 100%;
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -668,6 +730,22 @@ ol.list{
 	height: 120px;
 	width: 120px;
 	flex: 0 0 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $white;
+	position: relative;
+	img{
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+	}
+}
+
+.image-hw-200{
+	height: 200px;
+	width: 200px;
+	flex: 0 0 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -744,6 +822,29 @@ ol.list{
 }
 
 //////////////////////// Прочее /////////////////////////////////////
+
+.nums{
+	counter-reset: myNums;
+	&__item{
+		width: 40px;
+		height: 40px;
+		flex: 0 0 40px;
+		border: 2px solid $black;
+		margin-right: 8px;
+		text-align: center;
+		border-radius: 99px;
+		&:before{
+			content: counter(myNums);
+			counter-increment: myNums;
+			line-height: 38px;
+		}
+	}
+	&_white{
+		.nums__item{
+			border-color: $white;
+		}
+	}
+}
 
 .label{
 	padding: 2px 4px;

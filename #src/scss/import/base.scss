@@ -104,6 +104,10 @@ img, video{
 	margin-bottom: 16px;
 }
 
+.nlc-mb-8 > *:not(:last-child){
+	margin-bottom: 8px;
+}
+
 .nlc-mr-16 > *:not(:last-child){
 	margin-right: 16px;
 }

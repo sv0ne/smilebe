@@ -1,0 +1,69 @@
+////////////////////////// select-once-2 //////////////////////////
+
+.select-once-2{
+	//width: 100%;
+	.select2-container{
+		width: 100% !important;
+	}
+	.select2-selection{ // Селект блок
+		border: 2px solid $lightGray;
+		border-radius: 12px !important;
+		height: 56px;
+		.select2-selection__rendered{ // Селект текст
+			padding: 15px 48px 16px 16px;
+			color: $black;
+			@extend .text-default; 
+		}
+		.select2-selection__arrow{ // Стрелочка
+			b{display: none;}
+			height: 24px;
+			width: 24px;
+			margin: 14px 12px 0 0;
+			&:after{
+				position: absolute;
+				content: "";
+				top: 0px;
+				width: 24px;
+				height: 24px;
+				background: url('../img/sprite/icons-sprite.svg#breadcrumbsNav') 0 0 / cover no-repeat;
+				background-position: 50% 50%;
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.select2-container--open{ // Селект открыт
+		.select2-selection__arrow:after{
+			left: -2px;
+			transform: rotate(270deg);
+		}
+	}
+}
+.select-once-2-dropdown{
+	border-radius: 12px !important;
+	border: 1px solid $lightGray;
+	box-shadow: $boxShadow;
+	margin-top: 4px;
+	.select2-results__option{
+		padding: 12px;
+		color: $black;
+		@extend .text-default; 
+		&--highlighted{
+			color: $black !important;
+			background: none !important;
+		}
+		&--selected{
+			display: none;
+		}
+		&:hover{
+			color: $black;
+			background: $lightGray !important;
+			border-radius: 12px !important;
+		}
+	}
+}
+
+.js-select-once-2._validate._error + span{
+	.select2-selection{
+		border-color: $red;
+	}
+}
