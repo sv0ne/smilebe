@@ -26,6 +26,7 @@ $(document).ready(function () {
 	});
 
 	@@include('_popup.js');
+	@@include('_scroll.js');
 	@@include('_validation.js');
 
 ///////////////////////////// Логика бургер-меню ///////////////////////////////////////
@@ -381,6 +382,93 @@ $(document).on("click", ".js-tape-mute", function(e){
 	$(this).toggleClass('active');
 });
 
+////////////////////////////////////// Home ////////////////////////////////////////////
+
+var $video_fScreen = $(".js-fScreen video");
+// Запускаем одновременно 2 видео когда они оба подгрузились
+function startVideo() {
+	let hasError = false;
+  	$video_fScreen.each(function(){
+		let duration = $(this)[0].duration;
+		if(isNaN(duration)){hasError = true;}
+	});
+	if(hasError === true){
+		setTimeout(function(){
+			startVideo();
+		},500);
+	}else{
+		$(".js-fScreen").addClass("js-video-active");
+		$(".js-fScreen").find(".js-video").trigger('play');
+	}
+}
+startVideo();
+
+/** Сразу фильтруем после инициализации фильтра */
+$('.js-slider-bundles').on('init', function(event, slick){
+	setTimeout(function() {
+		filterBundles($("#js-bandles-first"), "filter-group-1");
+	}, 1000);
+});
+
+// Слайдер наборов
+$('.js-slider-bundles').slick({
+	prevArrow: $('.bundles .btnRound.btn-prev'),
+	nextArrow: $('.bundles .btnRound.btn-next'),
+	slidesToShow: 4,
+	responsive:[
+		{ 
+			breakpoint: BREAKPOINT_md2,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		{ 
+			breakpoint: BREAKPOINT_md3,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{ 
+			breakpoint: BREAKPOINT_608,
+			settings: {
+				slidesToShow: 1,
+			}
+		}
+	]
+});
+
+// Функция ниже позволяет отфильтровать слайдов внутри слай пу указанному классу (.filter)
+$(".js-filter-slider .scroll__item a").click(function(e){
+	e.preventDefault();
+	let filter = $(this).data('filter');
+	filterBundles($(this), filter);
+});
+
+// Фильтрация слайдера 
+function filterBundles(elem, filter) {
+	$(".js-filter-slider .scroll__item a").removeClass('btn_black').addClass("btn_light");
+	elem.removeClass('btn_light').addClass("btn_black");
+
+	if(filter === 'all'){
+		$('.js-slider-bundles').slick('slickUnfilter').slick('slickFilter', '.bundles__col'); // Отменяем фильтровку
+	}else{
+		$('.js-slider-bundles').slick('slickUnfilter').slick('slickFilter', '.'+filter); // Фильтруем
+	}
+
+	let slickListWidth = $(".js-slider-bundles .slick-list").width();
+	let slickTrackWidth = $(".js-slider-bundles .slick-track").width();
+	const diff = slickTrackWidth - slickListWidth;
+	if(diff < 30){
+		$('.bundles .sliderBtn').hide();
+	}else{
+		$('.bundles .sliderBtn').show();
+	}
+	setTimeout(function() {
+		$('.js-slider-bundles').slick('goTo', 0);
+	}, 500);
+}
+
+
 //////////////////////////////////// Корзина ///////////////////////////////////////////
 
 let isFixedTotality = false;
@@ -521,9 +609,10 @@ function fixedElementOnScroll(scrollTop) {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-	$(document).on("click", function(e){
-		if(e.ctrlKey){
-			
-		}
-	});
+$(document).on("click", function(e){
+	if(e.ctrlKey){
+		
+	}
+});
+
 });

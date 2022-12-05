@@ -8,7 +8,7 @@
 		"page": "home"
 	})
 	<!-- First screen -->
-	<div class="fScreen js-video-container js-video-active">
+	<div class="fScreen js-video-container js-fScreen">
 		<div class="fScreen__body">
 			<div class="container">
 				<div class="fScreen__row">
@@ -21,7 +21,7 @@
 					</div>
 					<div class="fScreen__col">
 						<div class="fScreen__video">
-							<video class="js-video" src="video/01.mp4" autoplay muted loop playsinline></video>
+							<video id="test" class="js-video" src="video/01.mp4" muted loop playsinline></video>
 							<button class="fScreen__control btnControl js-video-control svgWithState">
 								<svg class="w-24">
 									<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 		<div class="fScreen__bg posa">
-			<video class="posa js-video" src="video/01.mp4" autoplay muted loop playsinline></video>
+			<video class="posa js-video" src="video/01.mp4" muted loop playsinline></video>
 		</div>
 	</div>
 
@@ -57,7 +57,7 @@
 					</div>
 					<a href="" class="btn btn_white md4-w-100">
 						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-						<span class="ml-8">Add to cart</span>
+						<span class="ml-8 btn__text">Add to cart</span>
 						<span class="ml-32 d-inline-flex aic teethKit__price">
 							<span class="text-medium">$149</span>
 							<span class="ml-8 text-through">$175</span>
@@ -68,6 +68,263 @@
 			<div class="p-8 col-2 f-jcc-aic posr">
 				<div class="teethKit__image">
 					<img src="img/content/cam_light.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="p-16">
+			<p class="text-big mb-16">Every problem has its own solution</p>
+			<p class="darkGray">We’ve got a solution for every smile, with expert formulation and incredible ingredients.</p>
+		</div>
+		<div class="scroll mod-anchor" data-scroll-id="4">
+			<div class="scroll__body">
+				<ul class="scroll__scroll js-filter-slider">
+					<li class="scroll__item">
+						<a href="" id="js-bandles-first" class="btn btn_black" data-filter="filter-group-1">Professional whitening</a>
+					</li>
+					<li class="scroll__item">
+						<a href="" class="btn btn_light" data-filter="filter-group-2">Gentle whitening</a>
+					</li>
+					<li class="scroll__item">
+						<a href="" class="btn btn_light" data-filter="filter-group-3">Everyday whitening</a>
+					</li>
+					<li class="scroll__item">
+						<a href="" class="btn btn_light" data-filter="filter-group-4">On the go whitening</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bundles">
+			<div class="bundles__body">
+				<button class="btnRound btnRound_black sliderBtn btn-prev">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+				</button>
+				<button class="btnRound btnRound_black sliderBtn btn-next">
+					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+				</button>
+				<div class="bundles__row js-slider-bundles slider-style-default">
+					<div class="bundles__col filter-group-1">
+						<div class="bundles__card">
+							<div class="bundles__preview">
+								<div class="bundles__previewImage">
+									<img src="img/_placeholder/02.jpg" alt="">
+								</div>
+								<div class="bundles__previewText text-large">Professional whitening </div>
+							</div>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-1">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/10.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Toothpaste</p>
+									<p class="text-medium">$11</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-1">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/11.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Strips</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-1">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/12.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-2">
+						<div class="bundles__card">
+							<div class="bundles__preview">
+								<div class="bundles__previewImage">
+									<img src="img/_placeholder/01.jpg" alt="">
+								</div>
+								<div class="bundles__previewText text-large">Gentle whitening</div>
+							</div>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-2">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/01.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Strips</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-2">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/02.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-2">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/03.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-3">
+						<div class="bundles__card">
+							<div class="bundles__preview">
+								<div class="bundles__previewImage">
+									<img src="img/_placeholder/03.jpg" alt="">
+								</div>
+								<div class="bundles__previewText text-large">Everyday whitening</div>
+							</div>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-3">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/04.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-3">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/05.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-4">
+						<div class="bundles__card">
+							<div class="bundles__preview">
+								<div class="bundles__previewImage">
+									<img src="img/_placeholder/04.jpg" alt="">
+								</div>
+								<div class="bundles__previewText text-large">On the go whitening</div>
+							</div>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-4">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/06.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-4">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/07.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-4">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/08.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="bundles__col filter-group-4">
+						<div class="bundles__card">
+							<a href="https://site.com">
+								<div class="p-0-32">
+									<div class="bundles__image">
+										<img src="img/product/09.png" alt="">
+									</div>
+								</div>
+								<div class="p-24 nlc-mb-16">
+									<p class="text-large">PAP+ Whitening Powder</p>
+									<p class="text-medium">$35</p>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -171,7 +428,7 @@
 		<div class="p-16">
 			<div class="mb-16 d-inline-flex">
 				<svg class="w-40 mt-8 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#instagram"></use></svg>
-				<p class="text-big">Follow us on Instagram <a class="link" href="https://www.instagram.com/smilebe/">@smilebe</a></p>
+				<p class="text-big">Follow us on Instagram <a class="link" href="https://www.instagram.com/smilebeshop/">@smilebe</a></p>
 			</div>
 			<p class="darkGray">Don't miss out on sales and special offers.</p>
 		</div>

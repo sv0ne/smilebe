@@ -1,0 +1,105 @@
+.scrollBlock{
+	padding-top: 72px;
+	&__body{
+		background-color: $white;
+	}
+}
+
+.scroll {
+	position: relative;
+	padding: 0px 8px 1px 8px;
+	overflow-y: hidden;
+	margin-bottom: -8px;
+	::-webkit-scrollbar { /* chrome based */
+	    width: 0px;  /* ширина scrollbar'a */
+	    background: transparent;  /* опционально */
+	}
+   -ms-overflow-style: none;  /* IE 10+ */
+   scrollbar-width: none; /* Firefox */
+
+   @media (max-width:$mw+px) {
+      padding: 0px 0px 1px 0px;
+      margin: 0 -8px;
+   } 
+	&__body {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	&__scroll {
+		display: inline-flex;
+		@media (max-width:$mw+px) {
+		    padding: 0 16px;
+		}
+	}
+	&__item {
+		list-style: none;
+		padding: 8px;
+		a{
+			white-space: nowrap;
+		}
+		&:first-child{margin-left: 0px; padding-left: 0px;}
+		&:last-child{margin-right: 0px; padding-right: 0px;}
+	}
+	&__button{
+		position: absolute;
+		top: calc(50% - 22px);
+		padding: 8px 6px;
+		display: flex !important;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		left: 16px;
+		z-index: 10;
+		background-color: $white;
+		border: 2px solid $lightGray !important;
+		border-radius: 99px;
+		&.btn-prev{transform: rotate(180deg);}
+		&.btn-next{
+			left: auto;
+			right: 16px;
+		}
+		&.open{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__overlayArea{
+		position: absolute;
+		z-index: 5;
+		top: 16px;
+		bottom: 16px;
+		left: 0px;
+		width: 150px;
+		pointer-events: none;
+		//background: linear-gradient(270deg, rgba(255,255,255,0),rgba(255,255,255,1));
+		background: linear-gradient(270deg, rgba(255,0,255,0),rgba(255,0,255,1));
+		opacity: 0;
+		transition: all 1.5s ease 0s;
+		&_right{
+			left: auto;
+			right: 0px;
+			//background: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
+			background: linear-gradient(90deg, rgba(255,0,255,0),rgba(255,0,255,1));
+		}
+		&.open{
+			opacity: 1;
+			transition: all 1.5s ease 0s;
+		}
+	}
+
+	&.mod-anchor{
+		padding: 0 !important;
+		margin: 0 !important;
+		.scroll__body{
+			padding-bottom: 3px;
+			padding-top: 16px;
+		}
+		.scroll__item{
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.scroll__scroll{
+			padding: 0 16px;
+		}
+	}
+}

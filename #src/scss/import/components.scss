@@ -13,6 +13,9 @@
 		    margin-left: 8px;
 		}
 	}
+	&__text{
+		transform: translateY(3px);
+	}
 	&:hover{
 		opacity: 0.8;
 		text-decoration: none;
@@ -230,6 +233,10 @@ button.btn-2:hover, a.btn-2:hover{
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	input[type="text"]:disabled, input[type="password"]:disabled, textarea:disabled{
+		background-color: transparent;
+		color: rgba(0, 0, 0, 0.48);
+	}
 	input[type="text"]:disabled + label, input[type="password"]:disabled + label, textarea:disabled + label{
 		//background-color: transparent;
 	}
@@ -288,6 +295,9 @@ button.btn-2:hover, a.btn-2:hover{
 		flex: 1;
 		input[type="text"] + label{
 			border-radius: 4px;
+		}
+		input[type="text"]{
+			border-radius: 12px 0 0 12px;
 		}
 	}
 	.inputBtn{
@@ -438,6 +448,9 @@ input::-webkit-inner-spin-button {
 		}
 	}
 	input[type="radio"]:checked + label{
+		border-color: $black;
+	}
+	input[type="radio"]:hover + label{
 		border-color: $black;
 	}
 }
