@@ -185,17 +185,17 @@ h6 {
 }
 
 .text-default-bold,
-.btn,
+.inputPlusminus input,
 .btn-2,
-.inputPlusminus input {
+.btn {
   font-family: "NunitoSans-Bold-700";
   font-size: 18px;
   line-height: 130%;
 }
 
 .text-default,
-.select-once-2 .select2-selection .select2-selection__rendered,
-.select-once-2-dropdown .select2-results__option {
+.select-once-2-dropdown .select2-results__option,
+.select-once-2 .select2-selection .select2-selection__rendered {
   font-family: "NunitoSans-Regular-400";
   font-size: 18px;
   line-height: 130%;
@@ -416,18 +416,18 @@ video {
 }
 
 .posa,
-.image-w100-h50 img,
-.userImage img,
-.popup__gift img,
-.sliderBig__body,
-.bundles__image img,
-.bundles__previewImage,
-.bundles__previewText,
-.buyBundles__bg,
-.buyBundles__bg:after,
-.timescale,
+.diagram__background,
 .imageFeedback__wrap,
-.diagram__background {
+.timescale,
+.buyBundles__bg:after,
+.buyBundles__bg,
+.bundles__previewText,
+.bundles__previewImage,
+.bundles__image img,
+.sliderBig__body,
+.popup__gift img,
+.userImage img,
+.image-w100-h50 img {
   position: absolute;
   top: 0;
   left: 0;
@@ -440,12 +440,12 @@ video {
 }
 
 .bold,
-.inputBtn,
-ol.list li:before,
-.label,
-.label-gradient,
 .pagination__list li a,
-.pagination__list li span {
+.pagination__list li span,
+.label-gradient,
+.label,
+ol.list li:before,
+.inputBtn {
   font-family: "NunitoSans-Bold-700";
 }
 
@@ -812,7 +812,7 @@ a.btn-2:hover {
   -webkit-transition: all 0.1s ease 0s;
   -o-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
-  background: #303438;
+  background: rgb(48, 52, 56);
 }
 
 .btn-3 svg {
@@ -985,8 +985,8 @@ a.btn-2:hover {
   top: 8px;
 }
 
-.inputText input[type="text"],
-.inputText input[type="password"],
+.inputText input[type=text],
+.inputText input[type=password],
 .inputText textarea {
   border: 2px solid #F1F5F9;
   border-radius: 12px;
@@ -1002,14 +1002,14 @@ a.btn-2:hover {
   position: relative;
 }
 
-.inputText input[type="text"]._error,
-.inputText input[type="password"]._error,
+.inputText input[type=text]._error,
+.inputText input[type=password]._error,
 .inputText textarea._error {
   border: 2px solid #E63189;
 }
 
-.inputText input[type="text"] + label,
-.inputText input[type="password"] + label,
+.inputText input[type=text] + label,
+.inputText input[type=password] + label,
 .inputText textarea + label {
   max-width: calc(100% - 16px);
   position: absolute;
@@ -1030,8 +1030,8 @@ a.btn-2:hover {
      text-overflow: ellipsis;
 }
 
-.inputText input[type="text"]:disabled,
-.inputText input[type="password"]:disabled,
+.inputText input[type=text]:disabled,
+.inputText input[type=password]:disabled,
 .inputText textarea:disabled {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.48);
@@ -1122,11 +1122,11 @@ a.btn-2:hover {
           flex: 1;
 }
 
-.inputTextBtn .inputText input[type="text"] + label {
+.inputTextBtn .inputText input[type=text] + label {
   border-radius: 4px;
 }
 
-.inputTextBtn .inputText input[type="text"] {
+.inputTextBtn .inputText input[type=text] {
   border-radius: 12px 0 0 12px;
 }
 
@@ -1139,12 +1139,12 @@ a.btn-2:hover {
   cursor: pointer;
 }
 
-.inputCheckbox input[type="checkbox"] {
+.inputCheckbox input[type=checkbox] {
   visibility: hidden;
   display: none;
 }
 
-.inputCheckbox input[type="checkbox"] + label {
+.inputCheckbox input[type=checkbox] + label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1153,33 +1153,33 @@ a.btn-2:hover {
           align-items: flex-start;
 }
 
-.inputCheckbox input[type="checkbox"] + label span {
+.inputCheckbox input[type=checkbox] + label span {
   padding-left: 8px;
 }
 
-.inputCheckbox input[type="checkbox"] + label .st-1 {
+.inputCheckbox input[type=checkbox] + label .st-1 {
   fill: #000000;
 }
 
-.inputCheckbox input[type="checkbox"] + label .st-2 {
+.inputCheckbox input[type=checkbox] + label .st-2 {
   visibility: hidden;
 }
 
-.inputCheckbox input[type="checkbox"]:checked + label .st-1 {
+.inputCheckbox input[type=checkbox]:checked + label .st-1 {
   visibility: hidden;
 }
 
-.inputCheckbox input[type="checkbox"]:checked + label .st-2 {
+.inputCheckbox input[type=checkbox]:checked + label .st-2 {
   visibility: visible;
   fill: #000000;
 }
 
-.inputRadio input[type="radio"] {
+.inputRadio input[type=radio] {
   visibility: hidden;
   display: none;
 }
 
-.inputRadio input[type="radio"] + label {
+.inputRadio input[type=radio] + label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1192,14 +1192,14 @@ a.btn-2:hover {
   padding-left: 40px;
 }
 
-.inputRadio input[type="radio"] + label:after,
-.inputRadio input[type="radio"] + label:before {
+.inputRadio input[type=radio] + label:after,
+.inputRadio input[type=radio] + label:before {
   content: "";
   position: absolute;
   border-radius: 50%;
 }
 
-.inputRadio input[type="radio"] + label:after {
+.inputRadio input[type=radio] + label:after {
   top: calc(50% - 12px);
   left: 0px;
   width: 24px;
@@ -1207,7 +1207,7 @@ a.btn-2:hover {
   border: 2px solid #8F98A3;
 }
 
-.inputRadio input[type="radio"] + label:before {
+.inputRadio input[type=radio] + label:before {
   z-index: 2;
   top: calc(50% - 6px);
   left: 6px;
@@ -1216,7 +1216,7 @@ a.btn-2:hover {
   background-color: #FFFFFF;
 }
 
-.inputRadio input[type="radio"]:checked + label:after {
+.inputRadio input[type=radio]:checked + label:after {
   border: none;
   background-color: #000000;
 }
@@ -1325,11 +1325,11 @@ input::-webkit-inner-spin-button {
   margin-bottom: 10px;
 }
 
-.switch input[type="radio"]:checked + label {
+.switch input[type=radio]:checked + label {
   border-color: #000000;
 }
 
-.switch input[type="radio"]:hover + label {
+.switch input[type=radio]:hover + label {
   border-color: #000000;
 }
 
@@ -2179,9 +2179,9 @@ ol.list li:before {
   left: 0px;
   width: 150px;
   pointer-events: none;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 255, 0)), to(magenta));
-  background: -o-linear-gradient(right, rgba(255, 0, 255, 0), magenta);
-  background: linear-gradient(270deg, rgba(255, 0, 255, 0), magenta);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 255, 0)), to(rgb(255, 0, 255)));
+  background: -o-linear-gradient(right, rgba(255, 0, 255, 0), rgb(255, 0, 255));
+  background: linear-gradient(270deg, rgba(255, 0, 255, 0), rgb(255, 0, 255));
   opacity: 0;
   -webkit-transition: all 1.5s ease 0s;
   -o-transition: all 1.5s ease 0s;
@@ -2191,9 +2191,9 @@ ol.list li:before {
 .scroll__overlayArea_right {
   left: auto;
   right: 0px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 255, 0)), to(magenta));
-  background: -o-linear-gradient(left, rgba(255, 0, 255, 0), magenta);
-  background: linear-gradient(90deg, rgba(255, 0, 255, 0), magenta);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 255, 0)), to(rgb(255, 0, 255)));
+  background: -o-linear-gradient(left, rgba(255, 0, 255, 0), rgb(255, 0, 255));
+  background: linear-gradient(90deg, rgba(255, 0, 255, 0), rgb(255, 0, 255));
 }
 
 .scroll__overlayArea.open {
@@ -2439,10 +2439,10 @@ ol.list li:before {
 
 .sliderBig__body:hover {
   /*.slick-dots > li.slick-active:after{
-				display: none !important;
-				animation-play-state: paused;
-				-webkit-animation-play-state: paused;
-			}*/
+  	display: none !important;
+  	animation-play-state: paused;
+  	-webkit-animation-play-state: paused;
+  }*/
 }
 
 .sliderBig__body.preInit .sliderBig__item {
@@ -3203,7 +3203,7 @@ ol.list li:before {
   grid-gap: 4px;
   grid-template-columns: 36.5fr 23fr 18fr 22.5fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "post-1 post-2 post-4 post-6"   "post-1 post-3 post-5 post-6";
+  grid-template-areas: "post-1 post-2 post-4 post-6" "post-1 post-3 post-5 post-6";
 }
 
 .imageFeedback > *:first-child {
@@ -3244,7 +3244,7 @@ ol.list li:before {
 
 .imageFeedback.child-5 {
   height: 216px;
-  grid-template-areas: "post-1 post-2 post-4 post-5"   "post-1 post-3 post-4 post-5";
+  grid-template-areas: "post-1 post-2 post-4 post-5" "post-1 post-3 post-4 post-5";
 }
 
 .imageFeedback.child-5 .imageFeedback__item {
@@ -3253,7 +3253,7 @@ ol.list li:before {
 
 .imageFeedback.child-4 {
   height: 216px;
-  grid-template-areas: "post-1 post-2 post-4 post-4"   "post-1 post-3 post-4 post-4";
+  grid-template-areas: "post-1 post-2 post-4 post-4" "post-1 post-3 post-4 post-4";
 }
 
 .imageFeedback.child-4 .imageFeedback__item {
@@ -4353,7 +4353,7 @@ ol.list li:before {
   .wrapper {
     overflow: hidden;
     /* Выше 768 мы его убираем чтобы сработал 
-	    position sticky у блока .stickyBlock */
+position sticky у блока .stickyBlock */
   }
 
   .text-huge {
