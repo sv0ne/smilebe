@@ -138,6 +138,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		height: 100%;
+		@media (max-width:$md2+px) {
+		    flex-direction: column-reverse;
+		}
 	}
 	&__col {
 		padding: 8px;
@@ -336,6 +339,8 @@
 
 ///////////////////////// bundles /////////////////////////
 
+
+
 .bundles {
 	&__body {
 		position: relative;
@@ -347,8 +352,8 @@
 		padding: 16px;
 	}
 	&__card {
-		width: 100%;
-		height: 100%;
+		width: 400px;
+		height: 500px;
 		border-radius: 16px;
 		box-shadow: 0px 0px 20px rgba(69, 76, 84, 0.08);
 		@media (max-width:$md4+px) {
@@ -358,7 +363,28 @@
 		    .p-24{
 		    	padding: 16px;
 		    }
+		    width: 300px;
+			height: 100%;
 		}
+		a{
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		transition: ease 0.2s;
+		&:hover{
+			transform: translateY(-8px);
+			transition: ease 0.2s;
+		}
+	}
+	&__text{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	&__image{
 		position: relative;
@@ -1637,9 +1663,14 @@
 /////////////////////// before-after //////////////////////
 
 .beforeAfter{
+	&__row{
+		@media (max-width:$md3+px) {
+		    flex-wrap: wrap-reverse;
+		}
+	}
 	&__text{
 		@media (max-width:$md4+px) {
-			padding-bottom: 16px !important;
+			padding-top: 16px !important;
 		}
 	}
 }

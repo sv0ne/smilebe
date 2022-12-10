@@ -745,27 +745,7 @@ $('.js-slider-bundles').on('init', function(event, slick){
 $('.js-slider-bundles').slick({
 	prevArrow: $('.bundles .btnRound.btn-prev'),
 	nextArrow: $('.bundles .btnRound.btn-next'),
-	slidesToShow: 4,
-	responsive:[
-		{ 
-			breakpoint: BREAKPOINT_md2,
-			settings: {
-				slidesToShow: 3,
-			}
-		},
-		{ 
-			breakpoint: BREAKPOINT_md3,
-			settings: {
-				slidesToShow: 2,
-			}
-		},
-		{ 
-			breakpoint: BREAKPOINT_608,
-			settings: {
-				slidesToShow: 1,
-			}
-		}
-	]
+	variableWidth: true
 });
 
 // Функция ниже позволяет отфильтровать слайдов внутри слай пу указанному классу (.filter)

@@ -97,9 +97,14 @@
 		.scroll__item{
 			padding-top: 0;
 			padding-bottom: 0;
+			flex: 1;
+			a{
+				width: 100%;
+			}
 		}
 		.scroll__scroll{
 			padding: 0 16px;
+			min-width: 100%;
 		}
 	}
 }
