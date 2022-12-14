@@ -23,6 +23,7 @@
 			li{
 				padding: 12px;
 				font-weight: 500;
+				@extend .bold;
 			}
 		}
 		@media (max-width:($md_872+px)) {
@@ -77,48 +78,27 @@
 		}
 	}
 	&__burger{
-		width: 32px;
-		height: 32px;
+		width: 24px;
+		height: 24px;
 		background-color: transparent;
-		position: relative;
-		span{
-			position: absolute;
+		svg{
 			pointer-events: none;
-			left: 4px;
-			width: 24px;
-			height: 3px;
-			border-radius: 99px;
-			background-color: $black;
-			transition: 0.1s ease;
-			&:first-child{ top: 7px; }
-			&:nth-child(2){ top: 15px; }
-			&:last-child{ top: 23px; }
+			transform: translateY(-2px);
 		}
-		/* &.active span{
-			transition: 0.1s ease;
-			&:first-child{
-				top: 15.5px;
-				transform: rotate(-45deg);
-			}
-			&:nth-child(2){ display: none; }
-			&:last-child{
-				top: 15.5px;
-				transform: rotate(45deg);
-			}
-		} */
 		@media (min-width:($md_872+px)) {
 		    display: none;
 		}
 	}
 	&__home{
+		transform: translateY(-3px);
 		@media (max-width:($md_872+px)) {
 			margin-left: 8px;
-			transform: translateY(-3px);
 		}
 	}
 }
 
 .cartCount{
+	@extend .text-small;
 	@extend .bold;
 	padding: 2px 8px;
 	margin-left: 8px;
@@ -190,10 +170,23 @@
 	}
 	&__video {
 		position: relative;
+		padding-top: 100%;
+		@media (max-width:$md2+px) {
+		    padding-top: 0;
+		    height: calc((100vw - 32px) * 0.75 ) ;
+		}
+		@media (max-width:$md_608+px) {
+		    height: calc(100vw - 32px);
+		}
 		video,img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
 			border-radius: 16px;
 			max-width: 100%;
-			position: relative;
 			z-index: 1;
 		}
 	}

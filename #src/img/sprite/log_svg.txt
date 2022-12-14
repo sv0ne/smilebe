@@ -9,6 +9,7 @@ img/sprite/icons-sprite.svg#facebook
 img/sprite/icons-sprite.svg#inCart
 img/sprite/icons-sprite.svg#information
 img/sprite/icons-sprite.svg#instagram
+img/sprite/icons-sprite.svg#menu
 img/sprite/icons-sprite.svg#minus
 img/sprite/icons-sprite.svg#pause
 img/sprite/icons-sprite.svg#play
