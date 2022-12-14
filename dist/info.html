@@ -41,17 +41,22 @@
 				<nav class="nav__menu js-menu">
 					<ul>
 						<li><a href="">Shop</a></li>
-						<li><a href="">Bundles</a><span class="label label_black ml-4">-20%</span></li>
 						<li><a href="">About</a></li>
 						<li><a href="">How it works</a></li>
 						<li><a href="">Contacts</a></li>
 						<li><a href="">Help</a></li>
+						<li>
+							<a href="" class="btn btn_black w-100 onlyMobile">Log in</a>
+						</li>
 					</ul>
 				</nav>
-				<a href="" class="p-8 f-aic nav__cart">
-					<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-					<p class="ml-8">Cart</p>
-				</a>
+				<div class="f-aic"> 
+					<a href="" class="p-8 onlyDesktop">Log in</a>
+					<a href="" class="p-8 f-aic nav__cart">
+						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+						<p class="ml-8">Cart <span class="cartCount">12</span></p>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -157,21 +162,14 @@
 	</div>
 
 	<!-- Рекомендации -->
-	<div class="container products products_withSlider">
+	<div class="container products ">
 	<div class="p-16 f-jcsb-aic">
 		<p class="text-big">Вдруг вы что-то забыли..?</p>
 		
 	</div>
 	<div class="products__body">
 		
-			<button class="btnRound btnRound_black sliderBtn btn-prev">
-				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
-			</button>
-			<button class="btnRound btnRound_black sliderBtn btn-next">
-				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
-			</button>
-		
-		<div class="products__row js-slider slider-style-default">
+		<div class="products__row ">
 			<div class="products__col">
 				<div class="products__card">
 					<div class="products__label">
@@ -279,8 +277,8 @@
 </div>
 	<footer class="footer jcfe">
 	<div class="container">
-		<div class="row p-8 jcsb mb-16">
-			<div class="col p-8">
+		<div class="footer__row p-8 jcsb mb-16">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Shop</p>
 					<a href="">View all products</a>
@@ -290,7 +288,7 @@
 					<a href="">VIO405 Teeth Whitening Refills</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Support</p>
 					<a href="">Help centre</a>
@@ -300,7 +298,7 @@
 					<a href="">Privacy Policy</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Explore</p>
 					<a href="">About smilebe</a>

@@ -735,17 +735,33 @@ function startVideo() {
 startVideo();
 
 /** Сразу фильтруем после инициализации фильтра */
+
 $('.js-slider-bundles').on('init', function(event, slick){
 	setTimeout(function() {
 		filterBundles($("#js-bandles-first"), "filter-group-1");
 	}, 1000);
 });
 
+
+var slidesToShow = 1;
+// Посчитать сколько слайдов нужно показывать для слайдера
+function calcToShow() {
+	const slideWidth = w < BREAKPOINT_md4 ? 332 : 432;
+	if(w > BREAKPOINT_md1){
+		slidesToShow = BREAKPOINT_md1 / slideWidth;
+	}else{
+		slidesToShow = (w - 16) / slideWidth;
+	}
+	
+}
+calcToShow();
+
 // Слайдер наборов
 $('.js-slider-bundles').slick({
 	prevArrow: $('.bundles .btnRound.btn-prev'),
 	nextArrow: $('.bundles .btnRound.btn-next'),
-	variableWidth: true
+	slidesToShow: slidesToShow,
+	infinite: false
 });
 
 // Функция ниже позволяет отфильтровать слайдов внутри слай пу указанному классу (.filter)
@@ -779,7 +795,6 @@ function filterBundles(elem, filter) {
 	}, 500);
 }
 
-
 //////////////////////////////////// Корзина ///////////////////////////////////////////
 
 let isFixedTotality = false;
@@ -803,13 +818,13 @@ function fixedCardOnScroll(scrollTop) {
 // В зависимости от разрешения экрана меняем расположение блоков местами
 var movementBlockStateDESC = true;
 function moveDOMelement (){
-	if(w < BREAKPOINT_md3 && movementBlockStateDESC === true){
+	if(w < BREAKPOINT_md2 && movementBlockStateDESC === true){
 		$(".js-movement-block").each(function(){
 			var id = $(this).closest('.js-movement-block-to-desc').data('id');
 			$(this).appendTo('.js-movement-block-to-mob[data-id='+id+']');
 			movementBlockStateDESC = false;
 		});
-	}else if(w > BREAKPOINT_md3 && movementBlockStateDESC === false){
+	}else if(w > BREAKPOINT_md2 && movementBlockStateDESC === false){
 		$(".js-movement-block").each(function(){
 			var id = $(this).closest('.js-movement-block-to-mob').data('id');
 			$(this).appendTo('.js-movement-block-to-desc[data-id='+id+']');

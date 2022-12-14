@@ -41,17 +41,22 @@
 				<nav class="nav__menu js-menu">
 					<ul>
 						<li><a href="">Shop</a></li>
-						<li><a href="">Bundles</a><span class="label label_black ml-4">-20%</span></li>
 						<li><a href="">About</a></li>
 						<li><a href="">How it works</a></li>
 						<li><a href="">Contacts</a></li>
 						<li><a href="">Help</a></li>
+						<li>
+							<a href="" class="btn btn_black w-100 onlyMobile">Log in</a>
+						</li>
 					</ul>
 				</nav>
-				<a href="" class="p-8 f-aic nav__cart">
-					<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-					<p class="ml-8">Cart</p>
-				</a>
+				<div class="f-aic"> 
+					<a href="" class="p-8 onlyDesktop">Log in</a>
+					<a href="" class="p-8 f-aic nav__cart">
+						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+						<p class="ml-8">Cart <span class="cartCount">12</span></p>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -272,14 +277,14 @@
 				<button class="btnRound btnRound_black sliderBtn btn-next">
 					<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
 				</button>
-				<div class="bundles__row js-slider-bundles slider-style-default">
+				<div class="bundles__row js-slider-bundles">
 					<div class="bundles__col filter-group-1">
 						<div class="bundles__card">
 							<div class="bundles__preview">
 								<div class="bundles__previewImage">
 									<img loading="lazy" src="img/_placeholder/02.jpg" alt="">
 								</div>
-								<div class="bundles__previewText text-big">Professional whitening </div>
+								<div class="bundles__previewText text-big">Professional whitening</div>
 							</div>
 						</div>
 					</div>
@@ -534,8 +539,8 @@
 	<!-- before-after -->
 	<div class="container p-16">
 	<div class="bg-lightGray brad-24 row">
-		<div class="row beforeAfter__row p-8">
-			<div class="p-8 col-2">
+		<div class="beforeAfter__row">
+			<div class="beforeAfter__col">
 				<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
 					<img loading="lazy" src="img/logo.svg" width="110" height="24" alt="">
 					<div class="nlc-mb-16">
@@ -551,7 +556,7 @@
 					
 				</div>
 			</div>
-			<div class="p-8 col-2 f-jcc-aic">
+			<div class="beforeAfter__col f-jcc-aic">
 				<div class="p-32-md3-16">
 					<img loading="lazy" class="maxW-100" src="img/content/before-after.png" alt="">
 				</div>
@@ -588,16 +593,16 @@
 					<div class="tape__bg tape__bg_1"></div>
 					<div class="tape__bg tape__bg_2"></div>
 					<div class="tape__control">
-						<button class="btnControl js-tape-pause mr-8 svgWithState">
-							<svg class="w-24">
-								<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
-								<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
-							</svg>
-						</button>
-						<button class="btnControl js-tape-mute svgWithState">
+						<button class="btnControl js-tape-mute mr-8 svgWithState">
 							<svg class="w-24">
 								<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#volumn-off"/>
 								<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#volumn-on"/>
+							</svg>
+						</button>
+						<button class="btnControl js-tape-pause svgWithState">
+							<svg class="w-24">
+								<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
+								<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
 							</svg>
 						</button>
 					</div>
@@ -695,8 +700,8 @@
 
 	<footer class="footer jcfe">
 	<div class="container">
-		<div class="row p-8 jcsb mb-16">
-			<div class="col p-8">
+		<div class="footer__row p-8 jcsb mb-16">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Shop</p>
 					<a href="">View all products</a>
@@ -706,7 +711,7 @@
 					<a href="">VIO405 Teeth Whitening Refills</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Support</p>
 					<a href="">Help centre</a>
@@ -716,7 +721,7 @@
 					<a href="">Privacy Policy</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Explore</p>
 					<a href="">About smilebe</a>

@@ -41,17 +41,22 @@
 				<nav class="nav__menu js-menu">
 					<ul>
 						<li><a href="">Shop</a></li>
-						<li><a href="">Bundles</a><span class="label label_black ml-4">-20%</span></li>
 						<li><a href="">About</a></li>
 						<li><a href="">How it works</a></li>
 						<li><a href="">Contacts</a></li>
 						<li><a href="">Help</a></li>
+						<li>
+							<a href="" class="btn btn_black w-100 onlyMobile">Log in</a>
+						</li>
 					</ul>
 				</nav>
-				<a href="" class="p-8 f-aic nav__cart">
-					<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-					<p class="ml-8">Cart</p>
-				</a>
+				<div class="f-aic"> 
+					<a href="" class="p-8 onlyDesktop">Log in</a>
+					<a href="" class="p-8 f-aic nav__cart">
+						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+						<p class="ml-8">Cart <span class="cartCount">12</span></p>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -371,6 +376,18 @@
 									<p>Мы рекомендуем проконсультироваться с врачом.</p>
 								</div>
 							</div>
+							<div class="dropdown__item js-dropdown-item">
+								<div class="dropdown__head js-dropdown-head">
+									<p class="text-large f-aic"><span class="nums__item"></span>Take the strips off</p>
+									<button class="btnRound">
+										<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+									</button>
+								</div>
+								<div class="dropdown__body js-dropdown-body">
+									<p>Клинические испытания подтвердили безопасность средства, однако они не проводились на женщинах в периоды лактации и беременности, а потому подтвердить или опровергнуть его безвредность не представляется возможным.</p>
+									<p>Мы рекомендуем проконсультироваться с врачом.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -381,8 +398,8 @@
 	<!-- before-after -->
 	<div class="container p-16">
 	<div class="bg-lightGray brad-24 row">
-		<div class="row beforeAfter__row p-8">
-			<div class="p-8 col-2">
+		<div class="beforeAfter__row">
+			<div class="beforeAfter__col">
 				<div class="nlc-mb-16 d-flex fdc aifs jcsb h-100 p-32-md3-16 beforeAfter__text">
 					<img loading="lazy" src="img/logo.svg" width="110" height="24" alt="">
 					<div class="nlc-mb-16">
@@ -407,7 +424,7 @@
 					
 				</div>
 			</div>
-			<div class="p-8 col-2 f-jcc-aic">
+			<div class="beforeAfter__col f-jcc-aic">
 				<div class="p-32-md3-16">
 					<img loading="lazy" class="maxW-100" src="img/content/before-after.png" alt="">
 				</div>
@@ -685,21 +702,14 @@
 	</div>
 
 	<!-- Recommendations -->
-	<div class="container products products_withSlider">
+	<div class="container products ">
 	<div class="p-16 f-jcsb-aic">
 		<p class="text-big">Recommendations</p>
 		
 	</div>
 	<div class="products__body">
 		
-			<button class="btnRound btnRound_black sliderBtn btn-prev">
-				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
-			</button>
-			<button class="btnRound btnRound_black sliderBtn btn-next">
-				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
-			</button>
-		
-		<div class="products__row js-slider slider-style-default">
+		<div class="products__row ">
 			<div class="products__col">
 				<div class="products__card">
 					<div class="products__label">
@@ -836,8 +846,8 @@
 	
 	<footer class="footer jcfe">
 	<div class="container">
-		<div class="row p-8 jcsb mb-16">
-			<div class="col p-8">
+		<div class="footer__row p-8 jcsb mb-16">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Shop</p>
 					<a href="">View all products</a>
@@ -847,7 +857,7 @@
 					<a href="">VIO405 Teeth Whitening Refills</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Support</p>
 					<a href="">Help centre</a>
@@ -857,7 +867,7 @@
 					<a href="">Privacy Policy</a>
 				</div>
 			</div>
-			<div class="col p-8">
+			<div class="footer__col p-8">
 				<div class="nlc-mb-16 d-flex fdc">
 					<p class="bold">Explore</p>
 					<a href="">About smilebe</a>

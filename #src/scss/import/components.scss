@@ -44,20 +44,24 @@
 .btn-2{
 	text-decoration: none !important;
 	border-radius: 8px;
-	padding: 4px 16px;
+	padding: 2px 14px;
+	border: 2px solid $lightGray;
 	display: inline-flex;
 	@extend .text-default-bold;
 	&_gray{
 		background-color: $lightGray;
 		color: $darkGray;
+		border-color: $lightGray;
 	}
 	&_black{
 		color: $white;
 		background-color: $black;
+		border-color: $black;
 	}
 	&_white{
 		color: $black;
 		background-color: $white;
+		border-color: $lightGray;
 	}
 	&.ta-c{
 		display: block;
@@ -111,7 +115,7 @@ button.btn-2:hover, a.btn-2:hover{
 		top: calc(50% - 100px);
 		&.btn-prev{ left: 0px; }
 		&.btn-next{ right: 0px; }
-		@media (max-width:($md3+px)) {
+		@media (max-width:($md_608+px)) {
 		    display: none !important;
 		}
 		@media (max-width:(1384+px)) {
@@ -375,6 +379,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: none;
 }
 
 .inputPlusminus{
@@ -643,9 +652,6 @@ ol.list{
 		padding: 8px 16px;
 		flex: 0 0 447px;
 		@media (max-width:$md2+px) {
-		    flex: 0 0 352px;
-		}
-		@media (max-width:$md3+px) {
 		    flex: 0 0 100%;
 		}
 	}
@@ -663,7 +669,7 @@ ol.list{
 	&__col{
 		padding: 8px 16px;
 		flex: 1 1 50%;
-		min-width: 255px;
+		min-width: 260px;
 	}
 }
 
