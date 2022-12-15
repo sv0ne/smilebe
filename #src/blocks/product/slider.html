@@ -92,31 +92,33 @@
 					</div>
 				</div>
 			</div>
-			<div class="products__col">
-				<div class="products__card">
-					<a href="https://site.com">
-						<div class="products__image">
-							<img loading="lazy" src="img/product/23.jpg" alt="">
+			@@if(showLastSlide == 'true'){
+				<div class="products__col">
+					<div class="products__card">
+						<a href="https://site.com">
+							<div class="products__image">
+								<img loading="lazy" src="img/product/23.jpg" alt="">
+							</div>
+							<div class="products__text nlc-mb-16 d-flex fdc flex-1">
+								<p class="text-large">Teeth Kit</p>
+								<p class="darkGray flex-1">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ratione ipsum animi molestiae veniam ex corporis asperiores quis id vero accusantium. Molestiae harum saepe nulla aliquid vero amet sint rem vitae? Consectetur impedit nemo error est, obcaecati sunt, magnam natus ex!</p>
+							</div>
+						</a>
+						<div class="products__btn">
+							<button class="btn btn_black jcsb w-100">
+								<span class="d-inline-flex">
+									<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+									<span class="products__btnText btn__text">Add to cart</span>
+								</span>
+								<span class="d-inline-flex aic">
+									<span class="text-medium">$149</span>
+									<span class="ml-8 text-through">$175</span>
+								</span>
+							</button>
 						</div>
-						<div class="products__text nlc-mb-16 d-flex fdc flex-1">
-							<p class="text-large">Teeth Kit</p>
-							<p class="darkGray flex-1">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ratione ipsum animi molestiae veniam ex corporis asperiores quis id vero accusantium. Molestiae harum saepe nulla aliquid vero amet sint rem vitae? Consectetur impedit nemo error est, obcaecati sunt, magnam natus ex!</p>
-						</div>
-					</a>
-					<div class="products__btn">
-						<button class="btn btn_black jcsb w-100">
-							<span class="d-inline-flex">
-								<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-								<span class="products__btnText btn__text">Add to cart</span>
-							</span>
-							<span class="d-inline-flex aic">
-								<span class="text-medium">$149</span>
-								<span class="ml-8 text-through">$175</span>
-							</span>
-						</button>
 					</div>
 				</div>
-			</div>
+			}
 		</div>
 	</div>
 </div>

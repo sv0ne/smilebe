@@ -437,6 +437,11 @@
 		&.btn-prev{left: 32px;}
 		&.btn-next{right: 32px;}
 	}
+	.slick-list {
+		@media (max-width:$md1+px) {
+		    overflow: hidden;
+		}
+	}
 	.slick-track{
 		display: flex;
 	}

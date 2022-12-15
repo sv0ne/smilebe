@@ -208,6 +208,13 @@ h6 {
   line-height: 130%;
 }
 
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+      text-size-adjust: none;
+}
+
 body {
   font-family: "NunitoSans-Regular-400";
   font-size: 18px;
@@ -1237,9 +1244,9 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
   -webkit-appearance: none;
           appearance: none;
+  -moz-appearance: textfield;
 }
 
 .inputPlusminus {
@@ -4270,6 +4277,10 @@ ol.list li:before {
 
   .scroll__scroll {
     padding: 0 16px;
+  }
+
+  .bundles .slick-list {
+    overflow: hidden;
   }
 
   .history__item {
