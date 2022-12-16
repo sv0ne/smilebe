@@ -116,7 +116,7 @@ button.btn-2:hover, a.btn-2:hover{
 		&.btn-prev{ left: 0px; }
 		&.btn-next{ right: 0px; }
 		@media (max-width:($md_608+px)) {
-		    display: none !important;
+		    //display: none !important;
 		}
 		@media (max-width:(1384+px)) {
 			&.btn-prev{ left: 28px; }
