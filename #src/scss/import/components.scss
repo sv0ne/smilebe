@@ -36,6 +36,10 @@
 	&.jcsb{
 		justify-content: space-between;
 	}
+	&.disabled{
+		pointer-events: none;
+		opacity: 0.8;
+	}
 	@media (max-width:$md4+px) {
 	    padding: 16px;
 	}
@@ -466,15 +470,14 @@ input[type='number'] {
 
 /////////////////////////// Списки ///////////////////////////////
 
-ul.list{
+ul.list, .styledContent ul{
 	> li:not(:last-child){
 		margin-bottom: 16px;
 	}
 	li{
-		display: flex;
 		&:before{
 			content: "";
-			flex: 0 0 8px;
+			display: inline-block;
 			margin: 8px 8px 0 16px;
 			top: 8px;
 			left: 16px;
@@ -486,7 +489,7 @@ ul.list{
 	}
 }
 
-ol.list{
+ol.list, .styledContent ol{
 	> li:not(:last-child){
 		margin-bottom: 16px;
 	}
@@ -989,6 +992,21 @@ ol.list{
 
 	scrollbar-color: #999#333;
     scrollbar-width: thin;
+}
+
+.styledContent{
+	h1, h2{
+		@extend .text-large;
+	}
+	table{
+		border-collapse: collapse;
+		td{
+			border: 1px solid $black;
+		}
+	}
+	a{
+		@extend .link;
+	}
 }
 
 /////////////////////////////////////////////////////////////////////

@@ -9,17 +9,17 @@
 }
 
 @font-face {
-  font-family: "Spectral-Bold-700";
+  font-family: "NunitoSans-Regular-400";
   font-display: swap;
-  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
+  src: url("../fonts/NunitoSans-Regular-400.woff") format("woff"), url("../fonts/NunitoSans-Regular-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "NunitoSans-Regular-400";
+  font-family: "Spectral-Bold-700";
   font-display: swap;
-  src: url("../fonts/NunitoSans-Regular-400.woff") format("woff"), url("../fonts/NunitoSans-Regular-400.woff2") format("woff2");
+  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -172,6 +172,8 @@ h6 {
 }
 
 .text-large,
+.styledContent h1,
+.styledContent h2,
 .userImage span {
   font-family: "Spectral-Bold-700";
   font-size: 28px;
@@ -457,6 +459,7 @@ video {
 .label-gradient,
 .label,
 ol.list li:before,
+.styledContent ol li:before,
 .inputBtn {
   font-family: "NunitoSans-Bold-700";
 }
@@ -773,6 +776,11 @@ ol.list li:before,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.btn.disabled {
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 .btn-2 {
@@ -1355,21 +1363,15 @@ input[type=number] {
   border-color: #000000;
 }
 
-ul.list > li:not(:last-child) {
+ul.list > li:not(:last-child),
+.styledContent ul > li:not(:last-child) {
   margin-bottom: 16px;
 }
 
-ul.list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-ul.list li:before {
+ul.list li:before,
+.styledContent ul li:before {
   content: "";
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 8px;
-          flex: 0 0 8px;
+  display: inline-block;
   margin: 8px 8px 0 16px;
   top: 8px;
   left: 16px;
@@ -1379,22 +1381,26 @@ ul.list li:before {
   border-radius: 99px;
 }
 
-ol.list {
+ol.list,
+.styledContent ol {
   counter-reset: myCounter;
 }
 
-ol.list > li:not(:last-child) {
+ol.list > li:not(:last-child),
+.styledContent ol > li:not(:last-child) {
   margin-bottom: 16px;
 }
 
-ol.list li {
+ol.list li,
+.styledContent ol li {
   padding-left: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-ol.list li:before {
+ol.list li:before,
+.styledContent ol li:before {
   content: counter(myCounter) ".";
   counter-increment: myCounter;
   padding-right: 8px;
@@ -1876,11 +1882,13 @@ ol.list li:before {
   color: #FFFFFF;
 }
 
-.link {
+.link,
+.styledContent a {
   text-decoration: underline;
 }
 
-.link:hover {
+.link:hover,
+.styledContent a:hover {
   opacity: 0.8;
 }
 
@@ -1991,6 +1999,14 @@ ol.list li:before {
 
 .horizontalScroller ::-webkit-scrollbar-thumb:hover {
   background-color: #8F98A3;
+}
+
+.styledContent table {
+  border-collapse: collapse;
+}
+
+.styledContent table td {
+  border: 1px solid #000000;
 }
 
 .popup {
@@ -4593,7 +4609,11 @@ position sticky у блока .stickyBlock */
 
   .fixedCard__text .text-large,
   .fixedCard__text .userImage span,
-  .userImage .fixedCard__text span {
+  .userImage .fixedCard__text span,
+  .fixedCard__text .styledContent h1,
+  .styledContent .fixedCard__text h1,
+  .fixedCard__text .styledContent h2,
+  .styledContent .fixedCard__text h2 {
     font-size: 18px;
     margin-bottom: 16px;
   }
@@ -4674,6 +4694,8 @@ position sticky у блока .stickyBlock */
   }
 
   .text-large,
+  .styledContent h1,
+  .styledContent h2,
   .userImage span {
     font-size: 24px;
   }
