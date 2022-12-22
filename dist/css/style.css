@@ -4720,6 +4720,10 @@ position sticky у блока .stickyBlock */
     padding: 16px;
   }
 
+  .btn.mod-dn .btn__text {
+    display: none;
+  }
+
   .card-v1.mod-md-p-16 {
     padding: 16px;
   }
@@ -4877,6 +4881,12 @@ position sticky у блока .stickyBlock */
   }
 
   .magic__bg {
+    display: none;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 992.98px) {
+  .btn.mod-dn .btn__text {
     display: none;
   }
 }
