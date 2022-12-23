@@ -82,13 +82,13 @@ $('.js-slider').slick({
 	nextArrow: $('.products_withSlider .sliderBtn.btn-next'),
 	responsive:[
 		{ 
-			breakpoint: BREAKPOINT_md2,
+			breakpoint: 1150,
 			settings: {
 				slidesToShow: 2,
 			}
 		},
 		{ 
-			breakpoint: BREAKPOINT_608,
+			breakpoint: 800,
 			settings: {
 				slidesToShow: 1,
 			}
