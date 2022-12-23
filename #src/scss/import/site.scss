@@ -1387,7 +1387,7 @@
 	    padding-top: 16px;
 	}
 	&__image{
-		@media (min-width:$md3+px) {
+		@media (min-width:845+px) {
 			text-align: center;
 		    position: absolute;
 		    top: 0;
@@ -1397,20 +1397,28 @@
 		}
 		img{
 			max-width: 100%;
-			@media (min-width:$md3+px) {
+			@media (min-width:845+px) {
 				position: absolute;
 				bottom: 0;
 				left: 50%;
 				transform: translateX(-50%);
 			}
-			@media (max-width:$md3+px) {
+			@media (max-width:845+px) {
 			    margin-top: -58px;
 			}
 		}
 	}
 	&__row{
-		@media (max-width:$md3+px) {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width:845+px) {
 		    flex-wrap: wrap-reverse;
+		}
+	}
+	&__col{
+		flex: 0 0 50%;
+		@media (max-width:(845+px)) {
+		    flex: 0 0 100%;
 		}
 	}
 	&__price{

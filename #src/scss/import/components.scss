@@ -44,16 +44,6 @@
 	@media (max-width:$md4+px) {
 	    padding: 16px;
 	}
-	&.mod-dn{
-		.btn__text{
-			@media (min-width:$md3+px) and (max-width:$md2+px) {
-				display: none;
-			}
-			@media (max-width:$md4+px) {
-			    display: none;
-			}
-		}
-	}
 }
 
 .btn-2{

@@ -3640,6 +3640,20 @@ ol.list li:before,
   max-width: 100%;
 }
 
+.teethKit__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.teethKit__col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
 .cart__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4060,7 +4074,7 @@ ol.list li:before,
   border-color: #E63189;
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 845px) {
   .teethKit__image {
     text-align: center;
     position: absolute;
@@ -4350,6 +4364,23 @@ ol.list li:before,
   }
 }
 
+@media (max-width: 845px) {
+  .teethKit__image img {
+    margin-top: -58px;
+  }
+
+  .teethKit__row {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+
+  .teethKit__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 @media (max-width: 824px) {
   .testimonials__col {
     -webkit-box-flex: 0;
@@ -4571,15 +4602,6 @@ position sticky у блока .stickyBlock */
     bottom: -21.5px;
   }
 
-  .teethKit__image img {
-    margin-top: -58px;
-  }
-
-  .teethKit__row {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-
   .cartSet .slick-slider {
     width: 100%;
   }
@@ -4722,10 +4744,6 @@ position sticky у блока .stickyBlock */
 
   .btn {
     padding: 16px;
-  }
-
-  .btn.mod-dn .btn__text {
-    display: none;
   }
 
   .card-v1.mod-md-p-16 {
@@ -4897,12 +4915,6 @@ position sticky у блока .stickyBlock */
   }
 
   .magic__bg {
-    display: none;
-  }
-}
-
-@media (min-width: 767.98px) and (max-width: 992.98px) {
-  .btn.mod-dn .btn__text {
     display: none;
   }
 }
