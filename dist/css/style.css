@@ -745,12 +745,6 @@ ol.list li:before,
   margin-left: 32px;
 }
 
-.btn__text {
-  -webkit-transform: translateY(3px);
-      -ms-transform: translateY(3px);
-          transform: translateY(3px);
-}
-
 .btn:hover {
   opacity: 0.8;
   text-decoration: none;
