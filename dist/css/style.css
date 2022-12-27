@@ -2317,6 +2317,31 @@ ol.list li:before,
           transform: translateY(-3px);
 }
 
+.nav__cart {
+  color: #000000;
+  cursor: default;
+}
+
+.nav__cart:hover {
+  text-decoration: none;
+}
+
+.nav__cart.active {
+  cursor: pointer;
+}
+
+.nav__cart.active:hover {
+  text-decoration: underline;
+}
+
+.nav__cartLink {
+  cursor: none;
+}
+
+.nav__cartLink:hover {
+  text-decoration: none;
+}
+
 .cartCount {
   padding: 2px 8px;
   margin-left: 8px;

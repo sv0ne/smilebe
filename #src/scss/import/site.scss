@@ -95,6 +95,25 @@
 			margin-left: 8px;
 		}
 	}
+	&__cart{
+		color: $black;
+		cursor: default;
+		&:hover{
+			text-decoration: none;
+		}
+		&.active{
+			cursor: pointer;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	&__cartLink{
+		&:hover{
+			text-decoration: none;
+		}
+		cursor: none;
+	}
 }
 
 .cartCount{
