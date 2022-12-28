@@ -17,17 +17,17 @@
 }
 
 @font-face {
-  font-family: "Spectral-Bold-700";
+  font-family: "Spectral-SemiBold-600";
   font-display: swap;
-  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
+  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral-Bold-700";
   font-display: swap;
-  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
+  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -140,7 +140,7 @@ h6 {
 
 .wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +456,7 @@ video {
 .pagination__list li span,
 .cartCount,
 .nav__menu ul li,
-.label-gradient,
+.labelGradient,
 .label,
 ol.list li:before,
 .styledContent ol li:before,
@@ -756,9 +756,20 @@ ol.list li:before,
   fill: #FFFFFF;
 }
 
+.btn_black.disabled {
+  background-color: #F1F5F9;
+  fill: #8F98A3;
+  color: #8F98A3;
+}
+
 .btn_white {
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.btn_white.disabled {
+  fill: #8F98A3;
+  color: #8F98A3;
 }
 
 .btn_light {
@@ -1626,7 +1637,7 @@ ol.list li:before,
   left: 4px;
   width: 16px;
   height: 16px;
-  background: url("../img/sprite/icons-sprite.svg#breadcrumbsNav") 0 0/cover no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.49999 9.5L6.49999 6.25736C6.49999 5.36645 7.57714 4.92029 8.2071 5.55025L11.4497 8.79289C11.8403 9.18342 11.8403 9.81658 11.4497 10.2071L8.2071 13.4497C7.57714 14.0797 6.49999 13.6335 6.49999 12.7426L6.49999 9.5Z' fill='%238F98A3'/%3E%3C/svg%3E") 0 0/cover no-repeat;
   background-position: 50% 50%;
 }
 
@@ -1868,12 +1879,20 @@ ol.list li:before,
   padding: 16px;
 }
 
-.label-gradient {
-  background: -o-linear-gradient(184.38deg, #FF78FA -0.04%, #4BDFFF 100.04%);
-  background: linear-gradient(265.62deg, #FF78FA -0.04%, #4BDFFF 100.04%);
+.labelGradient {
   border-radius: 8px;
   padding: 4px 16px;
   color: #FFFFFF;
+}
+
+.labelGradient_gentle {
+  background: -o-linear-gradient(184.38deg, #FF78FA -0.04%, #4BDFFF 100.04%);
+  background: linear-gradient(265.62deg, #FF78FA -0.04%, #4BDFFF 100.04%);
+}
+
+.labelGradient_proFormula {
+  background: -o-linear-gradient(184.38deg, #BD02FE -0.04%, #6117FE 100.04%);
+  background: linear-gradient(265.62deg, #BD02FE -0.04%, #6117FE 100.04%);
 }
 
 .link,
@@ -2069,7 +2088,7 @@ ol.list li:before,
 }
 
 .popup__body {
-  max-height: calc(100vh - 64px);
+  max-height: calc(var(--vh, 1vh) * 100 - 64px);
   width: 540px;
   position: relative;
   border-radius: 12px;
@@ -2355,7 +2374,7 @@ ol.list li:before,
 }
 
 .fScreen__body {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   padding-top: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2583,6 +2602,16 @@ ol.list li:before,
 .sliderBig .slick-list {
   height: 100%;
   overflow: hidden;
+}
+
+.bundlesFilter li > a {
+  padding: 14px 22px;
+  border: 2px solid #FFFFFF;
+}
+
+.bundlesFilter li > a:hover {
+  opacity: 1;
+  border-color: #000000;
 }
 
 .bundles__body {
@@ -3290,7 +3319,7 @@ ol.list li:before,
 .isSliderReviews .imageFeedback__item {
   height: auto !important;
   border-radius: 0px;
-  max-height: 95vh;
+  max-height: calc(var(--vh, 1vh) * 95);
   width: 100%;
   padding-top: 0 !important;
 }
@@ -4528,7 +4557,7 @@ position sticky у блока .stickyBlock */
   .popup.p-overlay .popup__body {
     border-radius: 12px 12px 0 0;
     position: relative;
-    max-height: calc(100vh - 128px) !important;
+    max-height: calc(var(--vh, 1vh) * 100 - 128px) !important;
   }
 
   .popup.p-overlay .popup__wrap {

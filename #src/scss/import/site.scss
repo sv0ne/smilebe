@@ -144,7 +144,7 @@
 .fScreen {
 	position: relative;
 	&__body{
-		min-height: 100vh;
+		min-height: calc(var(--vh, 1vh) * 100);
 		padding-top: 128px;
 		display: flex;
 		flex-direction: column;
@@ -371,6 +371,18 @@
 }
 
 ///////////////////////// bundles /////////////////////////
+
+.bundlesFilter{
+	li > a{
+		padding: 14px 22px;
+		border: 2px solid $white;
+		&:hover{
+			opacity: 1;
+			border-color: $black;
+		}
+	}
+}
+
 
 .bundles {
 	&__body {
@@ -1030,7 +1042,7 @@
 		&__item{
 			height: auto !important;
 			border-radius: 0px;
-			max-height: 95vh;
+			max-height: calc(var(--vh, 1vh) * 95);
 			width: 100%;
 			padding-top: 0 !important;
 		}

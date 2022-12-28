@@ -46,7 +46,7 @@
 			.popup__body{
 				border-radius: 12px 12px 0 0;
 				position: relative;
-				max-height: calc(100vh - 128px) !important;
+				max-height: calc((var(--vh, 1vh) * 100) - 128px) !important;
 			}
 			.popup__wrap{
 				border-radius: 12px 12px 0 0;
@@ -75,7 +75,7 @@
 		filter: drop-shadow(0px 2px 8px rgba(43, 43, 66, 0.08));
 	}
 	&__body {
-		max-height: calc(100vh - 64px);
+		max-height: calc((var(--vh, 1vh) * 100) - 64px);
 		width: 540px;
 		position: relative;
 		border-radius: 12px;

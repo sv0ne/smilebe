@@ -427,7 +427,7 @@ $('.js-slider').slick({
 	]
 });
 
-//////////////////////// Скопировать ссылку в буфер обмена ////////////////////////// 
+///////////////////// Скопировать ссылку в буфер обмена /////////////////////// 
 
 // Копирование текста в буфер обмена
 function copy_in_buffer(txt) {
@@ -932,6 +932,16 @@ function fixedElementOnScroll(scrollTop) {
 		fixedCard.toggleClass('active', isFixedCard);
 	}
 }
+
+/** Высчитываем высоту экрана чтоб использовать ее вместо обычного css vh. */
+function detectVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+detectVH();
+
+$(window).resize(detectVH);
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
