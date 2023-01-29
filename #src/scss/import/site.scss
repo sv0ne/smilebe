@@ -914,6 +914,81 @@
 	}
 }
 
+////////////////////////// Compare //////////////////////////
+
+.compate{
+	table{
+		width: 100%;
+		background-color: $lightGray;
+		border-radius: 24px;
+		border-collapse: collapse;
+		td{
+			padding: 16px;
+			text-align: center;
+			svg{
+				margin: 0 auto;
+			}
+			&.bg-lg{
+				background: linear-gradient(265.62deg, #BD02FE -0.04%, #6117FE 100.04%);
+			}
+
+			&.text-big{
+				@media (max-width:$md4+px) {
+				    font-size: 20px !important;
+				}
+			}
+		}
+		th{
+			padding: 16px 48px;
+			text-align: left;
+			@extend .text-medium;
+			@media (max-width:$md3+px) {
+			    padding: 16px;
+			}
+			@media (max-width:$md4+px) {
+			    font-size: 16px;
+			}
+		}
+		tr:last-child{
+			td, th{
+				padding-bottom: 48px;
+				@media (max-width:$md3+px) {
+				    padding-bottom: 16px;
+				}
+			}
+		}
+		tr:first-child{
+			td, th{
+				padding-top: 48px;
+				@media (max-width:$md3+px) {
+				    padding-top: 16px;
+				}
+			}
+		}
+	}
+}
+
+/////////////////////// What is pap+ cp /////////////////////
+
+.whatIs{
+	&__body{
+		background-color: $black;
+		padding: 48px;
+		border-radius: 32px;
+		color: $white;
+		@media (max-width:$md2+px) {
+		    padding: 24px;
+		    border-radius: 24px;
+		}
+		@media (max-width:$md3+px) {
+		    padding: 16px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+}
+
 ///////////////////////// feedback //////////////////////////
 
 .feedback {

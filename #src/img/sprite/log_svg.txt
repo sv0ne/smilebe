@@ -11,6 +11,7 @@ img/sprite/icons-sprite.svg#information
 img/sprite/icons-sprite.svg#instagram
 img/sprite/icons-sprite.svg#menu
 img/sprite/icons-sprite.svg#minus
+img/sprite/icons-sprite.svg#ok
 img/sprite/icons-sprite.svg#pause
 img/sprite/icons-sprite.svg#play
 img/sprite/icons-sprite.svg#play_2

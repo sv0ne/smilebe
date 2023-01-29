@@ -405,6 +405,22 @@ $(".js-dropdown-item").each(function(){
 	isActive ? $(this).find('.js-dropdown-body').show() : $(this).find('.js-dropdown-body').hide();
 });
 
+
+//////////////////// Выпадающий список у блока Ingredients ///////////////////////////
+
+/* Меняем состояние при клике */
+$(document).on("click", ".js-ingredients-list-trigger", function(){
+	let isActive = $(this).hasClass('active');
+	$(this).toggleClass("active", !isActive);
+	isActive ? $('.js-ingredients-list').slideUp(300) : $('.js-ingredients-list').slideDown(300);
+});
+
+/* Устанавливаем состояние при инициализации */
+(function ingredientsInit() {
+	const isActive = $(".js-ingredients-list-trigger").hasClass("active");
+	isActive ? $('.js-ingredients-list').show() : $('.js-ingredients-list').hide();
+})();
+
 ///////////////////////////////// Слайдеры ///////////////////////////////////////////
 
 $('.js-slider').slick({

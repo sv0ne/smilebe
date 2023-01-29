@@ -75,6 +75,7 @@ img, video{
 
 .mb-24{margin-bottom: 24px;}
 
+.mt-32{margin-top: 32px;}
 .mb-32{margin-bottom: 32px;}
 .ml-32{margin-left: 32px;}
 .mb-48{margin-bottom: 48px;}
@@ -203,6 +204,9 @@ img, video{
 .green{color: $green;}
 .black{color: $black; fill: $black;}
 .red{color: $red;}
+
+.fill-white{fill: $white; use{fill: $white;}}
+.fill-darkGray{fill: $darkGray; use{fill: $darkGray;}}
 
 .bg-lightGray{background-color: $lightGray;}
 .bg-green{background: $green !important;}

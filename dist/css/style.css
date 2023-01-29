@@ -180,7 +180,8 @@ h6 {
   line-height: 130%;
 }
 
-.text-medium {
+.text-medium,
+.compate table th {
   font-family: "NunitoSans-Bold-700";
   font-size: 24px;
   line-height: 130%;
@@ -339,6 +340,10 @@ video {
 
 .mb-24 {
   margin-bottom: 24px;
+}
+
+.mt-32 {
+  margin-top: 32px;
 }
 
 .mb-32 {
@@ -565,6 +570,22 @@ ol.list li:before,
   color: #E63189;
 }
 
+.fill-white {
+  fill: #FFFFFF;
+}
+
+.fill-white use {
+  fill: #FFFFFF;
+}
+
+.fill-darkGray {
+  fill: #8F98A3;
+}
+
+.fill-darkGray use {
+  fill: #8F98A3;
+}
+
 .bg-lightGray {
   background-color: #F1F5F9;
 }
@@ -775,6 +796,15 @@ ol.list li:before,
 .btn_light {
   background-color: #F1F5F9;
   color: #000000;
+}
+
+.btn_red {
+  background-color: #E63189;
+  color: #FFFFFF;
+}
+
+.btn_red svg {
+  fill: #FFFFFF;
 }
 
 .btn.jcsb {
@@ -997,6 +1027,34 @@ a.btn-2:hover {
 
 .btnControl svg {
   fill: #FFFFFF;
+}
+
+.btnListToggle {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btnListToggle__icon {
+  border-radius: 99px;
+  padding: 8px;
+  border: 1px solid #000000;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.btnListToggle.active .btnListToggle__icon {
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .inputText {
@@ -3186,6 +3244,53 @@ ol.list li:before,
   position: relative;
 }
 
+.compate table {
+  width: 100%;
+  background-color: #F1F5F9;
+  border-radius: 24px;
+  border-collapse: collapse;
+}
+
+.compate table td {
+  padding: 16px;
+  text-align: center;
+}
+
+.compate table td svg {
+  margin: 0 auto;
+}
+
+.compate table td.bg-lg {
+  background: -o-linear-gradient(184.38deg, #BD02FE -0.04%, #6117FE 100.04%);
+  background: linear-gradient(265.62deg, #BD02FE -0.04%, #6117FE 100.04%);
+}
+
+.compate table th {
+  padding: 16px 48px;
+  text-align: left;
+}
+
+.compate table tr:last-child td,
+.compate table tr:last-child th {
+  padding-bottom: 48px;
+}
+
+.compate table tr:first-child td,
+.compate table tr:first-child th {
+  padding-top: 48px;
+}
+
+.whatIs__body {
+  background-color: #000000;
+  padding: 48px;
+  border-radius: 32px;
+  color: #FFFFFF;
+}
+
+.whatIs__body img {
+  width: 100%;
+}
+
 .feedback__item {
   padding: 16px;
   border-bottom: 1px solid #F1F5F9;
@@ -4333,6 +4438,11 @@ ol.list li:before,
     padding: 32px;
   }
 
+  .whatIs__body {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
   .teethKit {
     padding-top: 16px;
   }
@@ -4598,6 +4708,24 @@ position sticky у блока .stickyBlock */
     padding: 16px;
     position: relative;
     min-height: 56.21vw;
+  }
+
+  .compate table th {
+    padding: 16px;
+  }
+
+  .compate table tr:last-child td,
+  .compate table tr:last-child th {
+    padding-bottom: 16px;
+  }
+
+  .compate table tr:first-child td,
+  .compate table tr:first-child th {
+    padding-top: 16px;
+  }
+
+  .whatIs__body {
+    padding: 16px;
   }
 
   .feedback__content {
@@ -4867,6 +4995,14 @@ position sticky у блока .stickyBlock */
 
   .buyBundles__image img {
     margin-top: -80px;
+  }
+
+  .compate table td.text-big {
+    font-size: 20px !important;
+  }
+
+  .compate table th {
+    font-size: 16px;
   }
 
   .imageFeedback__duration {

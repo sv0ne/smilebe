@@ -43,6 +43,13 @@
 		background-color: $lightGray;
 		color: $black;
 	}
+	&_red{
+		background-color: $red;
+		color: $white;
+		svg {
+			fill: $white;
+		}
+	}
 	&.jcsb{
 		justify-content: space-between;
 	}
@@ -204,6 +211,24 @@ button.btn-2:hover, a.btn-2:hover{
 	backdrop-filter: blur(10px);
 	svg{
 		fill: $white;
+	}
+}
+
+.btnListToggle{
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	&__icon{
+		border-radius: 99px;
+		padding: 8px;
+		border: 1px solid $black;
+		transition: all 0.2s ease 0s;
+	}
+	&.active{
+		.btnListToggle__icon{
+			transition: all 0.2s ease 0s;
+			transform: rotate(-45deg);
+		}
 	}
 }
 
