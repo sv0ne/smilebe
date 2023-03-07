@@ -143,6 +143,10 @@
 								<li>Fast results after just one treatment</li>
 								<li>Includes 14 individual on-the-go treatments</li>
 							</ul>
+							@@include('blocks/product/faq.html', {
+								"page": "page",
+								"title": ""
+							})
 						</div>
 						<div class="w-100">
 							<div class="switch">
@@ -309,7 +313,54 @@
 			<p>Water/Aqua, Glycerin, Sodium Cocoyl Glutamate, Sodium Chloride, Disodium Phosphate, Hydroxyethylcellulose, Phenoxyethanol, Sodium Carbonate, Sodium Bicarbonate, Xanthan Gum, Mentha Piperita (Peppermint) Oil, Sucralose, Ethylhexylglycerin.</p>
 		</div>
 	</div>
-
+	
+	<div class="container fastWhitening">
+		<div class="fastWhitening__row">
+			<div class="fastWhitening__col">
+				<div class="fastWhitening__image">
+					<img loading="lazy" src="img/fastWhitening/10.gif" alt="">
+				</div>
+			</div>
+			<div class="fastWhitening__col">
+				<div class="fastWhitening__text nlc-mb-16">
+					<p class="text-big">Just 30 minutes for whitening treatment</p>
+					<p>Each satchet comes with two strips, for your top and bottom teeth. Firmly apply a strip to both your upper & lower teeth. After 30 minutes, gently remove both strips from your teeth and say hello to your whitest & brightest smile yet.</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa asperiores ea deserunt corporis eos, tempora non! Repellendus recusandae aut dolore, consequatur, exercitationem sapiente in, rerum eum, quae nobis vel minima earum voluptatum laudantium provident. Consectetur dicta exercitationem asperiores quibusdam cumque?</p>
+				</div>
+			</div>
+		</div>
+		<div class="fastWhitening__row fastWhitening__row_2">
+			<div class="fastWhitening__col">
+				<div class="fastWhitening__image js-video-container js-video-active js-video-sound">
+					<!-- <img loading="lazy" src="img/fastWhitening/01.png" alt=""> -->
+					<video class="js-video" src="video/02.mp4" autoplay muted loop playsinline></video>
+					<div class="magic__control">
+						<button class="js-video-control btnControl mr-8 svgWithState">
+							<svg class="w-24">
+								<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
+								<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
+							</svg>
+						</button>
+						<button class="js-video-mute btnControl svgWithState">
+							<svg class="w-24">
+								<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#volumn-off"/>
+								<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#volumn-on"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="fastWhitening__col">
+				<div class="fastWhitening__text nlc-mb-16">
+					<p class="text-big">Just 30 minutes for</p>
+					<p>Each satchet comes with two strips, for your top and bottom teeth. </p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Id qui tempora ipsam, impedit voluptatem rem cupiditate.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus delectus neque quas! Corrupti odit fugit inventore architecto dolorum placeat iusto voluptatibus nihil quibusdam delectus porro rerum eaque beatae quia, magni excepturi mollitia quam. Dicta veritatis, magni praesentium incidunt libero, doloremque?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<!-- How to use? -->
 	<div class="container o-h">
 		<p class="p-16 text-big mb-32">How to use?</p>
@@ -498,7 +549,7 @@
 	<!-- FAQ -->
 	@@include('blocks/product/faq.html', {
 		"page": "product",
-		"title": "Got a questions? We've got answers" 
+		"title": "Got a questions? We've got answers"
 	})
 
 	<!-- Отзывы -->

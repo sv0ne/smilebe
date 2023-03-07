@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/common/head.html',{
+	"title": "Smilebe"
+})
+<body>
+	@@include('blocks/common/header.html', {
+		"page": "none"
+	})
+
+	<div class="container pageCreator">
+		<div class="pageCreator__black white nlc-mb-16">
+			<p class="text-huge">Программа «Toplash для профессионалов»</p>
+			<p>Тестируйте, преображайтесь, делитесь. Получайте результаты и кэшбэк от каждой продажи.</p>
+			<a href="" class="btn btn_white md4-w-100">Заполнить заявку</a>
+		</div>
+		<div class="pageCreator__white nlc-mb-48 professional">
+			<div class="introPage">
+				<img loading="lazy" width="926" height="288" src="img/professional/bg.svg" alt="">
+			</div>
+
+	      	<p class="text-big">Партнерство с нами — это красота, преображение, прибыль.</p>
+
+	      	<div class="nlc-mb-16">
+	      		<p>Вы специалист в бьюти-индустрии, ведете профессиональную страницу или блог в социальных сетях? Видели результаты продукции Toplash у других и хотите достичь таких же?</p>
+	      		<p><span class="bold">Напишите</span> нам для получения личного промокода, предоставляющего вашей аудитории скидку в 20% на продукцию каталога сайта.</p>
+	      		<p>А лично вам возвращается 15% кэшбэк от всех покупок, совершенных по вашему промокоду.</p>
+	      		<a href="" class="btn btn_black md4-w-100">Заполнить заявку</a>
+	      	</div>
+
+	      	<div class="container professionalBrend">
+				<div class="professionalBrend__row">
+					<div class="professionalBrend__col professionalBrend__col_1">
+						<div class="professionalBrend__text nlc-mb-32">
+							<div class="card-v1 mod-md-p-16">
+								<p class="text-medium">Бренд, о котором говорят</p>
+								<p>Мы обеспечиваем поддержку узнаваемости бренда и рост ваших продаж регулярными рекламными кампаниями в режиме нон-стоп.</p>
+							</div>
+							<div class="card-v1 mod-md-p-16">
+								<p class="text-medium">Мгновенная поддержка 24/7</p>
+								<p>Мы готовы ответить на все возникшие вопросы именно тогда, когда вы обратитесь</p>
+							</div>
+						</div>
+					</div>
+					<div class="professionalBrend__col professionalBrend__col_2">
+						<div class="tape">
+							<div class="tape__body posa">
+								<div class="professionalBrend__slide">
+									<img class="professionalBrend__bg" loading="lazy" src="img/problems/02.jpg" alt="">
+									<div class="professionalBrend__overlay posa white">
+										<img loading="lazy" width="87" height="105" src="img/professional/tape-img.svg" alt="">
+										<p class="text-large">Нас знают и рекомендуют тысячи специалистов и популярных блогеров.</p>
+										<a href="" class="btn btn_white md4-w-100">Присоедениться</a>
+									</div>
+								</div>
+							</div>
+							<div class="tape__bg tape__bg_1"></div>
+							<div class="tape__bg tape__bg_2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	      	<p class="text-big">Ответы на вопросы, которые могут у вас возникнуть:</p>
+	      	@@include('blocks/product/faq.html', {
+				"page": "page",
+				"title": ""
+			})
+	    </div>
+	</div>
+	
+	@@include('blocks/common/footer.html')
+</body>
+</html>
