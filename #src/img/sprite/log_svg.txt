@@ -4,6 +4,7 @@ img/sprite/icons-sprite.svg#breadcrumbsNav
 img/sprite/icons-sprite.svg#cart
 img/sprite/icons-sprite.svg#checkbox-active
 img/sprite/icons-sprite.svg#checkbox
+img/sprite/icons-sprite.svg#close-fill
 img/sprite/icons-sprite.svg#close
 img/sprite/icons-sprite.svg#facebook
 img/sprite/icons-sprite.svg#inCart
