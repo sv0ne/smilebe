@@ -822,6 +822,7 @@ ol.list, .styledContent ol{
 		.btnRound{
 			transition: all 0.3s ease 0s;
 			transform: rotate(180deg);
+			flex: 0 0 48px;
 		}
 		&.active{
 			.btnRound{
