@@ -23,6 +23,8 @@ body{
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
+		color: inherit;
+   -webkit-text-fill-color: inherit;
 	}
 }
 
@@ -162,6 +164,9 @@ img, video{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  > *:not(p:first-of-type) {
+	  display: none;
+	}
 }
 
 .text-through{
@@ -187,7 +192,10 @@ img, video{
 	    width: 100%;
 	}
 }
+
 .op-0{opacity: 0 !important;}
+.o75{opacity:.75;}
+
 .o-h{overflow: hidden;}
 .ws-n{white-space: nowrap;}
 .w-100{width: 100%;}

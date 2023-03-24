@@ -347,6 +347,19 @@ button.btn-2:hover, a.btn-2:hover{
 		position: relative;
 		left: -8px;
 	}
+
+	@media (max-width:$md4+px) {
+    	flex-direction: column;
+    	.inputBtn{
+    		left: 0;
+    	}
+    	.inputText{
+    		margin-bottom: 16px;
+    		input[type=text]{
+    			border-radius: 12px;
+    		}
+    	}
+	}
 }
 
 .inputCheckbox{

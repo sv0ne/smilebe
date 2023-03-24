@@ -17,17 +17,17 @@
 }
 
 @font-face {
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral-Bold-700";
   font-display: swap;
-  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
+  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Spectral-Bold-700";
+  font-family: "Spectral-SemiBold-600";
   font-display: swap;
-  src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
+  src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -239,6 +239,8 @@ body button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 svg.w-16 {
@@ -488,6 +490,11 @@ ol.list li:before,
   -webkit-line-clamp: 3;
 }
 
+.text-trim-3 > *:not(p:first-of-type),
+.card-v2__text > *:not(p:first-of-type) {
+  display: none;
+}
+
 .text-through {
   text-decoration: line-through;
 }
@@ -506,6 +513,10 @@ ol.list li:before,
 
 .op-0 {
   opacity: 0 !important;
+}
+
+.o75 {
+  opacity: 0.75;
 }
 
 .o-h {
@@ -2888,6 +2899,7 @@ ol.list li:before,
 
 .buyBundles__bg:after {
   content: "";
+  border-radius: 24px;
   background: rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
@@ -2998,6 +3010,7 @@ ol.list li:before,
 .tape__item video {
   width: 100%;
   height: 100%;
+  border-radius: 24px;
 }
 
 .tape__control {
@@ -4168,6 +4181,10 @@ ol.list li:before,
   display: flex;
 }
 
+.beforeAfter__text .btn {
+  text-align: center;
+}
+
 .beforeAfter__col {
   padding: 8px;
   -webkit-box-flex: 0;
@@ -4450,7 +4467,7 @@ ol.list li:before,
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    max-width: 95%;
+    max-width: 120%;
     height: auto;
   }
 }
@@ -4819,7 +4836,7 @@ position sticky у блока .stickyBlock */
   }
 
   .text-big {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .p-32-md3-16 {
@@ -4959,6 +4976,10 @@ position sticky у блока .stickyBlock */
     padding: 16px;
     position: relative;
     min-height: 56.21vw;
+  }
+
+  .demoVideo__textArea {
+    display: none;
   }
 
   .compate table th {
@@ -5149,6 +5170,26 @@ position sticky у блока .stickyBlock */
   }
 }
 
+@media (max-width: 520px) {
+  .compate table td svg {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24px;
+            flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .compate table td.text-big {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+
+  .compate table th {
+    font-size: 14px;
+    font-weight: 400 !important;
+  }
+}
+
 @media (max-width: 479.98px) {
   .text-huge {
     font-size: 32px;
@@ -5179,6 +5220,25 @@ position sticky у блока .stickyBlock */
 
   .btn {
     padding: 16px;
+  }
+
+  .inputTextBtn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .inputTextBtn .inputBtn {
+    left: 0;
+  }
+
+  .inputTextBtn .inputText {
+    margin-bottom: 16px;
+  }
+
+  .inputTextBtn .inputText input[type=text] {
+    border-radius: 12px;
   }
 
   .card-v1.mod-md-p-16 {
@@ -5231,6 +5291,14 @@ position sticky у блока .stickyBlock */
     z-index: 39;
   }
 
+  .bundlesFilter .scroll__item:not(:first-child) {
+    padding: 0px 4px;
+  }
+
+  .bundlesFilter .scroll__item:first-child {
+    padding: 0px 4px 0 0;
+  }
+
   .bundles__card {
     width: 300px;
     height: 100%;
@@ -5254,14 +5322,6 @@ position sticky у блока .stickyBlock */
 
   .buyBundles__image img {
     margin-top: -80px;
-  }
-
-  .compate table td.text-big {
-    font-size: 20px !important;
-  }
-
-  .compate table th {
-    font-size: 16px;
   }
 
   .introPage {
