@@ -167,7 +167,7 @@ h6 {
 
 .text-big {
   font-family: "Spectral-SemiBold-600";
-  font-size: 48px;
+  font-size: 40px;
   line-height: 120%;
 }
 
@@ -176,7 +176,7 @@ h6 {
 .styledContent h2,
 .userImage span {
   font-family: "Spectral-Bold-700";
-  font-size: 28px;
+  font-size: 24px;
   line-height: 130%;
 }
 
@@ -2434,6 +2434,23 @@ ol.list li:before,
   text-decoration: none;
 }
 
+.nav.nav-white-content {
+  color: #FFFFFF;
+}
+
+.nav.nav-white-content p {
+  color: #FFFFFF;
+}
+
+.nav.nav-white-content svg {
+  fill: #FFFFFF !important;
+}
+
+.nav.nav-white-content .cartCount {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 .cartCount {
   padding: 2px 8px;
   margin-left: 8px;
@@ -4354,6 +4371,18 @@ ol.list li:before,
   min-width: 300px;
 }
 
+.footer__dropdown .btnRound {
+  display: none;
+  padding: 8px;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.footer .dropdown__item:after {
+  display: none;
+}
+
 .select-once-2 .select2-container {
   width: 100% !important;
 }
@@ -4744,6 +4773,10 @@ ol.list li:before,
 
   .nav__home {
     margin-left: 8px;
+  }
+
+  .nav.nav-white-content .nav__menu {
+    color: #000000 !important;
   }
 
   .onlyDesktop {
@@ -5412,6 +5445,23 @@ position sticky у блока .stickyBlock */
 
   .footer__socials > * {
     margin: 0 8px !important;
+  }
+
+  .footer__dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .footer__dropdown .btnRound {
+    display: inline-block;
   }
 }
 

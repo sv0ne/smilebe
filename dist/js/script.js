@@ -392,6 +392,8 @@ $(document).on(isMobile ? "touchend" : "mousedown", function (e) {
 
 // Клик по выпадающему списку
 $(document).on("click", ".js-dropdown-head", function(){
+	if($(this).closest(".js-dropdown-item").hasClass('js-only-md4') && w > BREAKPOINT_md4){ return; }
+
 	let dropdownItem = $(this).closest('.js-dropdown-item');
 	let dropdownBody = dropdownItem.find('.js-dropdown-body');
 	let isActive = dropdownItem.hasClass('active');
@@ -401,6 +403,8 @@ $(document).on("click", ".js-dropdown-head", function(){
 
 /** При инициализации страницы закрываем/открываем выпадающий список в зависимости от класса "active" */
 $(".js-dropdown-item").each(function(){
+	if($(this).hasClass('js-only-md4') && w > BREAKPOINT_md4){ return; }
+
 	let isActive = $(this).hasClass('active');
 	isActive ? $(this).find('.js-dropdown-body').show() : $(this).find('.js-dropdown-body').hide();
 });

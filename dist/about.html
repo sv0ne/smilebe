@@ -26,7 +26,7 @@
 	<div class="bg-gradient p-8 ta-c">
 		<p class="bold white">Save 10% for the first purchase with promocode: TLNEWYEAR2022 </p>
 	</div>
-	<div class="nav">
+	<div class="nav"> <!-- Добавь класс nav-white-content если содержимое должно быть белым цветом -->
 		<div class="container">
 			<div class="nav__body">
 				<div class="f-aic">
@@ -83,13 +83,20 @@
 	<div class="container o-h">
 		<div class="footer__row p-8 jcsb mb-16">
 			<div class="footer__col p-8">
-				<div class="nlc-mb-16 d-flex fdc">
-					<p class="bold">Shop</p>
-					<a href="">View all products</a>
-					<a href="">PAP+ Whitening Strips</a>
-					<a href="">V34 Colour Corrector Serum</a>
-					<a href="">VIO405 Teeth Whitening Kit</a>
-					<a href="">VIO405 Teeth Whitening Refills</a>
+				<div class="js-dropdown-item js-only-md4 dropdown__item">
+					<div class="js-dropdown-head mb-16 footer__dropdown">
+						<p class="bold">Shop</p>
+						<button class="btnRound">
+							<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+						</button>
+					</div>
+					<div class="nlc-mb-16 d-flex fdc js-dropdown-body">
+						<a href="">View all products</a>
+						<a href="">PAP+ Whitening Strips</a>
+						<a href="">V34 Colour Corrector Serum</a>
+						<a href="">VIO405 Teeth Whitening Kit</a>
+						<a href="">VIO405 Teeth Whitening Refills</a>
+					</div>
 				</div>
 			</div>
 			<div class="footer__col p-8">
