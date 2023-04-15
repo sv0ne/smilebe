@@ -808,7 +808,7 @@
 		&_2{
 			flex-direction: row-reverse;
 			@media (max-width:$md3+px) {
-			    flex-direction: column-reverse;
+			    flex-direction: column;
 			}
 		}
 	}
