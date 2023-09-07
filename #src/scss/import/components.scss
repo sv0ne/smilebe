@@ -119,6 +119,11 @@ button.btn-2:hover, a.btn-2:hover{
 	&.btn-next{
 		transform: rotate(180deg);
 	}
+	&.btn-close{
+		top: 16px !important;
+		left: auto;
+		right: 16px;
+	}
 	&:hover{
 	    transition: scale 0.2s ease 0s;
 		transform: scale(1.2);

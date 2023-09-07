@@ -733,6 +733,170 @@ $(document).on("click", ".js-tape-mute", function(e){
 	$(this).toggleClass('active');
 });
 
+///////////////////////// Блок историй (подобие инстаграм) /////////////////////////////
+
+const TIME_SLIDE_STORIES_DURATION = 5000; // Длительность слайда с картинкой
+let isInitStoriesSlider = false;
+// Открыть истории
+$('.js-stories').click(function(e){
+	let isItem = $(e.target).closest('.about__item').length;
+	if(isItem === 1){ // Показать сторис
+		let id = $(e.target).closest('.about__item').data('id');
+		let idCount = $('.stories__item[data-id="'+id+'"]').not('.slick-cloned').length;
+		let index = $('.stories__item[data-id="'+id+'"]').not('.slick-cloned').index();
+
+		$('.js-stories').addClass('active');
+		$body.addClass('lock');
+		
+		if(isInitStoriesSlider === false){
+			$('.js-sliderStories').slick({
+				prevArrow: $('.stories__body .sliderBtn.btn-prev'),
+				nextArrow: $('.stories__body .sliderBtn.btn-next'),
+				initialSlide: index,
+			})
+			$('.js-sliderStories').slick('goTo', index);
+		}else{
+			$('.js-sliderStories').slick('goTo', index-1);
+		}
+		isInitStoriesSlider = true;
+	}else{ // Скрыть сторисы
+		if($(e.target).hasClass("stories__body")){
+			closeStories();
+		}
+	}
+});
+
+let $lastVideoPlayingStories = null;
+// Переключение на новый слайд
+$('.js-stories').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	let currentID = $(slick.$slides.get(nextSlide)).data('id');
+	let subslideCount = $('.stories__item[data-id="'+currentID+'"]').not('.slick-cloned').length;
+	let subSlideID = 0;
+	if(subslideCount !== 1){subSlideID = $(slick.$slides.get(nextSlide)).data('sub-id');}
+
+	// Определяем наличие видео в слайде
+	let $video = $(slick.$slides.get(nextSlide)).find('video');
+	let isSlideWithVideo = $video.length;
+	let duration = null;
+	if($lastVideoPlayingStories !== null){
+		$lastVideoPlayingStories.get(0).pause();
+	  $lastVideoPlayingStories = null;
+	}
+	if(isSlideWithVideo === 1){
+		duration = $video[0].duration * 1000;
+		$video[0].currentTime = 0;
+		$video.get(0).play();
+		$lastVideoPlayingStories = $video;
+	}
+
+	let delay = duration > 0 ? duration : TIME_SLIDE_STORIES_DURATION;
+	isStopedStories = false;
+	$('.js-timescale-stories').remove();
+	$('.js-sliderStories').append(addTimescaleStories(subslideCount, subSlideID, delay));
+	calcScrollbarStories(currentID);
+	autoSlideStories(delay);
+});
+
+// Логика вертикального скроллбара
+function calcScrollbarStories(currentID) {
+	let h = $(window).height();
+	let heightItem = $('.about__item[data-id="'+currentID+'"]').outerHeight();
+	let marginTop = heightItem * currentID;
+	let itemStart = (h / 2) - (heightItem / 2) - 8;
+	let setScroll = marginTop - itemStart;
+	$('.js-stories .scroll__body').animate({scrollTop: setScroll}, 300);
+}
+
+let timeoutNextSlideStories = null, startSlideTimeStories;
+// Автопереключение слайдов
+function autoSlideStories(delay = TIME_SLIDE_DURATION) {
+	startSlideTimeStories = new Date().getTime();
+	clearTimeout(timeoutNextSlideStories);
+	timeoutNextSlideStories = setTimeout(function() {
+		$('.js-sliderStories').slick('slickNext');
+	}, delay);
+}
+
+// Создание панели управления слайдом
+function addTimescaleStories(count, itemActive, duration = TIME_SLIDE_STORIES_DURATION) {
+	let isMuted = storiesVideoMutedStories === false ? "" : "active";
+
+	let html = '<div class="timescale timescaleStories js-timescale-stories" style="--stories-duration: '+duration+'ms;">';
+		html += '<div class="timescale__lines">';
+			for (var i = 0; i < count; i++){
+				let timescale_leftClass = i === itemActive ? "active" : i < itemActive ? "complete" : "";
+				html = html + '<div class="timescale__item"><div class="timescale__left '+timescale_leftClass+'"></div></div>';
+			}
+		html += '</div>';
+		html += '<div class="f-jcsb-aic mt-16">';
+			html += '<div class="d-flex">';
+				html += '<svg class="timescale__control svgWithState w-24 js-stories-pause">';
+					html += '<use class="st-1" xlink:href="'+pathSprite+'#pause"/>';
+					html += '<use class="st-2" xlink:href="'+pathSprite+'#play_w16in24"/>';
+				html += '</svg>';
+
+				html += '<svg class="timescale__control svgWithState volumn w-24 js-stories-volumn '+isMuted+'">';
+					html += '<use class="st-1" xlink:href="'+pathSprite+'#volumn-on"/>';
+					html += '<use class="st-2" xlink:href="'+pathSprite+'#volumn-off"/>';
+				html += '</svg>';
+			html += '</div>';
+			html += '<svg class="timescale__control close w-24 js-close-stories">';
+				html += '<use xlink:href="'+pathSprite+'#close"/>';
+			html += '</svg>';
+		html += '</div>';
+	html += '</div>';
+	return html;
+}
+	
+// Закрыть сторисы
+$(document).on("click", ".js-close-stories", function(){
+	closeStories();
+});
+
+// Закрыть сторисы
+function closeStories() {
+	clearTimeout(timeoutNextSlideStories);
+	if($lastVideoPlayingStories !== null){
+		$lastVideoPlayingStories.get(0).pause();
+	  $lastVideoPlayingStories = null;
+	}
+	$('.js-stories').removeClass('active');
+	$body.removeClass('lock');
+}
+
+let isStopedStories = false, leftTimeSlideStories;
+// Остановить автопрокрутку сторисов
+$(document).on("mousedown", ".js-stories-pause", function(e){
+	if(isStopedStories === false){
+		isStopedStories = true;
+		$(this).addClass('active');
+		$('.timescale__left').addClass('pause');
+		let nowTime = new Date().getTime();
+		leftTimeSlideStories = nowTime - startSlideTimeStories;
+		clearTimeout(timeoutNextSlideStories);
+		if($lastVideoPlayingStories !== null){
+			$lastVideoPlayingStories.get(0).pause();
+		}
+	}else{
+		isStopedStories = false;
+		$(this).removeClass('active');
+		$('.timescale__left').removeClass('pause');
+		if($lastVideoPlayingStories !== null){
+			$lastVideoPlayingStories.get(0).play();
+		}
+		let durationSlide = $lastVideoPlayingStories !== null ? $lastVideoPlayingStories.get(0).duration * 1000 : TIME_SLIDE_STORIES_DURATION;
+		autoSlide(durationSlide - leftTimeSlideStories);
+	}
+});
+
+let storiesVideoMutedStories = false;
+// Включение/Отключение звука на видео
+$(document).on("click", ".js-stories-volumn", function(e){
+	storiesVideoMutedStories = !storiesVideoMutedStories;
+	$('.stories__item video').prop('muted', storiesVideoMutedStories);
+	$(this).toggleClass('active');
+});
+
 ////////////////////////////////////// Home ////////////////////////////////////////////
 
 var $video_fScreen = $(".js-fScreen video");
