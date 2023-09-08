@@ -916,7 +916,8 @@ function startVideo() {
 		$(".js-fScreen").find(".js-video").trigger('play');
 	}
 }
-startVideo();
+//startVideo();
+$(".js-fScreen").find(".js-video").trigger('play');
 
 /** Сразу фильтруем после инициализации фильтра */
 
