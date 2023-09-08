@@ -3358,7 +3358,7 @@ ol.list li:before,
 }
 
 .stories .slick-list {
-  border-radius: 12px;
+  border-radius: 24px;
   overflow: hidden;
   height: 100%;
 }
@@ -5192,6 +5192,21 @@ ol.list li:before,
 
   .btnRound.sliderBtn.btn-next {
     right: 28px;
+  }
+}
+
+@media (max-width: 1370px) {
+  .about .container {
+    max-width: none;
+  }
+
+  .about .container .scroll {
+    padding: 0px 0px 1px 0px;
+    margin: 0 -8px;
+  }
+
+  .about .container .scroll__scroll {
+    padding: 0 8px 0 16px;
   }
 }
 

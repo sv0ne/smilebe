@@ -808,6 +808,20 @@
 ////////////////////////// about ///////////////////////////
 
 .about{
+	@media (max-width:1370px) {
+	    .container{
+	    	max-width: none;
+	    	.scroll{
+	    		padding: 0px 0px 1px 0px;
+      			margin: 0 -8px;
+      			&__scroll{
+      				padding: 0 8px 0 16px;
+      			}
+	    	}
+	    }
+	}
+		
+
 	&__scroll{
 		padding: 16px 8px 8px 8px;
 		.scroll__scroll{
@@ -984,7 +998,7 @@
 	}
 
 	.slick-list {
-		border-radius: 12px;
+		border-radius: 24px;
 		overflow: hidden;
 		height: 100%;
 	}
