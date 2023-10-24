@@ -9,6 +9,14 @@
 }
 
 @font-face {
+  font-family: "NunitoSans-Regular-400";
+  font-display: swap;
+  src: url("../fonts/NunitoSans-Regular-400.woff") format("woff"), url("../fonts/NunitoSans-Regular-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Spectral-Bold-700";
   font-display: swap;
   src: url("../fonts/Spectral-Bold-700.woff") format("woff"), url("../fonts/Spectral-Bold-700.woff2") format("woff2");
@@ -20,14 +28,6 @@
   font-family: "Spectral-SemiBold-600";
   font-display: swap;
   src: url("../fonts/Spectral-SemiBold-600.woff") format("woff"), url("../fonts/Spectral-SemiBold-600.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NunitoSans-Regular-400";
-  font-display: swap;
-  src: url("../fonts/NunitoSans-Regular-400.woff") format("woff"), url("../fonts/NunitoSans-Regular-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }

@@ -8,7 +8,7 @@
 		"page": "home"
 	})
 	<!-- First screen -->
-	<div class="fScreen js-video-container js-fScreen">
+	<div class="fScreen js-fScreen">
 		<div class="fScreen__body">
 			<div class="container">
 				<div class="fScreen__row">
@@ -16,25 +16,26 @@
 						<div class="fScreen__text">
 							<p class="text-huge">Smile brighter with Smilbe</p>
 							<p>If your dentist uses it, so do we. Every product we make puts professional-quality ingredients in your hands, to help you be your own version of perfect.</p>
-							<a href="" class="btn btn_white">Shop smilebe solution</a>
+							<a href="" class="btn btn_black">Shop smilebe solution</a>
 						</div>
 					</div>
 					<div class="fScreen__col">
 						<div class="fScreen__video">
-							<video id="test" class="js-video" width="671" height="671" src="video/homePageVideo.mp4" muted loop playsinline preload="none"></video>
+							<!-- <video id="test" class="js-video" width="671" height="671" src="video/homePageVideo.mp4" muted loop playsinline preload="none"></video>
 							<button class="fScreen__control btnControl js-video-control svgWithState">
 								<svg class="w-24">
 									<use class="st-1" xlink:href="img/sprite/icons-sprite.svg#pause"/>
 									<use class="st-2" xlink:href="img/sprite/icons-sprite.svg#play"/>
 								</svg>
-							</button>
+							</button> -->
+							<img src="img/devOnly/p-02.jpg" alt="">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="fScreen__bg posa">
-			<video class="posa js-video" src="video/homePageVideo.mp4" muted loop playsinline preload="none"></video>
+			<!-- <video class="posa js-video" src="video/homePageVideo.mp4" muted loop playsinline preload="none"></video> -->
 		</div>
 	</div>
 
@@ -349,8 +350,10 @@
 						<p class="bold">Teeth Whitening Refills <span class="text-medium ml-16">$34</span></p>
 						<p class="bold">Premium Whitening Kit <span class="text-medium ml-16">$175</span></p>
 						<a href="" class="btn btn_white md4-w-100">
-							<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
-							<span class="ml-8 btn__text ws-n">Add to cart</span>
+							<span class="d-inline-flex">
+								<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+								<span class="ml-8 btn__text ws-n">Add to cart</span>
+							</span>
 							<span class="ml-32 d-inline-flex aic teethKit__price">
 								<span class="text-medium">$110</span>
 								<span class="ml-8 text-through">$220</span>
