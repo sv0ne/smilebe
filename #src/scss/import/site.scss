@@ -15,7 +15,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 16px;
+		padding: 0 16px;
 	}
 	&__menu{
 		ul{
@@ -233,6 +233,26 @@
 	}
 	&__bg{
 		z-index: 2;
+	}
+}
+
+////////////////////////// mainScreen ////////////////////////
+
+.mainScreen{
+	padding-top: 48px;
+	&__head{
+		background-color: $lightGray;
+		padding-top: 16px;
+
+	}
+	&__text{
+		margin-top: -59px;
+	}
+	img{
+		max-width: 320px;
+		height: auto;
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -575,7 +595,7 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				max-width: 120%;
+				max-width: 100%;
 				height: auto;
 			}
 			@media (max-width:$md_872+px) {
@@ -823,7 +843,7 @@
 		
 
 	&__scroll{
-		padding: 16px 8px 8px 8px;
+		padding: 8px;
 		.scroll__scroll{
 			padding-bottom: 8px;
 		}

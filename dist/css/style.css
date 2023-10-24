@@ -2390,7 +2390,7 @@ ol.list li:before,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 16px;
+  padding: 0 16px;
 }
 
 .nav__menu ul {
@@ -2563,6 +2563,26 @@ ol.list li:before,
 
 .fScreen__bg {
   z-index: 2;
+}
+
+.mainScreen {
+  padding-top: 48px;
+}
+
+.mainScreen__head {
+  background-color: #F1F5F9;
+  padding-top: 16px;
+}
+
+.mainScreen__text {
+  margin-top: -59px;
+}
+
+.mainScreen img {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .product__row {
@@ -3151,7 +3171,7 @@ ol.list li:before,
 }
 
 .about__scroll {
-  padding: 16px 8px 8px 8px;
+  padding: 8px;
 }
 
 .about__scroll .scroll__scroll {
@@ -5115,7 +5135,7 @@ ol.list li:before,
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    max-width: 120%;
+    max-width: 100%;
     height: auto;
   }
 }
