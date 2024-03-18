@@ -1,5 +1,6 @@
 .text-huge{
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral";
+  font-weight: 600;
   font-size: 80px;
   line-height: 120%;
   @media (max-width:($md3+px)) {
@@ -11,7 +12,8 @@
 }
 
 .text-big{
-  font-family: "Spectral-SemiBold-600";
+  font-family: "Spectral";
+  font-weight: 600;
   font-size: 40px;
   line-height: 120%;
   @media (max-width:($md3+px)) {
@@ -20,7 +22,8 @@
 }
 
 .text-large{
-  font-family: "Spectral-Bold-700";
+  font-family: "Spectral";
+  font-weight: 700;
   font-size: 24px;
   line-height: 130%;
   @media (max-width:$md4+px) {
@@ -29,25 +32,29 @@
 }
 
 .text-medium{
-  font-family: "NunitoSans-Bold-700";
+  font-family: "NunitoSans";
+  font-weight: 700;
   font-size: 24px;
   line-height: 130%;
 }
 
 .text-default-bold{
-  font-family: "NunitoSans-Bold-700";
+  font-family: "NunitoSans";
+  font-weight: 700;
   font-size: 18px;
   line-height: 130%;
 }
 
 .text-default{
-  font-family: "NunitoSans-Regular-400";
+  font-family: "NunitoSans";
+  font-weight: 400;
   font-size: 18px;
   line-height: 130%;
 }
 
 .text-small{
-  font-family: "NunitoSans-Regular-400";
+  font-family: "NunitoSans";
+  font-weight: 400;
   font-size: 14px;
   line-height: 130%;
 }

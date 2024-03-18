@@ -605,7 +605,8 @@ ol.list, .styledContent ol{
 		}
 	}
 	&__title{
-		font-family: "Spectral-Bold-700";
+		font-family: "Spectral";
+		font-weight: 700;
 	  	font-size: 28px;
 	  	line-height: 130%;
 	  	margin-left: 176px;
@@ -613,7 +614,8 @@ ol.list, .styledContent ol{
 	  		margin-left: 96px;
 	  	}
 	  	@media (max-width:($md_608+px)) {
-	  		font-family: "NunitoSans-Bold-700";
+	  		font-family: "NunitoSans";
+			font-weight: 700;
   			font-size: 18px;
 	  	}
 	}

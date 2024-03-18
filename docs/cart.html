@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/select2.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preload" href="fonts/NunitoSans-Bold-700.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/NunitoSans-Bold-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/NunitoSans-Regular-400.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/NunitoSans-Regular-400.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Spectral-Bold-700.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/Spectral-Bold-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Spectral-SemiBold-600.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/Spectral-SemiBold-600.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/maskinput.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/script.js"></script>
+	<title data-title="Скидка до 20% на все товары нашего магазина||Розыгрыш призов от Топлаш">Smilebe</title>
+</head>
+<body>
+	<div class="wrapper nlc-mb-64">
+<header class="header not-nlc ">
+	<div class="bg-gradient p-8 ta-c">
+		<p class="bold white">Save 10% for the first purchase with promocode: TLNEWYEAR2022 </p>
+	</div>
+	<div class="nav"> <!-- Добавь класс nav-white-content если содержимое должно быть белым цветом -->
+		<div class="container">
+			<div class="nav__body">
+				<div class="f-aic">
+					<button class="nav__burger js-burger">
+						<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#menu"/></svg>
+					</button>
+					<a href="/" class="nav__home"><img loading="lazy" src="img/logo.svg" width="110" height="24" alt=""></a> <!-- Тут подключить картнку logo-white.svg если нужен белый логотип -->
+				</div>
+				<div class="nav__overlay js-overlay"></div>
+				<nav class="nav__menu js-menu">
+					<ul>
+						<li><a href="">Shop</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">How it works</a></li>
+						<li><a href="">Contacts</a></li>
+						<li><a href="">Help</a></li>
+						<li><a href="" class="btn btn_black w-100 onlyMobile">Log in</a></li>
+					</ul>
+				</nav>
+				<div class="f-aic bold"> 
+					<a href="" class="p-8 onlyDesktop">Log in</a>
+					<a href="" class="f-aic nav__cartLink">
+						<div class="p-8 f-aic nav__cart">
+							<svg class="w-24 black"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+							<p class="ml-8">Cart</p>
+							<p class="cartCount">12</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+	<form class="cart container js-validation-form" action="" method="post">
+		<p class="p-16 text-big">В корзине 1 товар</p>
+		<div class="cart__row">
+			<div class="cart__col mod-col-1 nlc-mb-32 nums">
+				<div class="cartProduct">
+					<div class="cartProduct__col">
+						<div class="image-hw-80">
+							<img loading="lazy" src="img/product/21.jpg" alt="">
+						</div>
+					</div>
+					<div class="cartProduct__row">
+						<div class="cartProduct__col mod-col-2">
+							<p class="text-large mb-4">Toplash Eyeliner and Wing Stamp</p>
+							<p>Подводка и штамп для стрелок</p>
+						</div>
+						<div class="cartProduct__col mod-col-3">
+							<div class="inputPlusminus">
+								<button class="js-submit-without-validate">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#minus"></use></svg>
+								</button>
+								<input type="number" name="count" autocomplete="off" value="1">
+								<button class="js-submit-without-validate">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#plus"></use></svg>
+								</button>
+							</div>
+						</div>
+						<div class="cartProduct__col mod-col-4 fx-1 ws-n">
+							<p class="bold mb-4 ta-c">816 084 ₽</p>
+							<p class="darkGray ta-c">813 042 ₽/шт.</p>
+						</div>
+						<div class="cartProduct__col mod-col-5 d-flex">
+							<button class="btnIcon js-submit-without-validate">
+								<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#remove"></use></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="cartProduct">
+					<div class="cartProduct__col">
+						<div class="image-hw-80">
+							<img loading="lazy" src="img/product/20.jpg" alt="">
+						</div>
+					</div>
+					<div class="cartProduct__row">
+						<div class="cartProduct__col mod-col-2">
+							<p class="text-large mb-4">Toplash Eyeliner and Wing Stamp protected by NaVi</p>
+							<p>Подводка и штамп для стрелок</p>
+						</div>
+						<div class="cartProduct__col mod-col-3">
+							<div class="inputPlusminus">
+								<button class="js-submit-without-validate">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#minus"></use></svg>
+								</button>
+								<input type="number" name="count" autocomplete="off" value="1">
+								<button class="js-submit-without-validate">
+									<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#plus"></use></svg>
+								</button>
+							</div>
+						</div>
+						<div class="cartProduct__col mod-col-4 fx-1 ws-n">
+							<p class="bold mb-4 ta-c">7 084 ₽</p>
+							<p class="darkGray ta-c">5 042 ₽/шт.</p>
+						</div>
+						<div class="cartProduct__col mod-col-5 d-flex">
+							<button class="btnIcon js-submit-without-validate">
+								<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#remove"></use></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="js-movement-block-to-mob" data-id="1"></div>
+				<div class="imageComm"><img loading="lazy" width="903" height="100" src="img/content/banner.jpg" alt=""></div>
+				<div class="f-aic md4-fww">
+					<p>Войдите в свой акаунт, чтобы автоматически заполнить контактные данные</p>
+					<a href="" class="ml-16 btn btn_light md4-w-100 cart__btnSec">Войти</a>
+				</div>
+				<p class="text-large f-aic"><span class="nums__item"></span>Общая информация</p>
+				<div class="row aic not-nlc mb-16">
+					<div class="inputRadio mb-16 mr-16">
+						<input type="radio" id="delivery-method-1" name="delivery-method" value="delivery-method-1" checked>
+						<label for="delivery-method-1">
+							<p>Доставка почтой</p>		
+						</label>
+					</div>
+					<div class="inputRadio mb-16">
+						<input type="radio" id="delivery-method-2" name="delivery-method" value="delivery-method-2">
+						<label for="delivery-method-2">
+							<p>Курьерская доставка (Москва и Санкт-Петербург)</p>		
+						</label>
+					</div>
+				</div>
+				<div class="select-once-2 js-validation-block">
+					<select class="js-select-once-2 _validate" data-validation-type='["reqAddress"]' name="adress" data-placeholder="Выберите свой адрес">
+						<option value=""></option>
+						<option value="1">Колаколовский переулок д2/32</option>
+						<option value="2">Мечниковский проспект 17 кв 2129</option>
+						<option value="3">Подзаборная 322</option>
+					</select>
+					<p class="js-validation-error mt-4 error"></p>
+				</div>
+				<p class="text-large f-aic"><span class="nums__item"></span>Контактная информация</p>
+				<div class="rowInputs not-nlc">
+					<div class="rowInputs__col js-validation-block">
+						<div class="inputText">
+							<input class="_validate" data-validation-type='["req", "name"]' type="text" autocomplete="off" name="name" placeholder=" ">
+							<label>Имя*</label>
+						</div>
+						<p class="js-validation-error mt-4 error"></p>
+					</div>
+					<div class="rowInputs__col js-validation-block">
+						<div class="inputText">
+							<input class="_validate" data-validation-type='["req", "name"]' type="text" autocomplete="off" name="fam" placeholder=" ">
+							<label>Фамилия*</label>
+						</div>
+						<p class="js-validation-error mt-4 error"></p>
+					</div>
+					<div class="rowInputs__col js-validation-block">
+						<div class="inputText">
+							<input class="_validate" data-validation-type='["req", "name"]' type="text" autocomplete="off" name="lastname" placeholder=" ">
+							<label>Отчество*</label>
+						</div>
+						<p class="js-validation-error mt-4 error"></p>
+					</div>
+				</div>
+				<div class="rowInputs not-nlc">
+					<div class="rowInputs__col js-validation-block">
+						<div class="inputText">
+							<input class="_validate js-mask-tel" data-validation-type='["req", "tel"]' type="text" autocomplete="off" name="tel" placeholder=" ">
+							<label>Телефон для связи</label>
+						</div>
+						<p class="js-validation-error mt-4 error"></p>
+					</div>
+					<div class="rowInputs__col js-validation-block">
+						<div class="inputText">
+							<input class="_validate" data-validation-type='["req", "email"]' type="text" autocomplete="off" name="email" placeholder=" ">
+							<label>Email*</label>
+						</div>
+						<p class="js-validation-error mt-4 error"></p>
+					</div>
+				</div>
+				<p class="text-large f-aic"><span class="nums__item"></span>Возможно вы хотите что-то добавить?</p>
+				<div class="inputText">
+					<textarea type="text" autocomplete="off" name="message" placeholder=" "></textarea>
+					<label for="sv-input-name">Комментарий</label>
+				</div>
+				<p class="text-large f-aic"><span class="nums__item"></span>Способ оплаты</p>
+				<div class="row aic not-nlc mb-16">
+					<div class="inputRadio mb-16 mr-16">
+						<input type="radio" id="payment-method-1" name="payment-method" value="payment-method-1" checked>
+						<label for="payment-method-1">
+							<p>Оплата при получении</p>		
+						</label>
+					</div>
+					<div class="inputRadio mb-16">
+						<input type="radio" id="payment-method-2" name="payment-method" value="payment-method-2">
+						<label for="payment-method-2">
+							<p>Оплатить картой</p>		
+						</label>
+					</div>
+				</div>
+				<p>После нажатия кнопки “Подтвердить заказ” появится окно, в котором вы сможете произвести оплату.</p>
+				<div class="js-totalityFixed-anchor"></div>
+				<div class="mb-32 f-jcsb-aic p-8-16 boxShadow brad-16 js-totalityFixed cartFixed">
+					<div>
+						<p class="text-large">5 706 ₽</p>
+						<p class="darkGray">2 товара</p>
+					</div>
+					<button class="btn btn_black js-form-submit">Подтвердить заказ</button>
+				</div>
+			</div>
+			<div class="cart__col mod-col-2 nlc-mb-16">
+				<div class="js-movement-block-to-desc" data-id="1">
+					<div class="cardSimple p-16 nlc-mb-16 js-movement-block">
+						<div class="inputTextBtn js-inputTextBtn-change">
+							<div class="inputText">
+								<input type="text" autocomplete="off" name="promocode" placeholder=" ">
+								<label for="sv-input-name">Промокод</label>
+							</div>
+							<button class="inputBtn inputBtn_gray js-submit-without-validate">Применить</button>
+						</div>
+						<div>
+							<div class="f-jcsb-aic mb-4">
+								<p>Доступно баллов</p>
+								<div class="f-aic green">
+									<p class="mr-8">10</p>
+									<a href="" class="link">Потратить</a>
+								</div>
+							</div>
+							<p class="text-small darkGray">Баллы не суммируются со скидкой, и будут применены только если превысят ее.</p>
+						</div>
+						<p class="text-small red">Увы, но промокод не действителен</p>
+						<div class="f-jcsb-aic">
+							<p>Товары, 2 шт.</p>
+							<p>6 084 ₽ </p>
+						</div>
+						<div class="f-jcsb-aic">
+							<p>Скидка</p>
+							<p class="red">6 084 ₽</p>
+						</div>
+						<div>
+							<div class="f-jcsb-aic mb-4">
+								<p>Доставка</p>
+								<p class="green">Бесплатная</p>
+							</div>
+							<p class="darkGray text-small">Бесплатная при покупке от 3 000 ₽ или оплате картой</p>
+						</div>
+						<div class="f-jcsb-aic">
+							<p class="text-large">Итого</p>
+							<p class="text-large">5 706 ₽ </p>
+						</div>
+						<button class="btn btn_black w-100 js-form-submit">Подтвердить заказ</button>
+						<p class="text-small darkGray">Подтверждая заказ, вы принимаете условия <a href="" class="link">пользовательского соглашения</a></p>
+					</div>
+				</div>
+				<!-- <div class="p-0-16">
+					<p class="text-large mb-16">Вместе дешевле</p>
+					<p>Ура, вы почти собрали набор, присмотритесь, возможно лучше забрать все вместе?</p>
+				</div>
+				<div class="cartSet">
+					<div class="f-jcsb-aic p-16">
+						<button type="button" class="js-cartSlider-control btnRound btnRound_black btn-prev">
+							<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+						</button>
+						<p>Набор <span class="js-cartSlider-currentSlide">1</span> из <span class="js-cartSlider-slideCount">x</span></p>
+						<button type="button" class="js-cartSlider-control btnRound btnRound_black btn-next">
+							<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+						</button>
+					</div>
+					<div class="cartSlider js-cartSlider">
+						<div class="cartSlider__item">
+							<div class="f-jcc-aic">
+								<div class="image-hw-200"><img loading="lazy" src="img/product/20.jpg" alt=""></div>
+							</div>
+							<div class="p-16 nlc-mb-8">
+								<div class="f-aic">
+									<div class="js-rating rating mr-8" data-rating="4"></div>
+									<p class="darkGray text-small">15 отзывов</p>
+								</div>
+								<p class="text-large">Maximum whitening</p>
+								<p class="text-small">Набор для максимального отбеливания</p>
+							</div>
+							<div class="nlc-mb-16 p-0-16">
+								<div class="d-flex">
+									<div class="image-hw-120">
+										<img loading="lazy" src="img/product/21.jpg" alt="">
+										<div class="inCart">
+											<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#inCart"/></svg>
+										</div>
+									</div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="4"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/22.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="5"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/23.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="2"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+							</div>
+							<div class="p-16 nlc-mb-16">
+								<div class="f-jcsb-aic">
+									<p>Цена набора:</p>	
+									<div class="f-aic">
+										<p class="text-large">12 000 ₽</p>
+										<p class="ml-8 text-through">20 290 ₽</p>
+									</div>
+								</div>	
+								<p class="btn-2 btn-2_black w-100 ta-c">Выгода 490 ₽</p>
+								<button class="btn btn_black w-100 js-submit-without-validate">Заменить товары в корзине</button>
+							</div>
+						</div>
+						<div class="cartSlider__item">
+							<div class="f-jcc-aic">
+								<div class="image-hw-200"><img loading="lazy" src="img/product/24.jpg" alt=""></div>
+							</div>
+							<div class="p-16 nlc-mb-8">
+								<div class="f-aic">
+									<div class="js-rating rating mr-8" data-rating="5"></div>
+									<p class="darkGray text-small">8 отзывов</p>
+								</div>
+								<p class="text-large">Maximum whitening</p>
+								<p class="text-small">Набор для максимального отбеливания</p>
+							</div>
+							<div class="nlc-mb-16 p-0-16">
+								<div class="d-flex">
+									<div class="image-hw-120">
+										<img loading="lazy" src="img/product/26.jpg" alt="">
+										<div class="inCart">
+											<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#inCart"/></svg>
+										</div>
+									</div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="4"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/27.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="5"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/28.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="2"></div>
+											<p class="darkGray text-small">15 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+							</div>
+							<div class="p-16 nlc-mb-16">
+								<div class="f-jcsb-aic">
+									<p>Цена набора:</p>	
+									<div class="f-aic">
+										<p class="text-large">12 000 ₽</p>
+										<p class="ml-8 text-through">20 290 ₽</p>
+									</div>
+								</div>	
+								<p class="btn-2 btn-2_black w-100 ta-c">Выгода 490 ₽</p>
+								<button class="btn btn_black w-100 js-submit-without-validate">Заменить товары в корзине</button>
+							</div>
+						</div>
+						<div class="cartSlider__item">
+							<div class="f-jcc-aic">
+								<div class="image-hw-200"><img loading="lazy" src="img/product/20.jpg" alt=""></div>
+							</div>
+							<div class="p-16 nlc-mb-8">
+								<div class="f-aic">
+									<div class="js-rating rating mr-8" data-rating="4"></div>
+									<p class="darkGray text-small">15 отзывов</p>
+								</div>
+								<p class="text-large">Maximum whitening</p>
+								<p class="text-small">Набор для максимального отбеливания</p>
+							</div>
+							<div class="nlc-mb-16 p-0-16">
+								<div class="d-flex">
+									<div class="image-hw-120">
+										<img loading="lazy" src="img/product/21.jpg" alt="">
+										<div class="inCart">
+											<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#inCart"/></svg>
+										</div>
+									</div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="4"></div>
+											<p class="darkGray text-small">17 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/22.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="5"></div>
+											<p class="darkGray text-small">8 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">2 290 ₽</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="image-hw-120"><img loading="lazy" src="img/product/23.jpg" alt=""></div>
+									<div class="fx-1 p-0-16 nlc-mb-8">
+										<p class="bold">Whitening Strips</p>
+										<div class="f-aic">
+											<div class="js-rating rating mr-8" data-rating="2"></div>
+											<p class="darkGray text-small">155 отзывов</p>
+										</div>
+										<p class="text-small">Полоски для отбелив...</p>
+										<p class="bold">12 290 ₽</p>
+									</div>
+								</div>
+							</div>
+							<div class="p-16 nlc-mb-16">
+								<div class="f-jcsb-aic">
+									<p>Цена набора:</p>	
+									<div class="f-aic">
+										<p class="text-large">12 000 ₽</p>
+										<p class="ml-8 text-through">20 290 ₽</p>
+									</div>
+								</div>	
+								<p class="btn-2 btn-2_black w-100 ta-c">Выгода 490 ₽</p>
+								<button class="btn btn_black w-100 js-submit-without-validate">Заменить товары в корзине</button>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</form>
+	
+	<footer class="footer not-nlc">
+	<div class="container o-h">
+		<div class="footer__row p-8 jcsb mb-16">
+			<div class="footer__col p-8">
+				<div class="js-dropdown-item js-only-md4 dropdown__item">
+					<div class="js-dropdown-head mb-16 footer__dropdown">
+						<p class="bold">Shop</p>
+						<button class="btnRound">
+							<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#arrow"/></svg>
+						</button>
+					</div>
+					<div class="nlc-mb-16 d-flex fdc js-dropdown-body">
+						<a href="">View all products</a>
+						<a href="">PAP+ Whitening Strips</a>
+						<a href="">V34 Colour Corrector Serum</a>
+						<a href="">VIO405 Teeth Whitening Kit</a>
+						<a href="">VIO405 Teeth Whitening Refills</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__col p-8">
+				<div class="nlc-mb-16 d-flex fdc">
+					<p class="bold">Support</p>
+					<a href="">Help centre</a>
+					<a href="">Shipping information</a>
+					<a href="">Contact us</a>
+					<a href="">Terms and conditions</a>
+					<a href="">Privacy Policy</a>
+				</div>
+			</div>
+			<div class="footer__col p-8">
+				<div class="nlc-mb-16 d-flex fdc">
+					<p class="bold">Explore</p>
+					<a href="">About smilebe</a>
+					<a href="">How whitening works</a>
+					<a href="">Blog</a>
+				</div>
+			</div>
+		</div>
+		<div class="p-8 row aic mb-16 footer__payments">
+			<div class="p-8"><img loading="lazy" src="img/paymentSystems/visa.svg" alt=""></div>
+			<div class="p-8"><img loading="lazy" src="img/paymentSystems/mastercard.svg" alt=""></div>
+			<div class="p-8"><img loading="lazy" src="img/paymentSystems/paypal.svg" alt=""></div>
+			<div class="p-8"><img loading="lazy" src="img/paymentSystems/apple-pay.svg" alt=""></div>
+			<div class="p-8"><img loading="lazy" src="img/paymentSystems/google-pay.svg" alt=""></div>
+		</div>
+		<div class="row jcsb p-8">
+			<div class="p-8 footer__logo">
+				<a href="/">
+					<img loading="lazy" src="img/logo.svg" alt="">
+					<p class="text-small">by toplash cosmetics</p>
+				</a>
+			</div>
+			<div class="p-8 row aic footer__footer">
+				<div class="f-aic nlc-mr-16 darkGray mr-16 footer__socials">
+					<a href="" class="p-8"><svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#tiktok"/></svg></a>
+					<a href="" class="p-8"><svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#instagram"/></svg></a>
+					<a href="" class="p-8"><svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#facebook"/></svg></a>
+				</div>
+				<p>© <span class="js-full-year"></span>, Smilebe</p>
+			</div>
+		</div>
+		
+	</div>
+</footer>
+<script>
+	pathSprite = "img/sprite/icons-sprite.svg"; // Путь к спрайту с иконками
+</script>
+</div>
+</body>
+</html>
