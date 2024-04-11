@@ -4209,14 +4209,6 @@ ol.list li:before,
           flex-direction: column;
 }
 
-.products__card:hover {
-  -webkit-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
-  -webkit-transform: translateY(-8px);
-      -ms-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
-
 .products__image {
   position: relative;
   padding-top: 100%;
@@ -5072,6 +5064,14 @@ ol.list li:before,
 @media (min-width: 767.98px) {
   .rtl .pro-tip {
     padding: 48px;
+  }
+
+  .products__card:hover {
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    -webkit-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+            transform: translateY(-8px);
   }
 }
 

@@ -1852,8 +1852,10 @@
 		}
 		transition: all 0.2s ease 0s;
 		&:hover{
-			transition: all 0.2s ease 0s;
-			transform: translateY(-8px);
+			@media (min-width:#{$md3}px) {
+				transition: all 0.2s ease 0s;
+				transform: translateY(-8px);
+			}
 		}
 	}
 	&__image{
