@@ -34,29 +34,19 @@
 	&__item {
 		list-style: none;
 		padding: 8px;
-		a{
-			white-space: nowrap;
-		}
 		&:first-child{margin-left: 0px; padding-left: 0px;}
 		&:last-child{margin-right: 0px; padding-right: 0px;}
 	}
 	&__button{
 		position: absolute;
-		top: calc(50% - 22px);
-		padding: 8px 6px;
-		display: flex !important;
-		align-items: center;
+		top: calc(50% - 32px) !important;
 		opacity: 0;
 		visibility: hidden;
 		left: 16px;
 		z-index: 10;
-		background-color: $white;
-		border: 2px solid $lightGray !important;
-		border-radius: 99px;
-		&.btn-prev{transform: rotate(180deg);}
 		&.btn-next{
-			left: auto;
-			right: 16px;
+			left: auto !important;
+			right: 16px !important;
 		}
 		&.open{
 			opacity: 1;
@@ -66,20 +56,20 @@
 	&__overlayArea{
 		position: absolute;
 		z-index: 5;
-		top: 16px;
+		top: 0px;
 		bottom: 16px;
 		left: 0px;
-		width: 150px;
+		width: 75px;
 		pointer-events: none;
-		//background: linear-gradient(270deg, rgba(255,255,255,0),rgba(255,255,255,1));
-		background: linear-gradient(270deg, rgba(255,0,255,0),rgba(255,0,255,1));
+		background: linear-gradient(270deg, rgba(255,255,255,0),rgba(255,255,255,1));
+		//background: linear-gradient(270deg, rgba(255,0,255,0),rgba(255,0,255,1));
 		opacity: 0;
 		transition: all 1.5s ease 0s;
 		&_right{
 			left: auto;
 			right: 0px;
-			//background: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
-			background: linear-gradient(90deg, rgba(255,0,255,0),rgba(255,0,255,1));
+			background: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
+			//background: linear-gradient(90deg, rgba(255,0,255,0),rgba(255,0,255,1));
 		}
 		&.open{
 			opacity: 1;
@@ -105,6 +95,33 @@
 		.scroll__scroll{
 			padding: 0 16px;
 			min-width: 100%;
+		}
+	}
+
+	&.productsScroll{
+		padding: 0px 0px 1px 0px;
+		margin-top: -8px;
+		.scroll{
+			&__body{
+				padding: 8px 0;
+			}
+			&__item{
+				padding: 16px;
+				width: 400px;
+				&:first-child{padding-left: 16px;}
+				&:last-child{padding-right: 16px;}
+				@media (max-width:#{$md3}px) {
+					width: 360px;
+				}
+				@media (max-width:#{$md4}px) {
+					width: 332px;
+				}
+			}
+			&__scroll {
+				@media (max-width:$mw+px) {
+					padding: 0 8px 0 8px;
+				}
+			}
 		}
 	}
 }

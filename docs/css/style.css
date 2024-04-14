@@ -2259,10 +2259,6 @@ ol.list li:before,
   padding: 8px;
 }
 
-.scroll__item a {
-  white-space: nowrap;
-}
-
 .scroll__item:first-child {
   margin-left: 0px;
   padding-left: 0px;
@@ -2275,32 +2271,16 @@ ol.list li:before,
 
 .scroll__button {
   position: absolute;
-  top: calc(50% - 22px);
-  padding: 8px 6px;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  top: calc(50% - 32px) !important;
   opacity: 0;
   visibility: hidden;
   left: 16px;
   z-index: 10;
-  background-color: #FFFFFF;
-  border: 2px solid #F1F5F9 !important;
-  border-radius: 99px;
-}
-
-.scroll__button.btn-prev {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .scroll__button.btn-next {
-  left: auto;
-  right: 16px;
+  left: auto !important;
+  right: 16px !important;
 }
 
 .scroll__button.open {
@@ -2311,13 +2291,13 @@ ol.list li:before,
 .scroll__overlayArea {
   position: absolute;
   z-index: 5;
-  top: 16px;
+  top: 0px;
   bottom: 16px;
   left: 0px;
-  width: 150px;
+  width: 75px;
   pointer-events: none;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 255, 0)), to(rgb(255, 0, 255)));
-  background: linear-gradient(270deg, rgba(255, 0, 255, 0), rgb(255, 0, 255));
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0), rgb(255, 255, 255));
   opacity: 0;
   -webkit-transition: all 1.5s ease 0s;
   transition: all 1.5s ease 0s;
@@ -2326,8 +2306,8 @@ ol.list li:before,
 .scroll__overlayArea_right {
   left: auto;
   right: 0px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 255, 0)), to(rgb(255, 0, 255)));
-  background: linear-gradient(90deg, rgba(255, 0, 255, 0), rgb(255, 0, 255));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(255, 255, 255));
 }
 
 .scroll__overlayArea.open {
@@ -2363,6 +2343,28 @@ ol.list li:before,
   min-width: 100%;
 }
 
+.scroll.productsScroll {
+  padding: 0px 0px 1px 0px;
+  margin-top: -8px;
+}
+
+.scroll.productsScroll .scroll__body {
+  padding: 8px 0;
+}
+
+.scroll.productsScroll .scroll__item {
+  padding: 16px;
+  width: 400px;
+}
+
+.scroll.productsScroll .scroll__item:first-child {
+  padding-left: 16px;
+}
+
+.scroll.productsScroll .scroll__item:last-child {
+  padding-right: 16px;
+}
+
 .header.absolute {
   position: absolute;
   top: 0;
@@ -2392,7 +2394,6 @@ ol.list li:before,
 
 .nav__menu ul li {
   padding: 12px;
-  font-weight: 500;
 }
 
 .nav__overlay {
@@ -5216,6 +5217,10 @@ ol.list li:before,
     padding: 0 16px;
   }
 
+  .scroll.productsScroll .scroll__scroll {
+    padding: 0 8px 0 8px;
+  }
+
   .bundles .slick-list {
     overflow: hidden;
   }
@@ -5629,6 +5634,10 @@ position sticky у блока .stickyBlock */
     width: 100%;
   }
 
+  .scroll.productsScroll .scroll__item {
+    width: 360px;
+  }
+
   .timescale.timescaleStories {
     border-radius: 0px;
   }
@@ -5995,6 +6004,10 @@ position sticky у блока .stickyBlock */
 
   .simpleMessage {
     width: calc(100% - 32px);
+  }
+
+  .scroll.productsScroll .scroll__item {
+    width: 332px;
   }
 
   .nav__menu {

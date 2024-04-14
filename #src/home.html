@@ -13,12 +13,153 @@
 	@@include('blocks/home/mainScreen.html')
 
 	<!-- Our products -->
-	@@include('blocks/product/slider.html', {
-		"title": "Our products",
-		"hasLink": "true",
-		"withSlider": "true",
-		"showLastSlide": "true"
-	})
+	<div class="container products">
+		<div class="p-16 f-jcsb-aic">
+			<p class="text-big">Our products</p>
+			<a href="" class="p-12 bold">Show all</a>
+		</div>
+		<div class="products__body scroll productsScroll">
+			<button class="btnRound btnRound_black scroll__button btn-prev">
+				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+			</button>
+			<button class="btnRound btnRound_black scroll__button btn-next">
+				<svg class="w-24"><use xlink:href="img/sprite/icons-sprite.svg#back"/></svg>
+			</button>
+			<div class="scroll__overlayArea overlayArea-prev"></div>
+			<div class="scroll__overlayArea scroll__overlayArea_right overlayArea-next"></div>
+			<div class="scroll__body">
+				<div class="scroll__scroll">
+					<div class="scroll__item">
+						<div class="products__card">
+							<div class="products__label">
+								<span class="btn-2 btn-2_black">Best seller</span>
+								<span class="btn-2 btn-2_white">-25% discount</span>
+							</div>
+							<a href="https://site.com">
+								<div class="products__image">
+									<img loading="lazy" src="img/product/10.png" alt="">
+								</div>
+								<div class="products__text nlc-mb-16 d-flex fdc fx-1">
+									<p class="text-large">Teeth Whitening Kit</p>
+									<div class="text-trim-3 darkGray">
+										<ul>
+											<li>Get professional-grade teeth whitening.</li>
+											<li>See quick results with our teeth whitening treatment.</li>
+											<li>Our teeth whitening treatment is safe for your enamel and gums.</li>
+											<li>Receive 7 individual teeth whitening sessions.</li>
+										</ul>
+										<p>Combining the power of VIO405 light technology with our award-winning PAP+ formula, the VIO405 Kit promotes the highest level of at-home whitening in just 10 minutes.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae maxime sed.</p>
+										<ul>
+											<li>Get professional-grade teeth whitening.</li>
+											<li>See quick results with our teeth whitening treatment.</li>
+											<li>Our teeth whitening treatment is safe for your enamel and gums.</li>
+											<li>Receive 7 individual teeth whitening sessions.</li>
+										</ul>
+									</div>
+								</div>
+							</a>
+							<div class="products__btn">
+								<button class="btn btn_black jcsb w-100 disabled">
+									<span class="d-inline-flex">
+										<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+										<span class="products__btnText btn__text">Add to cart</span>
+									</span>
+									<span class="d-inline-flex aic">
+										<span class="text-medium">$149.00</span>
+										<span class="ml-8 text-through">$175.00</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="scroll__item">
+						<div class="products__card">
+							<a href="https://site.com">
+								<div class="products__image">
+									<img loading="lazy" src="img/product/21.jpg" alt="">
+								</div>
+								<div class="products__text nlc-mb-16 d-flex fdc fx-1">
+									<p class="text-large">Whitening Strips</p>
+									<div class="text-trim-3 darkGray">
+										<p>Based on our instant whitening formula PAP+, we’ve designed strips as our most convenient way to whiten yet.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae maxime sed.</p>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nobis quis eum vero aliquid perspiciatis iusto ipsum illum, tenetur corrupti alias, dicta minima cum, praesentium, veniam soluta. Facere, excepturi. Architecto.</p>
+									</div>
+								</div>
+							</a>
+							<div class="products__btn">
+								<button class="btn btn_black jcsb w-100">
+									<span class="d-inline-flex">
+										<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+										<span class="products__btnText btn__text">Add to cart</span>
+									</span>
+									<span class="d-inline-flex aic">
+										<span class="text-medium">$39</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="scroll__item">
+						<div class="products__card">
+							<a href="https://site.com">
+								<div class="products__image">
+									<img loading="lazy" src="img/product/22.jpg" alt="">
+								</div>
+								<div class="products__text nlc-mb-16 d-flex fdc fx-1">
+									<p class="text-large">Whitening Powder</p>
+									<div class="text-trim-3 darkGray">
+										<p>Our groundbreaking PAP+ Whitening Powder transforms your existing favourite toothpaste into an effective, daily whitening treatment, that effectively oxidises stains.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae maxime sed.</p>
+									</div>
+								</div>
+							</a>
+							<div class="products__btn">
+								<button class="btn btn_black jcsb w-100">
+									<span class="d-inline-flex">
+										<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+										<span class="products__btnText btn__text">Add to cart</span>
+									</span>
+									<span class="d-inline-flex aic">
+										<span class="text-medium">$39</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="scroll__item">
+						<div class="products__card">
+							<a href="https://site.com">
+								<div class="products__image">
+									<img loading="lazy" src="img/product/23.jpg" alt="">
+								</div>
+								<div class="products__text nlc-mb-16 d-flex fdc fx-1">
+									<p class="text-large">Teeth Kit</p>
+									<div class="text-trim-3 darkGray">
+										<p>Our groundbreaking PAP+ Whitening Powder transforms your existing favourite toothpaste into an effective, daily whitening treatment, that effectively oxidises stains.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae maxime sed.</p>
+									</div>
+								</div>
+							</a>
+							<div class="products__btn">
+								<button class="btn btn_black jcsb w-100">
+									<span class="d-inline-flex">
+										<svg class="w-24 mr-8"><use xlink:href="img/sprite/icons-sprite.svg#cart"/></svg>
+										<span class="products__btnText btn__text">Add to cart</span>
+									</span>
+									<span class="d-inline-flex aic">
+										<span class="text-medium">$149</span>
+										<span class="ml-8 text-through">$175</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Teeth Whitening Kit -->
 	<div class="container p-16 teethKit">
